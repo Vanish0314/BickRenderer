@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "C:/Users/20131/Desktop/BickRenderer/BickRenderer.exe"
   "C:/Users/20131/Desktop/BickRenderer/BickRenderer.exe.manifest"
   "C:/Users/20131/Desktop/BickRenderer/BickRenderer.pdb"
+  "CMakeFiles/BickRenderer.dir/Src/Camera/Camera.cpp.obj"
+  "CMakeFiles/BickRenderer.dir/Src/Camera/Camera.cpp.obj.d"
   "CMakeFiles/BickRenderer.dir/Src/Texture/Texture.cpp.obj"
   "CMakeFiles/BickRenderer.dir/Src/Texture/Texture.cpp.obj.d"
   "CMakeFiles/BickRenderer.dir/Src/glad/glad.c.obj"

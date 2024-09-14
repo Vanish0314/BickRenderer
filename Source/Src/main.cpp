@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-09 21:35:01
- * @LastEditTime: 2024-09-14 12:22:15
+ * @LastEditTime: 2024-09-14 16:02:13
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -20,7 +20,7 @@
 
 #include "Shader/Shader.hpp"
 #include "Texture/Texture.hpp"
-
+#include "Camera/Camera.hpp"
 
 //窗口大小变化回调函数
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
@@ -29,11 +29,24 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 }
 
 //输入处理函数
-void ProcessInput(GLFWwindow* window)
+void ProcessInput(GLFWwindow* window,Camera &camera)
 {
     //按下ESC键退出程序
     if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
+
+    if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+        camera.Move(camera.forward * 0.02f);
+    if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+        camera.Move(camera.forward * -0.02f);
+    if(glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+        camera.Move(camera.right * -0.02f);
+    if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+        camera.Move(camera.right * 0.02f);
+}
+void ProcessMouseInput(GLFWwindow* window,double xpos,double ypos)
+{
+    
 }
 
 int main()
@@ -170,12 +183,18 @@ int main()
     viewMatrix = glm::translate(viewMatrix, glm::vec3(0.0f, 0.0f, -3.0f));
     glm::mat4 projectionMatrix = glm::perspective(glm::radians(60.0f), 800.0f / 600.0f, 0.1f, 100.0f);
 
+    Camera camera = Camera(800,600,60.0);
+    camera.SetPosition(glm::vec3(0.0f, 0.0f, 3.0f));
+    camera.SetForward(glm::vec3(0.0f, 0.0f, -1.0f));
+
     glEnable(GL_DEPTH_TEST);
+
+    glfwSetCursorPosCallback(window,ProcessMouseInput);
     //渲染循环
     while(!glfwWindowShouldClose(window))//窗口应该关闭时结束循环
     {
         //输入
-        ProcessInput(window);//处理输入
+        ProcessInput(window,camera);//处理输入
 
         //渲染
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);//设置清空屏幕使用的颜色,是一个状态设置函数
@@ -201,10 +220,10 @@ int main()
             glUniformMatrix4fv(transformLocation,1,GL_FALSE,glm::value_ptr(trans)); //设置transform变量的值,即设置模型矩阵
             glm::mat4 model(1.0f);
             model = glm::translate(model, cubePositions[i]);
-            model = glm::rotate(model,20.0f*i,glm::vec3(glm::sin(i),glm::cos(i),0.0f));
+            model = glm::rotate(model,20.0f*i,glm::vec3(1.0f,0.0f,0.0f));
             glUniformMatrix4fv(modelMatrixLocation,1,GL_FALSE,glm::value_ptr(model)); //设置modelMatrix变量的值,即设置模型矩阵
-            glUniformMatrix4fv(viewMatrixLocation,1,GL_FALSE,glm::value_ptr(viewMatrix)); //设置viewMatrix变量的值,即设置视图矩阵
-            glUniformMatrix4fv(projectionMatrixLocation,1,GL_FALSE,glm::value_ptr(projectionMatrix)); //设置projectionMatrix变量的值,即设置投影矩阵
+            glUniformMatrix4fv(viewMatrixLocation,1,GL_FALSE,glm::value_ptr(camera.GetViewMatrix())); //设置viewMatrix变量的值,即设置视图矩阵
+            glUniformMatrix4fv(projectionMatrixLocation,1,GL_FALSE,glm::value_ptr(camera.GetProjectionMatrix())); //设置projectionMatrix变量的值,即设置投影矩阵
             glDrawArrays(GL_TRIANGLES, 0, 36);
         }
 

@@ -174,6 +174,30 @@ BickRenderer/fast:
 	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/build
 .PHONY : BickRenderer/fast
 
+Src/Camera/Camera.obj: Src/Camera/Camera.cpp.obj
+.PHONY : Src/Camera/Camera.obj
+
+# target to build an object file
+Src/Camera/Camera.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Camera/Camera.cpp.obj
+.PHONY : Src/Camera/Camera.cpp.obj
+
+Src/Camera/Camera.i: Src/Camera/Camera.cpp.i
+.PHONY : Src/Camera/Camera.i
+
+# target to preprocess a source file
+Src/Camera/Camera.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Camera/Camera.cpp.i
+.PHONY : Src/Camera/Camera.cpp.i
+
+Src/Camera/Camera.s: Src/Camera/Camera.cpp.s
+.PHONY : Src/Camera/Camera.s
+
+# target to generate assembly for a file
+Src/Camera/Camera.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Camera/Camera.cpp.s
+.PHONY : Src/Camera/Camera.cpp.s
+
 Src/Texture/Texture.obj: Src/Texture/Texture.cpp.obj
 .PHONY : Src/Texture/Texture.obj
 
@@ -283,6 +307,9 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... BickRenderer
+	@echo ... Src/Camera/Camera.obj
+	@echo ... Src/Camera/Camera.i
+	@echo ... Src/Camera/Camera.s
 	@echo ... Src/Texture/Texture.obj
 	@echo ... Src/Texture/Texture.i
 	@echo ... Src/Texture/Texture.s
