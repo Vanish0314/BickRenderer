@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-09 21:35:01
- * @LastEditTime: 2024-09-13 21:58:33
+ * @LastEditTime: 2024-09-14 12:22:15
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -71,13 +71,69 @@ int main()
                      "Source\\GLSL_Shaders\\ShaderClass\\FragmentShader.glsl");
 
     //输入顶点数据
+    // float vertices[] = {
+    // // ---- 位置 ----       ---- 颜色 ----     - 纹理坐标 -
+    //  0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // 右上
+    //  0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   // 右下
+    // -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // 左下
+    // -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f    // 左上
+    // };//顶点坐标
     float vertices[] = {
-    // ---- 位置 ----       ---- 颜色 ----     - 纹理坐标 -
-     0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // 右上
-     0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   // 右下
-    -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // 左下
-    -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f    // 左上
-    };//顶点坐标
+    -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
+     0.5f, -0.5f, -0.5f,  1.0f, 0.0f,
+     0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+     0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+    -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
+    -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
+
+    -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+     0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
+     0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
+     0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
+    -0.5f,  0.5f,  0.5f,  0.0f, 1.0f,
+    -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+
+    -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+    -0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+    -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+    -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+    -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+    -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+
+     0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+     0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+     0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+     0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+     0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+     0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+
+    -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+     0.5f, -0.5f, -0.5f,  1.0f, 1.0f,
+     0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
+     0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
+    -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
+    -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
+
+    -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
+     0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
+     0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+     0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
+    -0.5f,  0.5f,  0.5f,  0.0f, 0.0f,
+    -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
+    };
+    glm::vec3 cubePositions[] = {
+        glm::vec3( 0.0f,  0.0f,  0.0f),
+        glm::vec3( 2.0f,  5.0f, -15.0f),
+        glm::vec3(-1.5f, -2.2f, -2.5f),
+        glm::vec3(-3.8f, -2.0f, -12.3f),
+        glm::vec3( 2.4f, -0.4f, -3.5f),
+        glm::vec3(-1.7f,  3.0f, -7.5f),
+        glm::vec3( 1.3f, -2.0f, -2.5f),
+        glm::vec3( 1.5f,  2.0f, -2.5f),
+        glm::vec3( 1.5f,  0.2f, -1.5f),
+        glm::vec3(-1.3f,  1.0f, -1.5f)
+    };
+    
     unsigned int indices[] = {
     // 注意索引从0开始! 
     // 此例的索引(0,1,2,3)就是顶点数组vertices的下标，
@@ -99,18 +155,22 @@ int main()
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);//将索引数据复制到缓冲中,并指定数据用以静态访问
 
     //位置属性
-    glVertexAttribPointer(0,3,GL_FLOAT,GL_FALSE,8*sizeof(float),(void*)0);//设置顶点属性指针,第一个参数为属性索引,第二个参数为属性个数,第三个参数为属性类型,第四个参数为是否归一化,第五个参数为偏移量,第六个参数为数据指针
+    glVertexAttribPointer(0,3,GL_FLOAT,GL_FALSE,5*sizeof(float),(void*)0);//设置顶点属性指针,第一个参数为属性索引,第二个参数为属性个数,第三个参数为属性类型,第四个参数为是否归一化,第五个参数为偏移量,第六个参数为数据指针
     glEnableVertexAttribArray(0);//启用顶点属性数组
-    //颜色属性
-    glVertexAttribPointer(1,3,GL_FLOAT,GL_FALSE,8*sizeof(float),(void*)(3*sizeof(float)));//设置顶点属性指针,第一个参数为属性索引,第二个参数为属性个数,第三个参数为属性类型,第四个参数为是否归一化,第五个参数为偏移量,第六个参数为数据指针
-    glEnableVertexAttribArray(1);//启用顶点属性数组
-    glVertexAttribPointer(2,2,GL_FLOAT,GL_FALSE,8*sizeof(float),(void*)(6*sizeof(float)));//设置顶点属性指针,第一个参数为属性索引,第二个参数为属性个数,第三个参数为属性类型,第四个参数为是否归一化,第五个参数为偏移量,第六个参数为数据指针
+    glVertexAttribPointer(2,2,GL_FLOAT,GL_FALSE,5*sizeof(float),(void*)(3*sizeof(float)));//设置顶点属性指针,第一个参数为属性索引,第二个参数为属性个数,第三个参数为属性类型,第四个参数为是否归一化,第五个参数为偏移量,第六个参数为数据指针
     glEnableVertexAttribArray(2);//启用顶点属性数组
 
     Texture wall = Texture("Assets\\Textures\\wall.jpg",GL_TEXTURE0);
     Texture smile = Texture("Assets\\Textures\\awesomeface.png",GL_TEXTURE1);
 
     glm::mat4 trans(1.0f);
+    glm::mat4 modelMatrix(1.0f);
+    modelMatrix = glm::rotate(modelMatrix, glm::radians(-55.0f), glm::vec3(1.0f, 1.0f, 0.0f));
+    glm::mat4 viewMatrix(1.0f);
+    viewMatrix = glm::translate(viewMatrix, glm::vec3(0.0f, 0.0f, -3.0f));
+    glm::mat4 projectionMatrix = glm::perspective(glm::radians(60.0f), 800.0f / 600.0f, 0.1f, 100.0f);
+
+    glEnable(GL_DEPTH_TEST);
     //渲染循环
     while(!glfwWindowShouldClose(window))//窗口应该关闭时结束循环
     {
@@ -119,7 +179,7 @@ int main()
 
         //渲染
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);//设置清空屏幕使用的颜色,是一个状态设置函数
-        glClear(GL_COLOR_BUFFER_BIT);//清空颜色缓冲,是一个状态使用函数,获取状态后执行
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);//清空颜色缓冲,是一个状态使用函数,获取状态后执行
 
         //绘制
         float timeValue = (float)glfwGetTime(); //获取当前时间
@@ -127,13 +187,26 @@ int main()
         ourShader.Use(); //使用着色器程序
         int vertexColorLocation = glGetUniformLocation(ourShader.shaderProgramID, "ourColor"); //获取ourColor变量的位置
         glUniform4f(vertexColorLocation, 0.8f, greenValue, 0.8f, 1.0f);//设置ourColor变量的值,即设置顶点颜色
-        int transformLocation = glGetUniformLocation(ourShader.shaderProgramID, "transform"); //获取transform变量的位置
-        trans = glm::rotate(trans,(float)glfwGetTime()/100,glm::vec3(0.0f,0.0f,1.0f));
-        glUniformMatrix4fv(transformLocation,1,GL_FALSE,glm::value_ptr(trans)); //设置transform变量的值,即设置模型矩阵
+        int modelMatrixLocation = glGetUniformLocation(ourShader.shaderProgramID, "modelMatrix"); //获取transform变量的位置
+        int viewMatrixLocation = glGetUniformLocation(ourShader.shaderProgramID, "viewMatrix"); //获取transform变量的位置
+        int projectionMatrixLocation = glGetUniformLocation(ourShader.shaderProgramID, "projectionMatrix"); //获取transform变量的位置
         wall.Activate(ourShader.shaderProgramID, "Texture0"); //激活纹理0
         smile.Activate(ourShader.shaderProgramID, "Texture1"); //激活纹理1
         glBindVertexArray(VAO);//绑定VAO到当前活动的缓冲区
-        glDrawElements(GL_TRIANGLES,6,GL_UNSIGNED_INT,0);//绘制三角形,第一个参数为绘制模式,第二个参数为起始索引,第三个参数为绘制数量
+        
+        for (int i = 0;i < 10;i++)
+        {
+            int transformLocation = glGetUniformLocation(ourShader.shaderProgramID, "transform"); //获取transform变量的位置
+            trans = glm::rotate(glm::mat4(1.0f),(float)glfwGetTime(),glm::vec3(glm::sin(i),glm::cos(i),glm::tan(i)));
+            glUniformMatrix4fv(transformLocation,1,GL_FALSE,glm::value_ptr(trans)); //设置transform变量的值,即设置模型矩阵
+            glm::mat4 model(1.0f);
+            model = glm::translate(model, cubePositions[i]);
+            model = glm::rotate(model,20.0f*i,glm::vec3(glm::sin(i),glm::cos(i),0.0f));
+            glUniformMatrix4fv(modelMatrixLocation,1,GL_FALSE,glm::value_ptr(model)); //设置modelMatrix变量的值,即设置模型矩阵
+            glUniformMatrix4fv(viewMatrixLocation,1,GL_FALSE,glm::value_ptr(viewMatrix)); //设置viewMatrix变量的值,即设置视图矩阵
+            glUniformMatrix4fv(projectionMatrixLocation,1,GL_FALSE,glm::value_ptr(projectionMatrix)); //设置projectionMatrix变量的值,即设置投影矩阵
+            glDrawArrays(GL_TRIANGLES, 0, 36);
+        }
 
         //交换缓冲,检查并调用事件回调函数
         glfwSwapBuffers(window); //交换颜色缓冲
