@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "libglm.a"
+  "libglmd.a"
 )

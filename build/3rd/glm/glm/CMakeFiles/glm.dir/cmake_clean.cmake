@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/glm.dir/detail/glm.cpp.obj"
   "CMakeFiles/glm.dir/detail/glm.cpp.obj.d"
-  "libglm.a"
-  "libglm.pdb"
+  "libglmd.a"
+  "libglmd.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -198,6 +198,78 @@ Src/Camera/Camera.cpp.s:
 	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Camera/Camera.cpp.s
 .PHONY : Src/Camera/Camera.cpp.s
 
+Src/Input/InputSystem.obj: Src/Input/InputSystem.cpp.obj
+.PHONY : Src/Input/InputSystem.obj
+
+# target to build an object file
+Src/Input/InputSystem.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.obj
+.PHONY : Src/Input/InputSystem.cpp.obj
+
+Src/Input/InputSystem.i: Src/Input/InputSystem.cpp.i
+.PHONY : Src/Input/InputSystem.i
+
+# target to preprocess a source file
+Src/Input/InputSystem.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.i
+.PHONY : Src/Input/InputSystem.cpp.i
+
+Src/Input/InputSystem.s: Src/Input/InputSystem.cpp.s
+.PHONY : Src/Input/InputSystem.s
+
+# target to generate assembly for a file
+Src/Input/InputSystem.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.s
+.PHONY : Src/Input/InputSystem.cpp.s
+
+Src/Mesh/Mesh.obj: Src/Mesh/Mesh.cpp.obj
+.PHONY : Src/Mesh/Mesh.obj
+
+# target to build an object file
+Src/Mesh/Mesh.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.obj
+.PHONY : Src/Mesh/Mesh.cpp.obj
+
+Src/Mesh/Mesh.i: Src/Mesh/Mesh.cpp.i
+.PHONY : Src/Mesh/Mesh.i
+
+# target to preprocess a source file
+Src/Mesh/Mesh.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.i
+.PHONY : Src/Mesh/Mesh.cpp.i
+
+Src/Mesh/Mesh.s: Src/Mesh/Mesh.cpp.s
+.PHONY : Src/Mesh/Mesh.s
+
+# target to generate assembly for a file
+Src/Mesh/Mesh.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.s
+.PHONY : Src/Mesh/Mesh.cpp.s
+
+Src/Shader/Shader.obj: Src/Shader/Shader.cpp.obj
+.PHONY : Src/Shader/Shader.obj
+
+# target to build an object file
+Src/Shader/Shader.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Shader/Shader.cpp.obj
+.PHONY : Src/Shader/Shader.cpp.obj
+
+Src/Shader/Shader.i: Src/Shader/Shader.cpp.i
+.PHONY : Src/Shader/Shader.i
+
+# target to preprocess a source file
+Src/Shader/Shader.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Shader/Shader.cpp.i
+.PHONY : Src/Shader/Shader.cpp.i
+
+Src/Shader/Shader.s: Src/Shader/Shader.cpp.s
+.PHONY : Src/Shader/Shader.s
+
+# target to generate assembly for a file
+Src/Shader/Shader.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Shader/Shader.cpp.s
+.PHONY : Src/Shader/Shader.cpp.s
+
 Src/Texture/Texture.obj: Src/Texture/Texture.cpp.obj
 .PHONY : Src/Texture/Texture.obj
 
@@ -270,30 +342,6 @@ Src/main.cpp.s:
 	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.s
 .PHONY : Src/main.cpp.s
 
-Src/shader/Shader.obj: Src/shader/Shader.cpp.obj
-.PHONY : Src/shader/Shader.obj
-
-# target to build an object file
-Src/shader/Shader.cpp.obj:
-	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/shader/Shader.cpp.obj
-.PHONY : Src/shader/Shader.cpp.obj
-
-Src/shader/Shader.i: Src/shader/Shader.cpp.i
-.PHONY : Src/shader/Shader.i
-
-# target to preprocess a source file
-Src/shader/Shader.cpp.i:
-	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/shader/Shader.cpp.i
-.PHONY : Src/shader/Shader.cpp.i
-
-Src/shader/Shader.s: Src/shader/Shader.cpp.s
-.PHONY : Src/shader/Shader.s
-
-# target to generate assembly for a file
-Src/shader/Shader.cpp.s:
-	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/shader/Shader.cpp.s
-.PHONY : Src/shader/Shader.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -310,6 +358,15 @@ help:
 	@echo ... Src/Camera/Camera.obj
 	@echo ... Src/Camera/Camera.i
 	@echo ... Src/Camera/Camera.s
+	@echo ... Src/Input/InputSystem.obj
+	@echo ... Src/Input/InputSystem.i
+	@echo ... Src/Input/InputSystem.s
+	@echo ... Src/Mesh/Mesh.obj
+	@echo ... Src/Mesh/Mesh.i
+	@echo ... Src/Mesh/Mesh.s
+	@echo ... Src/Shader/Shader.obj
+	@echo ... Src/Shader/Shader.i
+	@echo ... Src/Shader/Shader.s
 	@echo ... Src/Texture/Texture.obj
 	@echo ... Src/Texture/Texture.i
 	@echo ... Src/Texture/Texture.s
@@ -319,9 +376,6 @@ help:
 	@echo ... Src/main.obj
 	@echo ... Src/main.i
 	@echo ... Src/main.s
-	@echo ... Src/shader/Shader.obj
-	@echo ... Src/shader/Shader.i
-	@echo ... Src/shader/Shader.s
 .PHONY : help
 
 

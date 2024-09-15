@@ -746,3 +746,212 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "3rd/assimp/contrib/zlib/CMakeLists.txt:35 (check_include_file)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-wt08aj"
+      binary: "C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-wt08aj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -fPIC "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/20131/Desktop/BickRenderer/3rd/assimp/cmake-modules"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-wt08aj'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_93a9c/fast
+        C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_93a9c.dir\\build.make CMakeFiles/cmTC_93a9c.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-wt08aj'
+        Building C object CMakeFiles/cmTC_93a9c.dir/CheckIncludeFile.c.obj
+        C:\\msys64\\ucrt64\\bin\\gcc.exe   -fno-strict-aliasing -fPIC   -std=gnu99 -o CMakeFiles\\cmTC_93a9c.dir\\CheckIncludeFile.c.obj -c C:\\Users\\20131\\Desktop\\BickRenderer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wt08aj\\CheckIncludeFile.c
+        Linking C executable cmTC_93a9c.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_93a9c.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_93a9c.dir/objects.a
+        C:\\msys64\\ucrt64\\bin\\ar.exe qc CMakeFiles\\cmTC_93a9c.dir/objects.a @CMakeFiles\\cmTC_93a9c.dir\\objects1.rsp
+        C:\\msys64\\ucrt64\\bin\\gcc.exe -fno-strict-aliasing -fPIC   -Wl,--whole-archive CMakeFiles\\cmTC_93a9c.dir/objects.a -Wl,--no-whole-archive -o cmTC_93a9c.exe -Wl,--out-implib,libcmTC_93a9c.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_93a9c.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-wt08aj'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "3rd/assimp/contrib/zlib/CMakeLists.txt:36 (check_include_file)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-x5yhxi"
+      binary: "C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-x5yhxi"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -fPIC "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/20131/Desktop/BickRenderer/3rd/assimp/cmake-modules"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-x5yhxi'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_4c6f6/fast
+        C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_4c6f6.dir\\build.make CMakeFiles/cmTC_4c6f6.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-x5yhxi'
+        Building C object CMakeFiles/cmTC_4c6f6.dir/CheckIncludeFile.c.obj
+        C:\\msys64\\ucrt64\\bin\\gcc.exe   -fno-strict-aliasing -fPIC   -std=gnu99 -o CMakeFiles\\cmTC_4c6f6.dir\\CheckIncludeFile.c.obj -c C:\\Users\\20131\\Desktop\\BickRenderer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-x5yhxi\\CheckIncludeFile.c
+        Linking C executable cmTC_4c6f6.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_4c6f6.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_4c6f6.dir/objects.a
+        C:\\msys64\\ucrt64\\bin\\ar.exe qc CMakeFiles\\cmTC_4c6f6.dir/objects.a @CMakeFiles\\cmTC_4c6f6.dir\\objects1.rsp
+        C:\\msys64\\ucrt64\\bin\\gcc.exe -fno-strict-aliasing -fPIC   -Wl,--whole-archive CMakeFiles\\cmTC_4c6f6.dir/objects.a -Wl,--no-whole-archive -o cmTC_4c6f6.exe -Wl,--out-implib,libcmTC_4c6f6.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_4c6f6.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-x5yhxi'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "3rd/assimp/contrib/zlib/CMakeLists.txt:37 (check_include_file)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-n9agwh"
+      binary: "C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-n9agwh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -fPIC "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/20131/Desktop/BickRenderer/3rd/assimp/cmake-modules"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-n9agwh'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_f71d9/fast
+        C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_f71d9.dir\\build.make CMakeFiles/cmTC_f71d9.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-n9agwh'
+        Building C object CMakeFiles/cmTC_f71d9.dir/CheckIncludeFile.c.obj
+        C:\\msys64\\ucrt64\\bin\\gcc.exe   -fno-strict-aliasing -fPIC   -std=gnu99 -o CMakeFiles\\cmTC_f71d9.dir\\CheckIncludeFile.c.obj -c C:\\Users\\20131\\Desktop\\BickRenderer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n9agwh\\CheckIncludeFile.c
+        Linking C executable cmTC_f71d9.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_f71d9.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_f71d9.dir/objects.a
+        C:\\msys64\\ucrt64\\bin\\ar.exe qc CMakeFiles\\cmTC_f71d9.dir/objects.a @CMakeFiles\\cmTC_f71d9.dir\\objects1.rsp
+        C:\\msys64\\ucrt64\\bin\\gcc.exe -fno-strict-aliasing -fPIC   -Wl,--whole-archive CMakeFiles\\cmTC_f71d9.dir/objects.a -Wl,--no-whole-archive -o cmTC_f71d9.exe -Wl,--out-implib,libcmTC_f71d9.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_f71d9.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-n9agwh'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckTypeSize.cmake:147 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckTypeSize.cmake:272 (__check_type_size_impl)"
+      - "3rd/assimp/contrib/zlib/CMakeLists.txt:55 (check_type_size)"
+    checks:
+      - "Check size of off64_t"
+    directories:
+      source: "C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-7y58a3"
+      binary: "C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-7y58a3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -fPIC "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/20131/Desktop/BickRenderer/3rd/assimp/cmake-modules"
+    buildResult:
+      variable: "HAVE_OFF64_T"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-7y58a3'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_012e7/fast
+        C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_012e7.dir\\build.make CMakeFiles/cmTC_012e7.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-7y58a3'
+        Building C object CMakeFiles/cmTC_012e7.dir/OFF64_T.c.obj
+        C:\\msys64\\ucrt64\\bin\\gcc.exe -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_TYPES_H -D_LARGEFILE64_SOURCE=1  -fno-strict-aliasing -fPIC   -std=gnu99 -o CMakeFiles\\cmTC_012e7.dir\\OFF64_T.c.obj -c C:\\Users\\20131\\Desktop\\BickRenderer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7y58a3\\OFF64_T.c
+        Linking C executable cmTC_012e7.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_012e7.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_012e7.dir/objects.a
+        C:\\msys64\\ucrt64\\bin\\ar.exe qc CMakeFiles\\cmTC_012e7.dir/objects.a @CMakeFiles\\cmTC_012e7.dir\\objects1.rsp
+        C:\\msys64\\ucrt64\\bin\\gcc.exe -fno-strict-aliasing -fPIC   -Wl,--whole-archive CMakeFiles\\cmTC_012e7.dir/objects.a -Wl,--no-whole-archive -o cmTC_012e7.exe -Wl,--out-implib,libcmTC_012e7.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_012e7.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-7y58a3'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "3rd/assimp/contrib/zlib/CMakeLists.txt:64 (check_function_exists)"
+    checks:
+      - "Looking for fseeko"
+    directories:
+      source: "C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-mn38ed"
+      binary: "C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-mn38ed"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -fPIC "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/20131/Desktop/BickRenderer/3rd/assimp/cmake-modules"
+    buildResult:
+      variable: "HAVE_FSEEKO"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-mn38ed'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_8ea50/fast
+        C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_8ea50.dir\\build.make CMakeFiles/cmTC_8ea50.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-mn38ed'
+        Building C object CMakeFiles/cmTC_8ea50.dir/CheckFunctionExists.c.obj
+        C:\\msys64\\ucrt64\\bin\\gcc.exe   -fno-strict-aliasing -fPIC  -DCHECK_FUNCTION_EXISTS=fseeko -std=gnu99 -o CMakeFiles\\cmTC_8ea50.dir\\CheckFunctionExists.c.obj -c C:\\Users\\20131\\Desktop\\BickRenderer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mn38ed\\CheckFunctionExists.c
+        Linking C executable cmTC_8ea50.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_8ea50.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_8ea50.dir/objects.a
+        C:\\msys64\\ucrt64\\bin\\ar.exe qc CMakeFiles\\cmTC_8ea50.dir/objects.a @CMakeFiles\\cmTC_8ea50.dir\\objects1.rsp
+        C:\\msys64\\ucrt64\\bin\\gcc.exe -fno-strict-aliasing -fPIC  -DCHECK_FUNCTION_EXISTS=fseeko -Wl,--whole-archive CMakeFiles\\cmTC_8ea50.dir/objects.a -Wl,--no-whole-archive -o cmTC_8ea50.exe -Wl,--out-implib,libcmTC_8ea50.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_8ea50.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-mn38ed'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "3rd/assimp/contrib/zlib/CMakeLists.txt:72 (check_include_file)"
+    checks:
+      - "Looking for unistd.h"
+    directories:
+      source: "C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-273slf"
+      binary: "C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-273slf"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing -fPIC "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/20131/Desktop/BickRenderer/3rd/assimp/cmake-modules"
+    buildResult:
+      variable: "Z_HAVE_UNISTD_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-273slf'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/ucrt64/bin/mingw32-make.exe -f Makefile cmTC_b2e78/fast
+        C:/msys64/ucrt64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_b2e78.dir\\build.make CMakeFiles/cmTC_b2e78.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-273slf'
+        Building C object CMakeFiles/cmTC_b2e78.dir/CheckIncludeFile.c.obj
+        C:\\msys64\\ucrt64\\bin\\gcc.exe   -fno-strict-aliasing -fPIC   -std=gnu99 -o CMakeFiles\\cmTC_b2e78.dir\\CheckIncludeFile.c.obj -c C:\\Users\\20131\\Desktop\\BickRenderer\\build\\CMakeFiles\\CMakeScratch\\TryCompile-273slf\\CheckIncludeFile.c
+        Linking C executable cmTC_b2e78.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_b2e78.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_b2e78.dir/objects.a
+        C:\\msys64\\ucrt64\\bin\\ar.exe qc CMakeFiles\\cmTC_b2e78.dir/objects.a @CMakeFiles\\cmTC_b2e78.dir\\objects1.rsp
+        C:\\msys64\\ucrt64\\bin\\gcc.exe -fno-strict-aliasing -fPIC   -Wl,--whole-archive CMakeFiles\\cmTC_b2e78.dir/objects.a -Wl,--no-whole-archive -o cmTC_b2e78.exe -Wl,--out-implib,libcmTC_b2e78.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_b2e78.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/20131/Desktop/BickRenderer/build/CMakeFiles/CMakeScratch/TryCompile-273slf'
+        
+      exitCode: 0
+...

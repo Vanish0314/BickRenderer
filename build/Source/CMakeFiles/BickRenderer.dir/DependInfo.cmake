@@ -10,9 +10,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/20131/Desktop/BickRenderer/Source/Src/glad/glad.c" "Source/CMakeFiles/BickRenderer.dir/Src/glad/glad.c.obj" "gcc" "Source/CMakeFiles/BickRenderer.dir/Src/glad/glad.c.obj.d"
   "C:/Users/20131/Desktop/BickRenderer/Source/Src/Camera/Camera.cpp" "Source/CMakeFiles/BickRenderer.dir/Src/Camera/Camera.cpp.obj" "gcc" "Source/CMakeFiles/BickRenderer.dir/Src/Camera/Camera.cpp.obj.d"
+  "C:/Users/20131/Desktop/BickRenderer/Source/Src/Input/InputSystem.cpp" "Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.obj" "gcc" "Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.obj.d"
+  "C:/Users/20131/Desktop/BickRenderer/Source/Src/Mesh/Mesh.cpp" "Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.obj" "gcc" "Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.obj.d"
   "C:/Users/20131/Desktop/BickRenderer/Source/Src/Texture/Texture.cpp" "Source/CMakeFiles/BickRenderer.dir/Src/Texture/Texture.cpp.obj" "gcc" "Source/CMakeFiles/BickRenderer.dir/Src/Texture/Texture.cpp.obj.d"
   "C:/Users/20131/Desktop/BickRenderer/Source/Src/main.cpp" "Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj" "gcc" "Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj.d"
-  "C:/Users/20131/Desktop/BickRenderer/Source/Src/shader/Shader.cpp" "Source/CMakeFiles/BickRenderer.dir/Src/shader/Shader.cpp.obj" "gcc" "Source/CMakeFiles/BickRenderer.dir/Src/shader/Shader.cpp.obj.d"
+  "C:/Users/20131/Desktop/BickRenderer/Source/Src/Shader/Shader.cpp" "Source/CMakeFiles/BickRenderer.dir/Src/shader/Shader.cpp.obj" "gcc" "Source/CMakeFiles/BickRenderer.dir/Src/shader/Shader.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

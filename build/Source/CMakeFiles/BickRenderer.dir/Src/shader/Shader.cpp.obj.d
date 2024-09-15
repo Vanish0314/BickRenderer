@@ -1,5 +1,5 @@
-Source/CMakeFiles/BickRenderer.dir/Src/shader/Shader.cpp.obj: \
- C:\Users\20131\Desktop\BickRenderer\Source\Src\shader\Shader.cpp \
+Source/CMakeFiles/BickRenderer.dir/Src/Shader/Shader.cpp.obj: \
+ C:\Users\20131\Desktop\BickRenderer\Source\Src\Shader\Shader.cpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Shader/Shader.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/string \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/requires_hosted.h \
