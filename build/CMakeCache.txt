@@ -98,6 +98,12 @@ ASSIMP_INJECT_DEBUG_POSTFIX:BOOL=ON
 //Disable this if you want to use assimp as a submodule.
 ASSIMP_INSTALL:BOOL=ON
 
+//Path to a library.
+ASSIMP_LIB:FILEPATH=ASSIMP_LIB-NOTFOUND
+
+//Path to a library.
+ASSIMP_LIBRARY:FILEPATH=ASSIMP_LIBRARY-NOTFOUND
+
 //Path for library output files
 ASSIMP_LIBRARY_OUTPUT_DIRECTORY:STRING=C:/Users/20131/Desktop/BickRenderer/build/3rd/assimp/bin
 

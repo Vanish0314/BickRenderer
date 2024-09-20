@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-09 21:35:01
- * @LastEditTime: 2024-09-15 21:43:46
+ * @LastEditTime: 2024-09-20 17:25:06
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -28,6 +28,7 @@
 #include "Shader/Shader.hpp"
 #include "Texture/Texture.hpp"
 #include "Camera/Camera.hpp"
+#include "Mesh/Model.hpp"
 
 //窗口大小变化回调函数
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
@@ -43,13 +44,13 @@ void ProcessInput(GLFWwindow* window,Camera &camera)
         glfwSetWindowShouldClose(window, true);
 
     if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-        camera.Move(camera.forward * 0.0002f);
+        camera.Move(camera.forward * 0.02f);
     if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-        camera.Move(camera.forward * -0.0002f);
+        camera.Move(camera.forward * -0.02f);
     if(glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-        camera.Move(camera.right * -0.0002f);
+        camera.Move(camera.right * -0.02f);
     if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-        camera.Move(camera.right * 0.0002f);
+        camera.Move(camera.right * 0.02f);
 }
 void ProcessMouseInput(GLFWwindow* window,double xpos,double ypos)
 {
@@ -58,6 +59,8 @@ void ProcessMouseInput(GLFWwindow* window,double xpos,double ypos)
 
 int main()
 {
+    std::cout << "BickRenderer启动,你好!!!" << std::endl<<std::endl;
+
     //初始化glfw
     glfwInit(); 
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); // 设置opengl主版本为3
@@ -71,7 +74,7 @@ int main()
     {
         std::cout << "Failed to create GLFW window" << std::endl;
         glfwTerminate();//终止glfw
-        return -1;
+        return 0;
     }
     glfwMakeContextCurrent(window);//通知GLFW将此窗口的上下文设置为当前线程的主上下文
     
@@ -79,7 +82,7 @@ int main()
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))//TODO: 这里暂时不是很清楚
     {
         std::cout << "Failed to initialize GLAD" << std::endl;
-        return -1;
+        return 0;
     }
 
     //设置Viewport
@@ -93,6 +96,11 @@ int main()
     Shader mapShader("Source\\GLSL_Shaders\\HomeWork\\MapEditorVertex.glsl",
                      "Source\\GLSL_Shaders\\HomeWork\\MapEditorFrag.glsl");
 
+    Shader PBRShader("Source\\GLSL_Shaders\\Standard\\Standard_VS_RM.glsl",
+                     "Source\\GLSL_Shaders\\Standard\\Standard_GS_RM.glsl",
+                     "Source\\GLSL_Shaders\\Standard\\Standard_FS_RM.glsl",
+                     "STD_PBS");
+
     //输入顶点数据
     float vertices[] = {
     // ---- 位置 ----      - 纹理坐标 -
@@ -101,62 +109,6 @@ int main()
     -0.5f, -0.5f, 0.0f,   0.0f , 0.0f,   // 左下
     -0.5f,  0.5f, 0.0f,   0.0f , 1.0f    // 左上
     };//顶点坐标
-    // float vertices[] = {
-    // -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
-    //  0.5f, -0.5f, -0.5f,  1.0f, 0.0f,
-    //  0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-    //  0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-    // -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
-    // -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
-
-    // -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-    //  0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-    //  0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
-    //  0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
-    // -0.5f,  0.5f,  0.5f,  0.0f, 1.0f,
-    // -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-
-    // -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-    // -0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-    // -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-    // -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-    // -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-    // -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-
-    //  0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-    //  0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-    //  0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-    //  0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-    //  0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-    //  0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-
-    // -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-    //  0.5f, -0.5f, -0.5f,  1.0f, 1.0f,
-    //  0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-    //  0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-    // -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-    // -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-
-    // -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
-    //  0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-    //  0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-    //  0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-    // -0.5f,  0.5f,  0.5f,  0.0f, 0.0f,
-    // -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
-    // };
-    // glm::vec3 cubePositions[] = {
-    //     glm::vec3( 0.0f,  0.0f,  0.0f),
-    //     glm::vec3( 2.0f,  5.0f, -15.0f),
-    //     glm::vec3(-1.5f, -2.2f, -2.5f),
-    //     glm::vec3(-3.8f, -2.0f, -12.3f),
-    //     glm::vec3( 2.4f, -0.4f, -3.5f),
-    //     glm::vec3(-1.7f,  3.0f, -7.5f),
-    //     glm::vec3( 1.3f, -2.0f, -2.5f),
-    //     glm::vec3( 1.5f,  2.0f, -2.5f),
-    //     glm::vec3( 1.5f,  0.2f, -1.5f),
-    //     glm::vec3(-1.3f,  1.0f, -1.5f)
-    // };
-    
     unsigned int indices[] = {
     // 注意索引从0开始! 
     // 此例的索引(0,1,2,3)就是顶点数组vertices的下标，
@@ -198,9 +150,12 @@ int main()
     camera.SetForward(glm::vec3(0.0f, 0.0f, -1.0f));
 
 
-    // glEnable(GL_DEPTH_TEST);
+
+
+    glEnable(GL_DEPTH_TEST);
 
     glfwSetCursorPosCallback(window,ProcessMouseInput);
+    Model model = Model("Assets/Models/NanoSuit/nanosuit.obj",new MatFactory_StandardPBM_MetallicWorkFlow());
     //渲染循环
     while(!glfwWindowShouldClose(window))//窗口应该关闭时结束循环
     {
@@ -210,6 +165,8 @@ int main()
         //渲染
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);//设置清空屏幕使用的颜色,是一个状态设置函数
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);//清空颜色缓冲,是一个状态使用函数,获取状态后执行
+
+        model.Draw();
 
         //绘制
         glBindVertexArray(VAO);//绑定VAO到当前活动的缓冲区

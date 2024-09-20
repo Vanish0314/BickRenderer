@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-12 14:40:07
- * @LastEditTime: 2024-09-12 19:28:52
+ * @LastEditTime: 2024-09-20 16:51:57
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -151,8 +151,8 @@ Shader::Shader(const std::string &vertexShaderPath, const std::string &geometryS
     }
     catch (const std::exception& e)
     {
-        std::cerr<<name<<"-着色器初始化失败!\n"<<e.what()<<std::endl;
-        std::cerr << e.what() << std::endl;
+        std::cerr<<"着色器程序初始化失败!\n";
+        std::cerr<<"错误:" << e.what() << std::endl<<std::endl;
         return;
     }
 }

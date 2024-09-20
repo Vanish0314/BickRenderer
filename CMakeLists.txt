@@ -10,5 +10,6 @@ set(CMAKE_BUILD_TYPE Debug)
 add_subdirectory(3rd/glfw)
 add_subdirectory(3rd/glm)
 include_directories(${CMAKE_SOURCE_DIR}/3rd/glm)
+include_directories(${CMAKE_SOURCE_DIR}/3rd/assimp/include)
 
 add_subdirectory(Source)

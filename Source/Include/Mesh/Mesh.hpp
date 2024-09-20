@@ -1,38 +1,41 @@
-// #pragma once
+/*
+ * @Author: Vanish
+ * @Date: 2024-09-14 17:08:09
+ * @LastEditTime: 2024-09-20 17:11:36
+ * Also View: http://vanishing.cc
+ * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
+ */
+#pragma once
 
-// #include <string>
-// #include <vector>
-// #include "glm/glm.hpp"
+#include <string>
+#include <vector>
+#include <memory>
+#include "glm/glm.hpp"
+#include "glad/glad.h"
 
-// #include "Shader/Shader.hpp"
+#include "Shader/Shader.hpp"
+#include "Material/Material.hpp"
+#include "Material/MatFactory.hpp"
+struct Vertex
+{
+    glm::vec3 position;
+    glm::vec3 normal;
+    glm::vec2 uv;
+};
 
-// struct Vertex
-// {
-//     glm::vec3 position;
-//     glm::vec3 normal;
-//     glm::vec2 uv;
-// };
+class Mesh{
+public:
+    std::shared_ptr<std::vector<Vertex>>        vertices;
+    std::shared_ptr<std::vector<unsigned int>>  indices;
+    std::shared_ptr<Material>                   material;
 
-// struct Texture
-// {
-//     std::string name;
-//     std::string path;
-//     unsigned int glID;
-// };
+private:
+    unsigned int VAO, VBO, EBO;
 
-// class Mesh{
-// public:
-//     std::vector<Vertex> *vertices;
-//     std::vector<unsigned int> *indices;
-//     std::vector<Texture> *textures;
+public:
+    Mesh(std::shared_ptr<std::vector<Vertex>> vertices, std::shared_ptr<std::vector<unsigned int>> indices, std::shared_ptr<Material> material);
+    ~Mesh(){};
 
-// private:
-//     unsigned int VAO, VBO, EBO;
-
-// public:
-//     Mesh(std::string const &path);
-//     ~Mesh(){};
-
-//     void InitializeMesh();
-//     void DrawMesh(Shader &shader);
-// };
+    void InitializeMesh();
+    void DrawMesh();
+};

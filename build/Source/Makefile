@@ -222,6 +222,78 @@ Src/Input/InputSystem.cpp.s:
 	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.s
 .PHONY : Src/Input/InputSystem.cpp.s
 
+Src/Material/MatFactory.obj: Src/Material/MatFactory.cpp.obj
+.PHONY : Src/Material/MatFactory.obj
+
+# target to build an object file
+Src/Material/MatFactory.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Material/MatFactory.cpp.obj
+.PHONY : Src/Material/MatFactory.cpp.obj
+
+Src/Material/MatFactory.i: Src/Material/MatFactory.cpp.i
+.PHONY : Src/Material/MatFactory.i
+
+# target to preprocess a source file
+Src/Material/MatFactory.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Material/MatFactory.cpp.i
+.PHONY : Src/Material/MatFactory.cpp.i
+
+Src/Material/MatFactory.s: Src/Material/MatFactory.cpp.s
+.PHONY : Src/Material/MatFactory.s
+
+# target to generate assembly for a file
+Src/Material/MatFactory.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Material/MatFactory.cpp.s
+.PHONY : Src/Material/MatFactory.cpp.s
+
+Src/Material/Mat_StandardPBM_MetallicWorkFlow.obj: Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.obj
+.PHONY : Src/Material/Mat_StandardPBM_MetallicWorkFlow.obj
+
+# target to build an object file
+Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.obj
+.PHONY : Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.obj
+
+Src/Material/Mat_StandardPBM_MetallicWorkFlow.i: Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.i
+.PHONY : Src/Material/Mat_StandardPBM_MetallicWorkFlow.i
+
+# target to preprocess a source file
+Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.i
+.PHONY : Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.i
+
+Src/Material/Mat_StandardPBM_MetallicWorkFlow.s: Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.s
+.PHONY : Src/Material/Mat_StandardPBM_MetallicWorkFlow.s
+
+# target to generate assembly for a file
+Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.s
+.PHONY : Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.s
+
+Src/Material/Material.obj: Src/Material/Material.cpp.obj
+.PHONY : Src/Material/Material.obj
+
+# target to build an object file
+Src/Material/Material.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Material/Material.cpp.obj
+.PHONY : Src/Material/Material.cpp.obj
+
+Src/Material/Material.i: Src/Material/Material.cpp.i
+.PHONY : Src/Material/Material.i
+
+# target to preprocess a source file
+Src/Material/Material.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Material/Material.cpp.i
+.PHONY : Src/Material/Material.cpp.i
+
+Src/Material/Material.s: Src/Material/Material.cpp.s
+.PHONY : Src/Material/Material.s
+
+# target to generate assembly for a file
+Src/Material/Material.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Material/Material.cpp.s
+.PHONY : Src/Material/Material.cpp.s
+
 Src/Mesh/Mesh.obj: Src/Mesh/Mesh.cpp.obj
 .PHONY : Src/Mesh/Mesh.obj
 
@@ -245,6 +317,30 @@ Src/Mesh/Mesh.s: Src/Mesh/Mesh.cpp.s
 Src/Mesh/Mesh.cpp.s:
 	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.s
 .PHONY : Src/Mesh/Mesh.cpp.s
+
+Src/Mesh/Model.obj: Src/Mesh/Model.cpp.obj
+.PHONY : Src/Mesh/Model.obj
+
+# target to build an object file
+Src/Mesh/Model.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Model.cpp.obj
+.PHONY : Src/Mesh/Model.cpp.obj
+
+Src/Mesh/Model.i: Src/Mesh/Model.cpp.i
+.PHONY : Src/Mesh/Model.i
+
+# target to preprocess a source file
+Src/Mesh/Model.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Model.cpp.i
+.PHONY : Src/Mesh/Model.cpp.i
+
+Src/Mesh/Model.s: Src/Mesh/Model.cpp.s
+.PHONY : Src/Mesh/Model.s
+
+# target to generate assembly for a file
+Src/Mesh/Model.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Model.cpp.s
+.PHONY : Src/Mesh/Model.cpp.s
 
 Src/Shader/Shader.obj: Src/Shader/Shader.cpp.obj
 .PHONY : Src/Shader/Shader.obj
@@ -361,9 +457,21 @@ help:
 	@echo ... Src/Input/InputSystem.obj
 	@echo ... Src/Input/InputSystem.i
 	@echo ... Src/Input/InputSystem.s
+	@echo ... Src/Material/MatFactory.obj
+	@echo ... Src/Material/MatFactory.i
+	@echo ... Src/Material/MatFactory.s
+	@echo ... Src/Material/Mat_StandardPBM_MetallicWorkFlow.obj
+	@echo ... Src/Material/Mat_StandardPBM_MetallicWorkFlow.i
+	@echo ... Src/Material/Mat_StandardPBM_MetallicWorkFlow.s
+	@echo ... Src/Material/Material.obj
+	@echo ... Src/Material/Material.i
+	@echo ... Src/Material/Material.s
 	@echo ... Src/Mesh/Mesh.obj
 	@echo ... Src/Mesh/Mesh.i
 	@echo ... Src/Mesh/Mesh.s
+	@echo ... Src/Mesh/Model.obj
+	@echo ... Src/Mesh/Model.i
+	@echo ... Src/Mesh/Model.s
 	@echo ... Src/Shader/Shader.obj
 	@echo ... Src/Shader/Shader.i
 	@echo ... Src/Shader/Shader.s
