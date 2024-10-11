@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-20 10:52:37
- * @LastEditTime: 2024-09-20 17:33:11
+ * @LastEditTime: 2024-09-23 18:57:39
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -65,6 +65,6 @@ public:
     ~Mat_StandardPBM_MetallicWorkFlow() {}
 
 public:
-    void Use() override;
+    void Use(Transform myTransform) override;
 
 };

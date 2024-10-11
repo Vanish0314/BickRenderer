@@ -1,12 +1,13 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-14 13:51:18
- * @LastEditTime: 2024-09-14 16:04:00
+ * @LastEditTime: 2024-09-23 19:36:58
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
 #include "Camera/Camera.hpp"
 
+std::shared_ptr<Camera> Camera::main = nullptr;
 
 glm::mat4 Camera::GetViewMatrix() const
 {

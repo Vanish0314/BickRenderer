@@ -198,6 +198,30 @@ Src/Camera/Camera.cpp.s:
 	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Camera/Camera.cpp.s
 .PHONY : Src/Camera/Camera.cpp.s
 
+Src/HomeWork02.obj: Src/HomeWork02.cpp.obj
+.PHONY : Src/HomeWork02.obj
+
+# target to build an object file
+Src/HomeWork02.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/HomeWork02.cpp.obj
+.PHONY : Src/HomeWork02.cpp.obj
+
+Src/HomeWork02.i: Src/HomeWork02.cpp.i
+.PHONY : Src/HomeWork02.i
+
+# target to preprocess a source file
+Src/HomeWork02.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/HomeWork02.cpp.i
+.PHONY : Src/HomeWork02.cpp.i
+
+Src/HomeWork02.s: Src/HomeWork02.cpp.s
+.PHONY : Src/HomeWork02.s
+
+# target to generate assembly for a file
+Src/HomeWork02.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/HomeWork02.cpp.s
+.PHONY : Src/HomeWork02.cpp.s
+
 Src/Input/InputSystem.obj: Src/Input/InputSystem.cpp.obj
 .PHONY : Src/Input/InputSystem.obj
 
@@ -342,6 +366,54 @@ Src/Mesh/Model.cpp.s:
 	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Model.cpp.s
 .PHONY : Src/Mesh/Model.cpp.s
 
+Src/Object/Object.obj: Src/Object/Object.cpp.obj
+.PHONY : Src/Object/Object.obj
+
+# target to build an object file
+Src/Object/Object.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Object/Object.cpp.obj
+.PHONY : Src/Object/Object.cpp.obj
+
+Src/Object/Object.i: Src/Object/Object.cpp.i
+.PHONY : Src/Object/Object.i
+
+# target to preprocess a source file
+Src/Object/Object.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Object/Object.cpp.i
+.PHONY : Src/Object/Object.cpp.i
+
+Src/Object/Object.s: Src/Object/Object.cpp.s
+.PHONY : Src/Object/Object.s
+
+# target to generate assembly for a file
+Src/Object/Object.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Object/Object.cpp.s
+.PHONY : Src/Object/Object.cpp.s
+
+Src/Renender/Renderer.obj: Src/Renender/Renderer.cpp.obj
+.PHONY : Src/Renender/Renderer.obj
+
+# target to build an object file
+Src/Renender/Renderer.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renender/Renderer.cpp.obj
+.PHONY : Src/Renender/Renderer.cpp.obj
+
+Src/Renender/Renderer.i: Src/Renender/Renderer.cpp.i
+.PHONY : Src/Renender/Renderer.i
+
+# target to preprocess a source file
+Src/Renender/Renderer.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renender/Renderer.cpp.i
+.PHONY : Src/Renender/Renderer.cpp.i
+
+Src/Renender/Renderer.s: Src/Renender/Renderer.cpp.s
+.PHONY : Src/Renender/Renderer.s
+
+# target to generate assembly for a file
+Src/Renender/Renderer.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renender/Renderer.cpp.s
+.PHONY : Src/Renender/Renderer.cpp.s
+
 Src/Shader/Shader.obj: Src/Shader/Shader.cpp.obj
 .PHONY : Src/Shader/Shader.obj
 
@@ -454,6 +526,9 @@ help:
 	@echo ... Src/Camera/Camera.obj
 	@echo ... Src/Camera/Camera.i
 	@echo ... Src/Camera/Camera.s
+	@echo ... Src/HomeWork02.obj
+	@echo ... Src/HomeWork02.i
+	@echo ... Src/HomeWork02.s
 	@echo ... Src/Input/InputSystem.obj
 	@echo ... Src/Input/InputSystem.i
 	@echo ... Src/Input/InputSystem.s
@@ -472,6 +547,12 @@ help:
 	@echo ... Src/Mesh/Model.obj
 	@echo ... Src/Mesh/Model.i
 	@echo ... Src/Mesh/Model.s
+	@echo ... Src/Object/Object.obj
+	@echo ... Src/Object/Object.i
+	@echo ... Src/Object/Object.s
+	@echo ... Src/Renender/Renderer.obj
+	@echo ... Src/Renender/Renderer.i
+	@echo ... Src/Renender/Renderer.s
 	@echo ... Src/Shader/Shader.obj
 	@echo ... Src/Shader/Shader.i
 	@echo ... Src/Shader/Shader.s

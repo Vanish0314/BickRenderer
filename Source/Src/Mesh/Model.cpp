@@ -1,25 +1,19 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-19 21:30:14
- * @LastEditTime: 2024-09-20 17:23:20
- * Also View: http://vanishing.cc
- * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
- */
-/*
- * @Author: Vanish
- * @Date: 2024-09-19 21:30:14
- * @LastEditTime: 2024-09-20 12:30:46
+ * @LastEditTime: 2024-10-11 14:48:09
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
 #include "Mesh/Model.hpp"
 #include "Material/MatFactory.hpp"
 
-Model::Model(std::string const path,MatFactory *matFactory)
+Model::Model(std::string const path,MatFactory *matFactory,Transform transform)
+:Object(transform)
 {
-    std::cout <<"开始加载模型..." << std::endl;
-
+    std::cout <<"开始加载模型..."<<"路径:"<<path << std::endl;
     LoadModel(path, matFactory);
+    std::cout <<"模型加载完成！"<<"路径:"<<path << std::endl;
 }
 
 Model::~Model(){}
@@ -27,7 +21,7 @@ Model::~Model(){}
 void Model::Draw()
 {
     for(auto &mesh : meshes)
-        mesh.DrawMesh();
+        mesh.DrawMesh(transform);
 }
 
 void Model::LoadModel(std::string const path,MatFactory *matFactory)

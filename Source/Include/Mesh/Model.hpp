@@ -11,16 +11,17 @@
 #include "assimp/Importer.hpp"
 #include "assimp/scene.h"
 #include "assimp/postprocess.h"
+#include "Object/Object.hpp"
 #include "Mesh/Mesh.hpp"
 
-class Model
+class Model : public Object
 {
 public:
     std::vector<Mesh> meshes;
     std::string directory;
 
 public:
-    Model(std::string const path,MatFactory *matFactory);
+    Model(std::string const path,MatFactory *matFactory,Transform transform);
     ~Model();
 
 public:

@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-14 17:08:04
- * @LastEditTime: 2024-09-20 17:11:15
+ * @LastEditTime: 2024-09-23 19:59:59
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -39,11 +39,11 @@ void Mesh::InitializeMesh()
     glBindVertexArray(0);
 }
 
-void Mesh::DrawMesh()
+void Mesh::DrawMesh(Transform myTransform)
 {
     glBindVertexArray(VAO);
 
-    material->Use();
+    material->Use(myTransform);
 
     glDrawElements(GL_TRIANGLES, indices->size(), GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);

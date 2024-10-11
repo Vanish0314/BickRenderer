@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-09 21:35:01
- * @LastEditTime: 2024-09-20 17:25:06
+ * @LastEditTime: 2024-10-11 15:53:52
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -91,71 +91,26 @@ int main()
     
     //Shader
     Shader ourShader("Source\\GLSL_Shaders\\ShaderClass\\VertexShader.glsl",
-                     "Source\\GLSL_Shaders\\ShaderClass\\FragmentShader.glsl");
+                     "Source\\GLSL_Shaders\\ShaderClass\\FragmentShader.glsl",
+                     "ourShader");
 
     Shader mapShader("Source\\GLSL_Shaders\\HomeWork\\MapEditorVertex.glsl",
-                     "Source\\GLSL_Shaders\\HomeWork\\MapEditorFrag.glsl");
+                     "Source\\GLSL_Shaders\\HomeWork\\MapEditorFrag.glsl",
+                     "mapShader");
 
     Shader PBRShader("Source\\GLSL_Shaders\\Standard\\Standard_VS_RM.glsl",
                      "Source\\GLSL_Shaders\\Standard\\Standard_GS_RM.glsl",
                      "Source\\GLSL_Shaders\\Standard\\Standard_FS_RM.glsl",
                      "STD_PBS");
 
-    //输入顶点数据
-    float vertices[] = {
-    // ---- 位置 ----      - 纹理坐标 -
-     0.5f,  0.5f, 0.0f,   1.0f , 1.0f,   // 右上
-     0.5f, -0.5f, 0.0f,   1.0f , 0.0f,   // 右下
-    -0.5f, -0.5f, 0.0f,   0.0f , 0.0f,   // 左下
-    -0.5f,  0.5f, 0.0f,   0.0f , 1.0f    // 左上
-    };//顶点坐标
-    unsigned int indices[] = {
-    // 注意索引从0开始! 
-    // 此例的索引(0,1,2,3)就是顶点数组vertices的下标，
-    // 这样可以由下标代表顶点组合成矩形
-    0, 1, 3, // 第一个三角形
-    1, 2, 3  // 第二个三角形
-    };//索引
-    unsigned int VBO,VAO,EBO;//声明一个VBO,VAO,EBO
-    glGenVertexArrays(1, &VAO);//生成一个VAO,并将其ID存储在VAO中,此时VAO拥有了其唯一的id
-    glGenBuffers(1, &VBO);//生成一个VBO,并将其ID存储在VBO中,此时VBO拥有了其唯一的id
-    glGenBuffers(1, &EBO);//生成一个EBO,并将其ID存储在EBO中,此时EBO拥有了其唯一的id
+    Model model = Model("Assets/Models/NanoSuit/nanosuit.obj",new MatFactory_StandardPBM_MetallicWorkFlow(),Transform(glm::vec3(0.0f, 0.0f, -10.0f), glm::vec3(45.0f, 0.0f, 0.0f), glm::vec3(0.3f)));
 
-    glBindVertexArray(VAO);//绑定VAO到当前活动的缓冲区,此时VAO将成为活动缓冲区
-
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);//绑定VBO到GL_ARRAY_BUFFER目标,GL_ARRAY_BUFFER是VBO(顶点缓冲对象)的缓冲类型
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);//将顶点数据复制到缓冲中,并指定数据用以静态访问
-
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);//绑定EBO到GL_ELEMENT_ARRAY_BUFFER目标,GL_ELEMENT_ARRAY_BUFFER是EBO(索引缓冲对象)的缓冲类型
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);//将索引数据复制到缓冲中,并指定数据用以静态访问
-
-    //位置属性
-    glVertexAttribPointer(0,3,GL_FLOAT,GL_FALSE,5*sizeof(float),(void*)0);
-    glEnableVertexAttribArray(0);
-    glVertexAttribPointer(1,2,GL_FLOAT,GL_FALSE,5*sizeof(float),(void*)(3*sizeof(float)));
-    glEnableVertexAttribArray(1);
-
-    // Texture wall = Texture("Assets\\Textures\\wall.jpg",GL_TEXTURE0);
-    // Texture smile = Texture("Assets\\Textures\\awesomeface.png",GL_TEXTURE1);
-
-    Texture controlMap = Texture("Assets\\Textures\\ControlMap.png",GL_TEXTURE5);
-    Texture grass = Texture("Assets\\Textures\\Grass.png",GL_TEXTURE1);
-    Texture rock = Texture("Assets\\Textures\\Rock.png",GL_TEXTURE2);
-    Texture dirt = Texture("Assets\\Textures\\Dirt.png",GL_TEXTURE3);
-    Texture snow = Texture("Assets\\Textures\\Snow.png",GL_TEXTURE4);
-    Texture heightMap = Texture("Assets\\Textures\\HeightMap.png",GL_TEXTURE0);
-
-    Camera camera = Camera(800,600,60.0);
+    Camera camera = Camera(800,600,90.0);
     camera.SetPosition(glm::vec3(0.0f, 0.0f, 1.0f));
     camera.SetForward(glm::vec3(0.0f, 0.0f, -1.0f));
 
-
-
-
     glEnable(GL_DEPTH_TEST);
-
     glfwSetCursorPosCallback(window,ProcessMouseInput);
-    Model model = Model("Assets/Models/NanoSuit/nanosuit.obj",new MatFactory_StandardPBM_MetallicWorkFlow());
     //渲染循环
     while(!glfwWindowShouldClose(window))//窗口应该关闭时结束循环
     {
@@ -167,28 +122,6 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);//清空颜色缓冲,是一个状态使用函数,获取状态后执行
 
         model.Draw();
-
-        //绘制
-        glBindVertexArray(VAO);//绑定VAO到当前活动的缓冲区
-        mapShader.Use(); //使用着色器程序
-        glm::mat4 modelMatrix(1.0f);
-        modelMatrix = glm::translate(modelMatrix, glm::vec3(0.0f, 0.0f, 0.0f));
-        modelMatrix = glm::rotate(modelMatrix,glm::radians(-45.0f),glm::vec3(1.0f,0.0f,0.0f));
-        glm::mat4 viewMatrix(1.0f);
-        viewMatrix = camera.GetViewMatrix();
-        glm::mat4 projectionMatrix = camera.GetProjectionMatrix();
-        glm::mat4 MVP = projectionMatrix * viewMatrix * modelMatrix;
-        int MVPLocation = glGetUniformLocation(mapShader.shaderProgramID, "MVP"); //获取MVP变量的位置
-        glUniformMatrix4fv(MVPLocation,1,GL_FALSE,glm::value_ptr(MVP));
-        heightMap.Activate(mapShader.shaderProgramID,"heightMap");
-        controlMap.Activate(mapShader.shaderProgramID,"controlMap");
-        grass.Activate(mapShader.shaderProgramID,"Texture0");
-        rock.Activate(mapShader.shaderProgramID,"Texture1");
-        dirt.Activate(mapShader.shaderProgramID,"Texture2");
-        snow.Activate(mapShader.shaderProgramID,"Texture3");
-
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-        glBindVertexArray(0);//解绑VAO
 
         //交换缓冲,检查并调用事件回调函数
         glfwSwapBuffers(window); //交换颜色缓冲

@@ -41,7 +41,7 @@ public:
     MatFactory_StandardPBM_MetallicWorkFlow()
     {
         std::string name = stdVertexShaderPath.substr(stdVertexShaderPath.find_last_of("/") + 1);
-        shader = std::make_shared<Shader>(stdVertexShaderPath, stdGeometryShaderPath, stdFragmentShaderPath, name);
+        shader = std::make_shared<Shader>(stdVertexShaderPath, stdFragmentShaderPath, name);
     }
 
     ~MatFactory_StandardPBM_MetallicWorkFlow() {}

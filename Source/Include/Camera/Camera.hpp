@@ -1,17 +1,21 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-14 13:51:13
- * @LastEditTime: 2024-09-14 15:58:34
+ * @LastEditTime: 2024-09-23 19:33:09
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
 #pragma once
 
+#include <memory>
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 
 class Camera
 {
+public:
+    static std::shared_ptr<Camera> main;
+
 public:
     glm::vec3 position = glm::vec3(0.0f, 0.0f, 0.0f);
     glm::vec3 forward = glm::vec3(0.0f, 0.0f, 1.0f);
@@ -23,13 +27,18 @@ public:
     double nearZ = 0.1, farZ = 1000.0;
     double aspectRatio;
 public:
-    Camera(const int &width, const int &height,const int &fov)
+    Camera(const int &width, const int &height,const int &fov,const bool &isMain = true)
     {
         imgWidth = width;
         imgHeight = height;
         this->fov = fov;
 
         aspectRatio = (double)imgWidth / (double)imgHeight;
+
+        if(main == nullptr && isMain)
+        {
+            main = std::shared_ptr<Camera>(this);
+        }
     }
     ~Camera() {}
 

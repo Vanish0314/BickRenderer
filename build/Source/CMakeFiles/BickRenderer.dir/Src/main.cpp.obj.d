@@ -390,6 +390,20 @@ Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/sstream.tcc \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Texture/Texture.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Camera/Camera.hpp \
+ C:/msys64/ucrt64/include/c++/13.2.0/memory \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_raw_storage_iter.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/align.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/unique_ptr.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr_base.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/allocated_ptr.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/ext/concurrence.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr_atomic.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/atomic_base.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/atomic_lockfree_defines.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/backward/auto_ptr.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/pstl/glue_memory_defs.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/pstl/execution_defs.h \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Mesh/Model.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/Importer.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/types.h \
@@ -407,7 +421,6 @@ Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/matrix3x3.inl \
  C:/msys64/ucrt64/include/c++/13.2.0/algorithm \
  C:/msys64/ucrt64/include/c++/13.2.0/pstl/glue_algorithm_defs.h \
- C:/msys64/ucrt64/include/c++/13.2.0/pstl/execution_defs.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/matrix4x4.inl \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/MathFunctions.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/quaternion.inl \
@@ -426,20 +439,8 @@ Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/anim.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/metadata.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/postprocess.h \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Object/Object.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Mesh/Mesh.hpp \
- C:/msys64/ucrt64/include/c++/13.2.0/memory \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_raw_storage_iter.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/align.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/unique_ptr.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr_base.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/allocated_ptr.h \
- C:/msys64/ucrt64/include/c++/13.2.0/ext/concurrence.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr_atomic.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/atomic_base.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/atomic_lockfree_defines.h \
- C:/msys64/ucrt64/include/c++/13.2.0/backward/auto_ptr.h \
- C:/msys64/ucrt64/include/c++/13.2.0/pstl/glue_memory_defs.h \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/Material.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/MatFactory.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/Mat_StandardPBM_MetallicWorkFlow.hpp

@@ -1,20 +1,24 @@
 #version 330 core
 
-layout(triangles) in;  // 输入为三角形
-layout(triangle_strip, max_vertices = 3) out;  // 输出为三角形条带，最大顶点数为3
+layout(triangles) in;  
+layout(triangle_strip, max_vertices = 3) out;
+
+uniform sampler2D heightMap;
+
+out vec2 fragTexCoords; // 用于传递纹理坐标到片段着色器
 
 void main()
 {
-    // 遍历输入的每个三角形的顶点
     for (int i = 0; i < 3; i++)
     {
-        // 直接将输入的顶点位置传递到下一个阶段
-        gl_Position = gl_in[i].gl_Position;  
-        
-        // 输出顶点
-        EmitVertex();
+        vec2 texCoords = gl_in[i].gl_Position.xy; // 根据实际情况计算纹理坐标
+        float height = texture(heightMap, texCoords).r; // 从高度图中获取高度
+        gl_Position = vec4(gl_in[i].gl_Position.x, gl_in[i].gl_Position.y, height, 1.0); // 更新Z坐标
+
+        fragTexCoords = texCoords; // 传递纹理坐标
+        gl_Position = gl_Position;
+        EmitVertex(); // 输出顶点
     }
     
-    // 结束当前的顶点输出
-    EndPrimitive();
+    EndPrimitive(); // 结束三角形的输出
 }

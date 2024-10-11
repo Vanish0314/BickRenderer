@@ -314,6 +314,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.obj: \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/func_integer.inl \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/glad/glad.h \
  C:/msys64/ucrt64/include/KHR/khrplatform.h \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Object/Object.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Shader/Shader.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/iostream \
  C:/msys64/ucrt64/include/c++/13.2.0/ostream \
@@ -346,14 +347,65 @@ Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/sstream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/sstream.tcc \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/Material.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/matrix_transform.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/gtc/constants.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/scalar_constants.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/scalar_constants.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/gtc/constants.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/matrix_transform.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/gtc/type_ptr.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/gtc/quaternion.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/gtc/matrix_transform.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/matrix_projection.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/matrix_projection.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/matrix_clip_space.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/matrix_clip_space.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/gtc/matrix_transform.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_relational.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_relational.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/type_float.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/quaternion_common.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/quaternion_geometric.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/quaternion_geometric.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/quaternion_common.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/quaternion_float.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/type_quat.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/quaternion_relational.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/quaternion_relational.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/type_quat.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/quaternion_float_precision.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/quaternion_double.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/quaternion_double_precision.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/quaternion_trigonometric.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/quaternion_trigonometric.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/quaternion_transform.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/quaternion_transform.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/gtc/quaternion.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/gtc/epsilon.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/setup.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/gtc/epsilon.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/gtc/vec1.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_bool1.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_bool1_precision.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_float1.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_float1_precision.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_double1.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_double1_precision.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_int1.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_int1_sized.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_uint1.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_uint1_sized.hpp \
+ C:/msys64/ucrt64/include/c++/13.2.0/cstring \
+ C:/msys64/ucrt64/include/string.h \
+ C:/msys64/ucrt64/include/sec_api/string_s.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/gtc/type_ptr.inl \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Camera/Camera.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/MatFactory.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/Mat_StandardPBM_MetallicWorkFlow.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Texture/Texture.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/stb_image.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/material.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/types.h \
- C:/msys64/ucrt64/include/string.h \
- C:/msys64/ucrt64/include/sec_api/string_s.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/defs.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/config.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/vector2.h \
@@ -362,7 +414,6 @@ Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.obj: \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/matrix3x3.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/matrix4x4.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/quaternion.h \
- C:/msys64/ucrt64/include/c++/13.2.0/cstring \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/vector2.inl \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/vector3.inl \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/color4.inl \

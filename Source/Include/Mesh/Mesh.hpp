@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-14 17:08:09
- * @LastEditTime: 2024-09-20 17:11:36
+ * @LastEditTime: 2024-09-23 19:57:04
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -13,6 +13,7 @@
 #include "glm/glm.hpp"
 #include "glad/glad.h"
 
+#include "Object/Object.hpp"
 #include "Shader/Shader.hpp"
 #include "Material/Material.hpp"
 #include "Material/MatFactory.hpp"
@@ -37,5 +38,5 @@ public:
     ~Mesh(){};
 
     void InitializeMesh();
-    void DrawMesh();
+    void DrawMesh(Transform myTransform);
 };
