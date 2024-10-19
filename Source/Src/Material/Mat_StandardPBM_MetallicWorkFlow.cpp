@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-20 10:53:17
- * @LastEditTime: 2024-10-19 19:23:40
+ * @LastEditTime: 2024-10-19 21:03:18
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -30,9 +30,9 @@ void Mat_StandardPBM_MetallicWorkFlow::Use(Transform myTransform)
 #pragma region Light
 
     // Directional Light 只使用第一个
-    unsigned short directionalLightDirLoc = glGetUniformLocation(shader->shaderProgramID, "directionalLight.dir");
-    unsigned short directionalLightColorLoc = glGetUniformLocation(shader->shaderProgramID, "directionalLight.color");
-    unsigned short directionalLightRadiantLoc = glGetUniformLocation(shader->shaderProgramID, "directionalLight.radiant");
+    unsigned short directionalLightDirLoc = glGetUniformLocation(shader->shaderProgramID, "dirLight.dir");
+    unsigned short directionalLightColorLoc = glGetUniformLocation(shader->shaderProgramID, "dirLight.color");
+    unsigned short directionalLightRadiantLoc = glGetUniformLocation(shader->shaderProgramID, "dirLight.radiant");
     glm::vec3 directionalLightDir = Singleton<Scene>::Instance().directionalLights.at(0)->direction;
     glm::vec3 directionalLightColor = Singleton<Scene>::Instance().directionalLights.at(0)->color;
     float directionalLightRadiant = Singleton<Scene>::Instance().directionalLights.at(0)->radiant;

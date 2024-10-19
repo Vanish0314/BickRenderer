@@ -98,11 +98,26 @@ Source/CMakeFiles/BickRenderer.dir/Src/Common/Singleton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BickRenderer.dir/Src/Common/Singleton.cpp.s"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\20131\Desktop\BickRenderer\Source\Src\Common\Singleton.cpp -o CMakeFiles\BickRenderer.dir\Src\Common\Singleton.cpp.s
 
+Source/CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.obj: Source/CMakeFiles/BickRenderer.dir/flags.make
+Source/CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.obj: Source/CMakeFiles/BickRenderer.dir/includes_CXX.rsp
+Source/CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.obj: C:/Users/20131/Desktop/BickRenderer/Source/Src/Common/Time.cpp
+Source/CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.obj: Source/CMakeFiles/BickRenderer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.obj"
+	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Source/CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.obj -MF CMakeFiles\BickRenderer.dir\Src\Common\Time.cpp.obj.d -o CMakeFiles\BickRenderer.dir\Src\Common\Time.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\Source\Src\Common\Time.cpp
+
+Source/CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.i"
+	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\20131\Desktop\BickRenderer\Source\Src\Common\Time.cpp > CMakeFiles\BickRenderer.dir\Src\Common\Time.cpp.i
+
+Source/CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.s"
+	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\20131\Desktop\BickRenderer\Source\Src\Common\Time.cpp -o CMakeFiles\BickRenderer.dir\Src\Common\Time.cpp.s
+
 Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.obj: Source/CMakeFiles/BickRenderer.dir/flags.make
 Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.obj: Source/CMakeFiles/BickRenderer.dir/includes_CXX.rsp
 Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.obj: C:/Users/20131/Desktop/BickRenderer/Source/Src/Input/InputSystem.cpp
 Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.obj: Source/CMakeFiles/BickRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.obj"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.obj -MF CMakeFiles\BickRenderer.dir\Src\Input\InputSystem.cpp.obj.d -o CMakeFiles\BickRenderer.dir\Src\Input\InputSystem.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\Source\Src\Input\InputSystem.cpp
 
 Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.i: cmake_force
@@ -117,7 +132,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/Light/DirectionalLight.cpp.obj: Source/CM
 Source/CMakeFiles/BickRenderer.dir/Src/Light/DirectionalLight.cpp.obj: Source/CMakeFiles/BickRenderer.dir/includes_CXX.rsp
 Source/CMakeFiles/BickRenderer.dir/Src/Light/DirectionalLight.cpp.obj: C:/Users/20131/Desktop/BickRenderer/Source/Src/Light/DirectionalLight.cpp
 Source/CMakeFiles/BickRenderer.dir/Src/Light/DirectionalLight.cpp.obj: Source/CMakeFiles/BickRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Light/DirectionalLight.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Light/DirectionalLight.cpp.obj"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Source/CMakeFiles/BickRenderer.dir/Src/Light/DirectionalLight.cpp.obj -MF CMakeFiles\BickRenderer.dir\Src\Light\DirectionalLight.cpp.obj.d -o CMakeFiles\BickRenderer.dir\Src\Light\DirectionalLight.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\Source\Src\Light\DirectionalLight.cpp
 
 Source/CMakeFiles/BickRenderer.dir/Src/Light/DirectionalLight.cpp.i: cmake_force
@@ -132,7 +147,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/Light/Light.cpp.obj: Source/CMakeFiles/Bi
 Source/CMakeFiles/BickRenderer.dir/Src/Light/Light.cpp.obj: Source/CMakeFiles/BickRenderer.dir/includes_CXX.rsp
 Source/CMakeFiles/BickRenderer.dir/Src/Light/Light.cpp.obj: C:/Users/20131/Desktop/BickRenderer/Source/Src/Light/Light.cpp
 Source/CMakeFiles/BickRenderer.dir/Src/Light/Light.cpp.obj: Source/CMakeFiles/BickRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Light/Light.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Light/Light.cpp.obj"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Source/CMakeFiles/BickRenderer.dir/Src/Light/Light.cpp.obj -MF CMakeFiles\BickRenderer.dir\Src\Light\Light.cpp.obj.d -o CMakeFiles\BickRenderer.dir\Src\Light\Light.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\Source\Src\Light\Light.cpp
 
 Source/CMakeFiles/BickRenderer.dir/Src/Light/Light.cpp.i: cmake_force
@@ -147,7 +162,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/Light/PointLight.cpp.obj: Source/CMakeFil
 Source/CMakeFiles/BickRenderer.dir/Src/Light/PointLight.cpp.obj: Source/CMakeFiles/BickRenderer.dir/includes_CXX.rsp
 Source/CMakeFiles/BickRenderer.dir/Src/Light/PointLight.cpp.obj: C:/Users/20131/Desktop/BickRenderer/Source/Src/Light/PointLight.cpp
 Source/CMakeFiles/BickRenderer.dir/Src/Light/PointLight.cpp.obj: Source/CMakeFiles/BickRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Light/PointLight.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Light/PointLight.cpp.obj"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Source/CMakeFiles/BickRenderer.dir/Src/Light/PointLight.cpp.obj -MF CMakeFiles\BickRenderer.dir\Src\Light\PointLight.cpp.obj.d -o CMakeFiles\BickRenderer.dir\Src\Light\PointLight.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\Source\Src\Light\PointLight.cpp
 
 Source/CMakeFiles/BickRenderer.dir/Src/Light/PointLight.cpp.i: cmake_force
@@ -162,7 +177,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/Material/MatFactory.cpp.obj: Source/CMake
 Source/CMakeFiles/BickRenderer.dir/Src/Material/MatFactory.cpp.obj: Source/CMakeFiles/BickRenderer.dir/includes_CXX.rsp
 Source/CMakeFiles/BickRenderer.dir/Src/Material/MatFactory.cpp.obj: C:/Users/20131/Desktop/BickRenderer/Source/Src/Material/MatFactory.cpp
 Source/CMakeFiles/BickRenderer.dir/Src/Material/MatFactory.cpp.obj: Source/CMakeFiles/BickRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Material/MatFactory.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Material/MatFactory.cpp.obj"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Source/CMakeFiles/BickRenderer.dir/Src/Material/MatFactory.cpp.obj -MF CMakeFiles\BickRenderer.dir\Src\Material\MatFactory.cpp.obj.d -o CMakeFiles\BickRenderer.dir\Src\Material\MatFactory.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\Source\Src\Material\MatFactory.cpp
 
 Source/CMakeFiles/BickRenderer.dir/Src/Material/MatFactory.cpp.i: cmake_force
@@ -177,7 +192,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/Material/Mat_StandardPBM_MetallicWorkFlow
 Source/CMakeFiles/BickRenderer.dir/Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.obj: Source/CMakeFiles/BickRenderer.dir/includes_CXX.rsp
 Source/CMakeFiles/BickRenderer.dir/Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.obj: C:/Users/20131/Desktop/BickRenderer/Source/Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp
 Source/CMakeFiles/BickRenderer.dir/Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.obj: Source/CMakeFiles/BickRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.obj"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Source/CMakeFiles/BickRenderer.dir/Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.obj -MF CMakeFiles\BickRenderer.dir\Src\Material\Mat_StandardPBM_MetallicWorkFlow.cpp.obj.d -o CMakeFiles\BickRenderer.dir\Src\Material\Mat_StandardPBM_MetallicWorkFlow.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\Source\Src\Material\Mat_StandardPBM_MetallicWorkFlow.cpp
 
 Source/CMakeFiles/BickRenderer.dir/Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.i: cmake_force
@@ -192,7 +207,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/Material/Material.cpp.obj: Source/CMakeFi
 Source/CMakeFiles/BickRenderer.dir/Src/Material/Material.cpp.obj: Source/CMakeFiles/BickRenderer.dir/includes_CXX.rsp
 Source/CMakeFiles/BickRenderer.dir/Src/Material/Material.cpp.obj: C:/Users/20131/Desktop/BickRenderer/Source/Src/Material/Material.cpp
 Source/CMakeFiles/BickRenderer.dir/Src/Material/Material.cpp.obj: Source/CMakeFiles/BickRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Material/Material.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Material/Material.cpp.obj"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Source/CMakeFiles/BickRenderer.dir/Src/Material/Material.cpp.obj -MF CMakeFiles\BickRenderer.dir\Src\Material\Material.cpp.obj.d -o CMakeFiles\BickRenderer.dir\Src\Material\Material.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\Source\Src\Material\Material.cpp
 
 Source/CMakeFiles/BickRenderer.dir/Src/Material/Material.cpp.i: cmake_force
@@ -207,7 +222,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.obj: Source/CMakeFiles/Bick
 Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.obj: Source/CMakeFiles/BickRenderer.dir/includes_CXX.rsp
 Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.obj: C:/Users/20131/Desktop/BickRenderer/Source/Src/Mesh/Mesh.cpp
 Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.obj: Source/CMakeFiles/BickRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.obj"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.obj -MF CMakeFiles\BickRenderer.dir\Src\Mesh\Mesh.cpp.obj.d -o CMakeFiles\BickRenderer.dir\Src\Mesh\Mesh.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\Source\Src\Mesh\Mesh.cpp
 
 Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.i: cmake_force
@@ -222,7 +237,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Model.cpp.obj: Source/CMakeFiles/Bic
 Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Model.cpp.obj: Source/CMakeFiles/BickRenderer.dir/includes_CXX.rsp
 Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Model.cpp.obj: C:/Users/20131/Desktop/BickRenderer/Source/Src/Mesh/Model.cpp
 Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Model.cpp.obj: Source/CMakeFiles/BickRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Model.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Model.cpp.obj"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Model.cpp.obj -MF CMakeFiles\BickRenderer.dir\Src\Mesh\Model.cpp.obj.d -o CMakeFiles\BickRenderer.dir\Src\Mesh\Model.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\Source\Src\Mesh\Model.cpp
 
 Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Model.cpp.i: cmake_force
@@ -237,7 +252,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/Object/Object.cpp.obj: Source/CMakeFiles/
 Source/CMakeFiles/BickRenderer.dir/Src/Object/Object.cpp.obj: Source/CMakeFiles/BickRenderer.dir/includes_CXX.rsp
 Source/CMakeFiles/BickRenderer.dir/Src/Object/Object.cpp.obj: C:/Users/20131/Desktop/BickRenderer/Source/Src/Object/Object.cpp
 Source/CMakeFiles/BickRenderer.dir/Src/Object/Object.cpp.obj: Source/CMakeFiles/BickRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Object/Object.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Object/Object.cpp.obj"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Source/CMakeFiles/BickRenderer.dir/Src/Object/Object.cpp.obj -MF CMakeFiles\BickRenderer.dir\Src\Object\Object.cpp.obj.d -o CMakeFiles\BickRenderer.dir\Src\Object\Object.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\Source\Src\Object\Object.cpp
 
 Source/CMakeFiles/BickRenderer.dir/Src/Object/Object.cpp.i: cmake_force
@@ -252,7 +267,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/Renender/Renderer.cpp.obj: Source/CMakeFi
 Source/CMakeFiles/BickRenderer.dir/Src/Renender/Renderer.cpp.obj: Source/CMakeFiles/BickRenderer.dir/includes_CXX.rsp
 Source/CMakeFiles/BickRenderer.dir/Src/Renender/Renderer.cpp.obj: C:/Users/20131/Desktop/BickRenderer/Source/Src/Renender/Renderer.cpp
 Source/CMakeFiles/BickRenderer.dir/Src/Renender/Renderer.cpp.obj: Source/CMakeFiles/BickRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Renender/Renderer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Renender/Renderer.cpp.obj"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Source/CMakeFiles/BickRenderer.dir/Src/Renender/Renderer.cpp.obj -MF CMakeFiles\BickRenderer.dir\Src\Renender\Renderer.cpp.obj.d -o CMakeFiles\BickRenderer.dir\Src\Renender\Renderer.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\Source\Src\Renender\Renderer.cpp
 
 Source/CMakeFiles/BickRenderer.dir/Src/Renender/Renderer.cpp.i: cmake_force
@@ -267,7 +282,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/Scene/Scene.cpp.obj: Source/CMakeFiles/Bi
 Source/CMakeFiles/BickRenderer.dir/Src/Scene/Scene.cpp.obj: Source/CMakeFiles/BickRenderer.dir/includes_CXX.rsp
 Source/CMakeFiles/BickRenderer.dir/Src/Scene/Scene.cpp.obj: C:/Users/20131/Desktop/BickRenderer/Source/Src/Scene/Scene.cpp
 Source/CMakeFiles/BickRenderer.dir/Src/Scene/Scene.cpp.obj: Source/CMakeFiles/BickRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Scene/Scene.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Scene/Scene.cpp.obj"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Source/CMakeFiles/BickRenderer.dir/Src/Scene/Scene.cpp.obj -MF CMakeFiles\BickRenderer.dir\Src\Scene\Scene.cpp.obj.d -o CMakeFiles\BickRenderer.dir\Src\Scene\Scene.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\Source\Src\Scene\Scene.cpp
 
 Source/CMakeFiles/BickRenderer.dir/Src/Scene/Scene.cpp.i: cmake_force
@@ -282,7 +297,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/Shader/Shader.cpp.obj: Source/CMakeFiles/
 Source/CMakeFiles/BickRenderer.dir/Src/Shader/Shader.cpp.obj: Source/CMakeFiles/BickRenderer.dir/includes_CXX.rsp
 Source/CMakeFiles/BickRenderer.dir/Src/Shader/Shader.cpp.obj: C:/Users/20131/Desktop/BickRenderer/Source/Src/Shader/Shader.cpp
 Source/CMakeFiles/BickRenderer.dir/Src/Shader/Shader.cpp.obj: Source/CMakeFiles/BickRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Shader/Shader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Shader/Shader.cpp.obj"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Source/CMakeFiles/BickRenderer.dir/Src/Shader/Shader.cpp.obj -MF CMakeFiles\BickRenderer.dir\Src\Shader\Shader.cpp.obj.d -o CMakeFiles\BickRenderer.dir\Src\Shader\Shader.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\Source\Src\Shader\Shader.cpp
 
 Source/CMakeFiles/BickRenderer.dir/Src/Shader/Shader.cpp.i: cmake_force
@@ -297,7 +312,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/Texture/Texture.cpp.obj: Source/CMakeFile
 Source/CMakeFiles/BickRenderer.dir/Src/Texture/Texture.cpp.obj: Source/CMakeFiles/BickRenderer.dir/includes_CXX.rsp
 Source/CMakeFiles/BickRenderer.dir/Src/Texture/Texture.cpp.obj: C:/Users/20131/Desktop/BickRenderer/Source/Src/Texture/Texture.cpp
 Source/CMakeFiles/BickRenderer.dir/Src/Texture/Texture.cpp.obj: Source/CMakeFiles/BickRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Texture/Texture.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/Texture/Texture.cpp.obj"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Source/CMakeFiles/BickRenderer.dir/Src/Texture/Texture.cpp.obj -MF CMakeFiles\BickRenderer.dir\Src\Texture\Texture.cpp.obj.d -o CMakeFiles\BickRenderer.dir\Src\Texture\Texture.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\Source\Src\Texture\Texture.cpp
 
 Source/CMakeFiles/BickRenderer.dir/Src/Texture/Texture.cpp.i: cmake_force
@@ -312,7 +327,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/glad/glad.c.obj: Source/CMakeFiles/BickRe
 Source/CMakeFiles/BickRenderer.dir/Src/glad/glad.c.obj: Source/CMakeFiles/BickRenderer.dir/includes_C.rsp
 Source/CMakeFiles/BickRenderer.dir/Src/glad/glad.c.obj: C:/Users/20131/Desktop/BickRenderer/Source/Src/glad/glad.c
 Source/CMakeFiles/BickRenderer.dir/Src/glad/glad.c.obj: Source/CMakeFiles/BickRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object Source/CMakeFiles/BickRenderer.dir/Src/glad/glad.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object Source/CMakeFiles/BickRenderer.dir/Src/glad/glad.c.obj"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT Source/CMakeFiles/BickRenderer.dir/Src/glad/glad.c.obj -MF CMakeFiles\BickRenderer.dir\Src\glad\glad.c.obj.d -o CMakeFiles\BickRenderer.dir\Src\glad\glad.c.obj -c C:\Users\20131\Desktop\BickRenderer\Source\Src\glad\glad.c
 
 Source/CMakeFiles/BickRenderer.dir/Src/glad/glad.c.i: cmake_force
@@ -327,7 +342,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: Source/CMakeFiles/BickRende
 Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: Source/CMakeFiles/BickRenderer.dir/includes_CXX.rsp
 Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: C:/Users/20131/Desktop/BickRenderer/Source/Src/main.cpp
 Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: Source/CMakeFiles/BickRenderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj -MF CMakeFiles\BickRenderer.dir\Src\main.cpp.obj.d -o CMakeFiles\BickRenderer.dir\Src\main.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\Source\Src\main.cpp
 
 Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.i: cmake_force
@@ -342,6 +357,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.s: cmake_force
 BickRenderer_OBJECTS = \
 "CMakeFiles/BickRenderer.dir/Src/Camera/Camera.cpp.obj" \
 "CMakeFiles/BickRenderer.dir/Src/Common/Singleton.cpp.obj" \
+"CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.obj" \
 "CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.obj" \
 "CMakeFiles/BickRenderer.dir/Src/Light/DirectionalLight.cpp.obj" \
 "CMakeFiles/BickRenderer.dir/Src/Light/Light.cpp.obj" \
@@ -364,6 +380,7 @@ BickRenderer_EXTERNAL_OBJECTS =
 
 C:/Users/20131/Desktop/BickRenderer/BickRenderer.exe: Source/CMakeFiles/BickRenderer.dir/Src/Camera/Camera.cpp.obj
 C:/Users/20131/Desktop/BickRenderer/BickRenderer.exe: Source/CMakeFiles/BickRenderer.dir/Src/Common/Singleton.cpp.obj
+C:/Users/20131/Desktop/BickRenderer/BickRenderer.exe: Source/CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.obj
 C:/Users/20131/Desktop/BickRenderer/BickRenderer.exe: Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.obj
 C:/Users/20131/Desktop/BickRenderer/BickRenderer.exe: Source/CMakeFiles/BickRenderer.dir/Src/Light/DirectionalLight.cpp.obj
 C:/Users/20131/Desktop/BickRenderer/BickRenderer.exe: Source/CMakeFiles/BickRenderer.dir/Src/Light/Light.cpp.obj
@@ -387,7 +404,7 @@ C:/Users/20131/Desktop/BickRenderer/BickRenderer.exe: C:/Users/20131/Desktop/Bic
 C:/Users/20131/Desktop/BickRenderer/BickRenderer.exe: Source/CMakeFiles/BickRenderer.dir/linkLibs.rsp
 C:/Users/20131/Desktop/BickRenderer/BickRenderer.exe: Source/CMakeFiles/BickRenderer.dir/objects1.rsp
 C:/Users/20131/Desktop/BickRenderer/BickRenderer.exe: Source/CMakeFiles/BickRenderer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable C:\Users\20131\Desktop\BickRenderer\BickRenderer.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable C:\Users\20131\Desktop\BickRenderer\BickRenderer.exe"
 	cd /d C:\Users\20131\Desktop\BickRenderer\build\Source && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\BickRenderer.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

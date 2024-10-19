@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/20131/Desktop/BickRenderer/Source/Src/glad/glad.c" "Source/CMakeFiles/BickRenderer.dir/Src/glad/glad.c.obj" "gcc" "Source/CMakeFiles/BickRenderer.dir/Src/glad/glad.c.obj.d"
   "C:/Users/20131/Desktop/BickRenderer/Source/Src/Camera/Camera.cpp" "Source/CMakeFiles/BickRenderer.dir/Src/Camera/Camera.cpp.obj" "gcc" "Source/CMakeFiles/BickRenderer.dir/Src/Camera/Camera.cpp.obj.d"
   "C:/Users/20131/Desktop/BickRenderer/Source/Src/Common/Singleton.cpp" "Source/CMakeFiles/BickRenderer.dir/Src/Common/Singleton.cpp.obj" "gcc" "Source/CMakeFiles/BickRenderer.dir/Src/Common/Singleton.cpp.obj.d"
+  "C:/Users/20131/Desktop/BickRenderer/Source/Src/Common/Time.cpp" "Source/CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.obj" "gcc" "Source/CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.obj.d"
   "C:/Users/20131/Desktop/BickRenderer/Source/Src/Input/InputSystem.cpp" "Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.obj" "gcc" "Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.obj.d"
   "C:/Users/20131/Desktop/BickRenderer/Source/Src/Light/DirectionalLight.cpp" "Source/CMakeFiles/BickRenderer.dir/Src/Light/DirectionalLight.cpp.obj" "gcc" "Source/CMakeFiles/BickRenderer.dir/Src/Light/DirectionalLight.cpp.obj.d"
   "C:/Users/20131/Desktop/BickRenderer/Source/Src/Light/Light.cpp" "Source/CMakeFiles/BickRenderer.dir/Src/Light/Light.cpp.obj" "gcc" "Source/CMakeFiles/BickRenderer.dir/Src/Light/Light.cpp.obj.d"

@@ -72,7 +72,7 @@ int main()
     camera.SetPosition(glm::vec3(0.0f, 0.0f, 1.0f));
     camera.SetForward(glm::vec3(0.0f, 0.0f, -1.0f));
 
-    auto directionalLight = std::make_shared<DirectionalLight>((glm::vec3(1.0f, 1.0f, 1.0f)));
+    auto directionalLight = std::make_shared<DirectionalLight>((glm::vec3(-1.0f, -1.0f, -1.0f)));
     Singleton<Scene>::Instance().directionalLights.push_back(directionalLight);
 
     MatFactory_StandardPBM_MetallicWorkFlow furMat = MatFactory_StandardPBM_MetallicWorkFlow(

@@ -222,6 +222,30 @@ Src/Common/Singleton.cpp.s:
 	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Common/Singleton.cpp.s
 .PHONY : Src/Common/Singleton.cpp.s
 
+Src/Common/Time.obj: Src/Common/Time.cpp.obj
+.PHONY : Src/Common/Time.obj
+
+# target to build an object file
+Src/Common/Time.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.obj
+.PHONY : Src/Common/Time.cpp.obj
+
+Src/Common/Time.i: Src/Common/Time.cpp.i
+.PHONY : Src/Common/Time.i
+
+# target to preprocess a source file
+Src/Common/Time.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.i
+.PHONY : Src/Common/Time.cpp.i
+
+Src/Common/Time.s: Src/Common/Time.cpp.s
+.PHONY : Src/Common/Time.s
+
+# target to generate assembly for a file
+Src/Common/Time.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.s
+.PHONY : Src/Common/Time.cpp.s
+
 Src/Input/InputSystem.obj: Src/Input/InputSystem.cpp.obj
 .PHONY : Src/Input/InputSystem.obj
 
@@ -625,6 +649,9 @@ help:
 	@echo ... Src/Common/Singleton.obj
 	@echo ... Src/Common/Singleton.i
 	@echo ... Src/Common/Singleton.s
+	@echo ... Src/Common/Time.obj
+	@echo ... Src/Common/Time.i
+	@echo ... Src/Common/Time.s
 	@echo ... Src/Input/InputSystem.obj
 	@echo ... Src/Input/InputSystem.i
 	@echo ... Src/Input/InputSystem.s

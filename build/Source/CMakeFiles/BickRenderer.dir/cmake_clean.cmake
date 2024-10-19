@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/BickRenderer.dir/Src/Camera/Camera.cpp.obj.d"
   "CMakeFiles/BickRenderer.dir/Src/Common/Singleton.cpp.obj"
   "CMakeFiles/BickRenderer.dir/Src/Common/Singleton.cpp.obj.d"
+  "CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.obj"
+  "CMakeFiles/BickRenderer.dir/Src/Common/Time.cpp.obj.d"
   "CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.obj"
   "CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.obj.d"
   "CMakeFiles/BickRenderer.dir/Src/Light/DirectionalLight.cpp.obj"
