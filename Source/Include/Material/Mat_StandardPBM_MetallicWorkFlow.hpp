@@ -1,12 +1,13 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-20 10:52:37
- * @LastEditTime: 2024-09-23 18:57:39
+ * @LastEditTime: 2024-10-15 15:40:58
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
 #pragma once
 
+#include "Scene/Scene.hpp"
 #include "Material/Material.hpp"
 #include "Texture/Texture.hpp"
 

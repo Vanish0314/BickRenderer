@@ -313,7 +313,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.obj: \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/integer.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/func_integer.inl \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/glad/glad.h \
- C:/msys64/ucrt64/include/KHR/khrplatform.h \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/glad/khrplatform.h \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Object/Object.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Shader/Shader.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/iostream \
@@ -346,6 +346,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/sstream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/sstream.tcc \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/MatFactory.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/Material.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/matrix_transform.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/gtc/constants.hpp \
@@ -400,11 +401,14 @@ Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.obj: \
  C:/msys64/ucrt64/include/sec_api/string_s.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/gtc/type_ptr.inl \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Camera/Camera.hpp \
- C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/MatFactory.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/Mat_StandardPBM_MetallicWorkFlow.hpp \
- C:/Users/20131/Desktop/BickRenderer/Source/Include/Texture/Texture.hpp \
- C:/Users/20131/Desktop/BickRenderer/Source/Include/stb_image.h \
- C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/material.h \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Scene/Scene.hpp \
+ C:/msys64/ucrt64/include/c++/13.2.0/list \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_list.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/list.tcc \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Common/Singleton.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Mesh/Model.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/Importer.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/types.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/defs.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/config.h \
@@ -423,6 +427,23 @@ Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Mesh.cpp.obj: \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/matrix4x4.inl \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/MathFunctions.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/quaternion.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/scene.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/texture.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/Compiler/pushpack1.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/Compiler/poppack1.h \
- C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/material.inl
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/mesh.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/aabb.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/unordered_set \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/unordered_set.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/light.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/camera.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/material.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/material.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/anim.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/metadata.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/postprocess.h \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Light/DirectionalLight.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Light/Light.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Light/PointLight.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Texture/Texture.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/stb_image.h

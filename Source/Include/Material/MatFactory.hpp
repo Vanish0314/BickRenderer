@@ -1,3 +1,10 @@
+/*
+ * @Author: Vanish
+ * @Date: 2024-09-20 11:50:30
+ * @LastEditTime: 2024-10-14 16:32:19
+ * Also View: http://vanishing.cc
+ * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
+ */
 #pragma once
 
 #include <memory>
@@ -35,7 +42,7 @@ public:
     : stdVertexShaderPath(vsPath), stdFragmentShaderPath(fsPath)
     {
         std::string name = vsPath.substr(vsPath.find_last_of("/") + 1);
-        shader = std::make_shared<Shader>(stdVertexShaderPath, "", stdFragmentShaderPath, name);
+        shader = std::make_shared<Shader>(stdVertexShaderPath, stdFragmentShaderPath, name);
     }
 
     MatFactory_StandardPBM_MetallicWorkFlow()

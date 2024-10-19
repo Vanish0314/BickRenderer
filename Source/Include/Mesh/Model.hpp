@@ -1,18 +1,25 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-19 21:30:00
- * @LastEditTime: 2024-09-20 15:06:45
+ * @LastEditTime: 2024-10-15 18:27:22
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
 #pragma once
 
+class MatFactory;
+class Model;
+class Mesh;
+
 #include <vector>
+
 #include "assimp/Importer.hpp"
 #include "assimp/scene.h"
 #include "assimp/postprocess.h"
-#include "Object/Object.hpp"
+
 #include "Mesh/Mesh.hpp"
+#include "Object/Object.hpp"
+#include "Material/MatFactory.hpp"
 
 class Model : public Object
 {

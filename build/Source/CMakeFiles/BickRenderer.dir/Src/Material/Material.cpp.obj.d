@@ -394,6 +394,6 @@ Source/CMakeFiles/BickRenderer.dir/Src/Material/Material.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/sstream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/sstream.tcc \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/glad/glad.h \
- C:/msys64/ucrt64/include/KHR/khrplatform.h \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/glad/khrplatform.h \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Object/Object.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Camera/Camera.hpp

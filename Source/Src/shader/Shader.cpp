@@ -23,7 +23,7 @@ Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentS
 
         if(!vertexShaderStream.is_open() ||!fragmentShaderStream.is_open())
         {
-            throw std::runtime_error("Failed to open shader files.");
+            throw std::runtime_error("[Shader.cpp]打开着色器文件失败.");
         }
 
         vertexShaderCode << vertexShaderStream.rdbuf();
@@ -52,13 +52,13 @@ Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentS
         if (!success)
         {
             glGetShaderInfoLog(vertexShaderID, 512, NULL, infoLog);
-            std::cerr << "顶点着色器编译失败!\n" << infoLog << std::endl;
+            std::cerr << "[Shader.cpp]顶点着色器编译失败!\n" << infoLog << std::endl;
         }
         glGetShaderiv(fragmentShaderID, GL_COMPILE_STATUS, &success);
         if (!success)
         {
             glGetShaderInfoLog(fragmentShaderID, 512, NULL, infoLog);
-            std::cerr << "片元着色器编译失败!\n" << infoLog << std::endl;
+            std::cerr << "[Shader.cpp]片元着色器编译失败!\n" << infoLog << std::endl;
         }
         // link shaders
         shaderProgramID = glCreateProgram();
@@ -69,7 +69,7 @@ Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentS
         glGetProgramiv(shaderProgramID, GL_LINK_STATUS, &success);
         if (!success) {
             glGetProgramInfoLog(shaderProgramID, 512, NULL, infoLog);
-            std::cerr << "着色器链接失败!\n" << infoLog << std::endl;
+            std::cerr << "[Shader.cpp]着色器链接失败!\n" << infoLog << std::endl;
         }
         // delete shaders as they're linked into our program now and no longer necessary
         glDeleteShader(vertexShaderID);
@@ -151,7 +151,7 @@ Shader::Shader(const std::string &vertexShaderPath, const std::string &geometryS
     }
     catch (const std::exception& e)
     {
-        std::cerr<<"着色器程序初始化失败!\n";
+        std::cerr<<"[Shader.cpp]着色器程序初始化失败!\n";
         std::cerr<<"错误:" << e.what() << std::endl<<std::endl;
         return;
     }

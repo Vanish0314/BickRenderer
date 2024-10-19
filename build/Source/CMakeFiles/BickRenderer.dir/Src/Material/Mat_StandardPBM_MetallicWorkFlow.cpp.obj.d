@@ -1,7 +1,7 @@
 Source/CMakeFiles/BickRenderer.dir/Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp.obj: \
  C:\Users\20131\Desktop\BickRenderer\Source\Src\Material\Mat_StandardPBM_MetallicWorkFlow.cpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/Mat_StandardPBM_MetallicWorkFlow.hpp \
- C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/Material.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Scene/Scene.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/memory \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/memoryfwd.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -102,8 +102,27 @@ Source/CMakeFiles/BickRenderer.dir/Src/Material/Mat_StandardPBM_MetallicWorkFlow
  C:/msys64/ucrt64/include/c++/13.2.0/backward/auto_ptr.h \
  C:/msys64/ucrt64/include/c++/13.2.0/pstl/glue_memory_defs.h \
  C:/msys64/ucrt64/include/c++/13.2.0/pstl/execution_defs.h \
- C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/glm.hpp \
- C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/_fixes.hpp \
+ C:/msys64/ucrt64/include/c++/13.2.0/vector \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_vector.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/initializer_list \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_bvector.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/range_access.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/vector.tcc \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/memory_resource.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/cstddef \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/uses_allocator_args.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/list \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_list.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/list.tcc \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Common/Singleton.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Mesh/Model.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/Importer.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/types.h \
+ C:/msys64/ucrt64/include/string.h \
+ C:/msys64/ucrt64/include/sec_api/string_s.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/defs.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/config.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/vector2.h \
  C:/msys64/ucrt64/include/c++/13.2.0/cmath \
  C:/msys64/ucrt64/include/math.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/std_abs.h \
@@ -126,11 +145,71 @@ Source/CMakeFiles/BickRenderer.dir/Src/Material/Mat_StandardPBM_MetallicWorkFlow
  C:/msys64/ucrt64/include/c++/13.2.0/tr1/poly_hermite.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/tr1/poly_laguerre.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/tr1/riemann_zeta.tcc \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/vector3.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/color4.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/matrix3x3.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/matrix4x4.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/quaternion.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/cstring \
+ C:/msys64/ucrt64/include/c++/13.2.0/string \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/char_traits.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/localefwd.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++locale.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/clocale \
+ C:/msys64/ucrt64/include/locale.h C:/msys64/ucrt64/include/stdio.h \
+ C:/msys64/ucrt64/include/sec_api/stdio_s.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/cctype \
+ C:/msys64/ucrt64/include/ctype.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/ostream_insert.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/cxxabi_forced.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_string.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/string_view \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/string_view.tcc \
+ C:/msys64/ucrt64/include/c++/13.2.0/ext/string_conversions.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/cstdlib \
+ C:/msys64/ucrt64/include/c++/13.2.0/cstdio \
+ C:/msys64/ucrt64/include/c++/13.2.0/cerrno \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/charconv.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_string.tcc \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/vector2.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/vector3.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/color4.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/matrix3x3.inl \
+ C:/msys64/ucrt64/include/c++/13.2.0/algorithm \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_algo.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/algorithmfwd.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_heap.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/uniform_int_dist.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/pstl/glue_algorithm_defs.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/matrix4x4.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/MathFunctions.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/quaternion.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/scene.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/texture.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/Compiler/pushpack1.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/Compiler/poppack1.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/mesh.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/aabb.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/unordered_set \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/unordered_set.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/hashtable.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/hashtable_policy.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/enable_special_members.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/node_handle.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/erase_if.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/light.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/camera.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/material.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/material.inl \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/anim.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/metadata.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/postprocess.h \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Mesh/Mesh.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/glm.hpp \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/_fixes.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/setup.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/cassert \
  C:/msys64/ucrt64/include/assert.h \
- C:/msys64/ucrt64/include/c++/13.2.0/cstdlib \
- C:/msys64/ucrt64/include/c++/13.2.0/cstddef \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/simd/platform.h \
  C:/msys64/ucrt64/include/c++/13.2.0/cstdint \
  C:/msys64/ucrt64/include/c++/13.2.0/climits \
@@ -165,26 +244,9 @@ Source/CMakeFiles/BickRenderer.dir/Src/Material/Mat_StandardPBM_MetallicWorkFlow
  C:/msys64/ucrt64/include/c++/13.2.0/functional \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/std_function.h \
  C:/msys64/ucrt64/include/c++/13.2.0/unordered_map \
- C:/msys64/ucrt64/include/c++/13.2.0/initializer_list \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/unordered_map.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/hashtable.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/hashtable_policy.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/enable_special_members.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/node_handle.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/range_access.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/erase_if.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/memory_resource.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/uses_allocator_args.h \
- C:/msys64/ucrt64/include/c++/13.2.0/vector \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_vector.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_bvector.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/vector.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/array \
  C:/msys64/ucrt64/include/c++/13.2.0/compare \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_algo.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/algorithmfwd.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_heap.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/uniform_int_dist.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/_vectorize.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_bool3_precision.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_float3.hpp \
@@ -292,6 +354,42 @@ Source/CMakeFiles/BickRenderer.dir/Src/Material/Mat_StandardPBM_MetallicWorkFlow
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/type_half.inl \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/integer.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/func_integer.inl \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/glad/glad.h \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/glad/khrplatform.h \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Object/Object.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Shader/Shader.hpp \
+ C:/msys64/ucrt64/include/c++/13.2.0/iostream \
+ C:/msys64/ucrt64/include/c++/13.2.0/ostream \
+ C:/msys64/ucrt64/include/c++/13.2.0/ios \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.tcc \
+ C:/msys64/ucrt64/include/c++/13.2.0/system_error \
+ C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/error_constants.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/stdexcept \
+ C:/msys64/ucrt64/include/c++/13.2.0/streambuf \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/streambuf.tcc \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_ios.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_facets.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/cwctype \
+ C:/msys64/ucrt64/include/wctype.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/streambuf_iterator.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_facets.tcc \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_ios.tcc \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/ostream.tcc \
+ C:/msys64/ucrt64/include/c++/13.2.0/istream \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/istream.tcc \
+ C:/msys64/ucrt64/include/c++/13.2.0/fstream \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/codecvt.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++io.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc \
+ C:/msys64/ucrt64/include/c++/13.2.0/sstream \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/sstream.tcc \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/MatFactory.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/Material.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/matrix_transform.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/gtc/constants.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/scalar_constants.hpp \
@@ -340,63 +438,10 @@ Source/CMakeFiles/BickRenderer.dir/Src/Material/Mat_StandardPBM_MetallicWorkFlow
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_int1_sized.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_uint1.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_uint1_sized.hpp \
- C:/msys64/ucrt64/include/c++/13.2.0/cstring \
- C:/msys64/ucrt64/include/string.h \
- C:/msys64/ucrt64/include/sec_api/string_s.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/gtc/type_ptr.inl \
- C:/Users/20131/Desktop/BickRenderer/Source/Include/Shader/Shader.hpp \
- C:/msys64/ucrt64/include/c++/13.2.0/string \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/char_traits.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/localefwd.h \
- C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++locale.h \
- C:/msys64/ucrt64/include/c++/13.2.0/clocale \
- C:/msys64/ucrt64/include/locale.h C:/msys64/ucrt64/include/stdio.h \
- C:/msys64/ucrt64/include/sec_api/stdio_s.h \
- C:/msys64/ucrt64/include/c++/13.2.0/cctype \
- C:/msys64/ucrt64/include/ctype.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/ostream_insert.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/cxxabi_forced.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_string.h \
- C:/msys64/ucrt64/include/c++/13.2.0/string_view \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/string_view.tcc \
- C:/msys64/ucrt64/include/c++/13.2.0/ext/string_conversions.h \
- C:/msys64/ucrt64/include/c++/13.2.0/cstdio \
- C:/msys64/ucrt64/include/c++/13.2.0/cerrno \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/charconv.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_string.tcc \
- C:/msys64/ucrt64/include/c++/13.2.0/iostream \
- C:/msys64/ucrt64/include/c++/13.2.0/ostream \
- C:/msys64/ucrt64/include/c++/13.2.0/ios \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.tcc \
- C:/msys64/ucrt64/include/c++/13.2.0/system_error \
- C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/error_constants.h \
- C:/msys64/ucrt64/include/c++/13.2.0/stdexcept \
- C:/msys64/ucrt64/include/c++/13.2.0/streambuf \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/streambuf.tcc \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_ios.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_facets.h \
- C:/msys64/ucrt64/include/c++/13.2.0/cwctype \
- C:/msys64/ucrt64/include/wctype.h \
- C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/streambuf_iterator.h \
- C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_facets.tcc \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_ios.tcc \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/ostream.tcc \
- C:/msys64/ucrt64/include/c++/13.2.0/istream \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/istream.tcc \
- C:/msys64/ucrt64/include/c++/13.2.0/fstream \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/codecvt.h \
- C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h \
- C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++io.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc \
- C:/msys64/ucrt64/include/c++/13.2.0/sstream \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/sstream.tcc \
- C:/Users/20131/Desktop/BickRenderer/Source/Include/glad/glad.h \
- C:/msys64/ucrt64/include/KHR/khrplatform.h \
- C:/Users/20131/Desktop/BickRenderer/Source/Include/Object/Object.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Camera/Camera.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Light/DirectionalLight.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Light/Light.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Light/PointLight.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Texture/Texture.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/stb_image.h

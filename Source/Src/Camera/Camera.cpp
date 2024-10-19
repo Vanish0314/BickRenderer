@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-14 13:51:18
- * @LastEditTime: 2024-09-23 19:36:58
+ * @LastEditTime: 2024-10-11 22:22:31
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -34,8 +34,10 @@ void Camera::Rotate(const float &yaw, const float &pitch)
 {
     glm::mat4 rotationMatrix(1.0f);
     rotationMatrix = glm::rotate(rotationMatrix, glm::radians(pitch), glm::vec3(1.0f, 0.0f, 0.0f));
-    rotationMatrix = glm::rotate(rotationMatrix, glm::radians(yaw), glm::vec3(0.0f, 1.0f, 0.0f));
-    this->position = glm::vec3(rotationMatrix * glm::vec4(this->position, 1.0f));
+    rotationMatrix = glm::rotate(rotationMatrix, glm::radians(yaw), this->up);
+    this->forward = glm::vec3(rotationMatrix * glm::vec4(this->forward, 1.0f));
+    this->up = glm::vec3(rotationMatrix * glm::vec4(this->up, 1.0f));
+    this->right = glm::normalize(glm::cross(this->forward, this->up));
 }
 void Camera::Zoom(const float &zoomFOV)
 {

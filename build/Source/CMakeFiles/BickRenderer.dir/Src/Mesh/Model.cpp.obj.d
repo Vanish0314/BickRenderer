@@ -172,7 +172,34 @@ Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Model.cpp.obj: \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/anim.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/metadata.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/postprocess.h \
- C:/Users/20131/Desktop/BickRenderer/Source/Include/Object/Object.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Mesh/Mesh.hpp \
+ C:/msys64/ucrt64/include/c++/13.2.0/memory \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_raw_storage_iter.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/align.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/unique_ptr.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr_base.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/allocated_ptr.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/ext/atomicity.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
+ C:/msys64/ucrt64/include/pthread.h C:/msys64/ucrt64/include/process.h \
+ C:/msys64/ucrt64/include/corecrt_startup.h \
+ C:/msys64/ucrt64/include/signal.h \
+ C:/msys64/ucrt64/include/pthread_signal.h \
+ C:/msys64/ucrt64/include/time.h C:/msys64/ucrt64/include/sys/timeb.h \
+ C:/msys64/ucrt64/include/sec_api/sys/timeb_s.h \
+ C:/msys64/ucrt64/include/_timeval.h \
+ C:/msys64/ucrt64/include/pthread_time.h \
+ C:/msys64/ucrt64/include/pthread_compat.h \
+ C:/msys64/ucrt64/include/pthread_unistd.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/ext/concurrence.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr_atomic.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/atomic_base.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/atomic_lockfree_defines.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/backward/auto_ptr.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/pstl/glue_memory_defs.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/glm.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/_fixes.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/setup.hpp \
@@ -322,36 +349,9 @@ Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Model.cpp.obj: \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/type_half.inl \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/integer.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/func_integer.inl \
- C:/Users/20131/Desktop/BickRenderer/Source/Include/Mesh/Mesh.hpp \
- C:/msys64/ucrt64/include/c++/13.2.0/memory \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_raw_storage_iter.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/align.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/unique_ptr.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr_base.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/allocated_ptr.h \
- C:/msys64/ucrt64/include/c++/13.2.0/ext/atomicity.h \
- C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
- C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
- C:/msys64/ucrt64/include/pthread.h C:/msys64/ucrt64/include/process.h \
- C:/msys64/ucrt64/include/corecrt_startup.h \
- C:/msys64/ucrt64/include/signal.h \
- C:/msys64/ucrt64/include/pthread_signal.h \
- C:/msys64/ucrt64/include/time.h C:/msys64/ucrt64/include/sys/timeb.h \
- C:/msys64/ucrt64/include/sec_api/sys/timeb_s.h \
- C:/msys64/ucrt64/include/_timeval.h \
- C:/msys64/ucrt64/include/pthread_time.h \
- C:/msys64/ucrt64/include/pthread_compat.h \
- C:/msys64/ucrt64/include/pthread_unistd.h \
- C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
- C:/msys64/ucrt64/include/c++/13.2.0/ext/concurrence.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/shared_ptr_atomic.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/atomic_base.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/atomic_lockfree_defines.h \
- C:/msys64/ucrt64/include/c++/13.2.0/backward/auto_ptr.h \
- C:/msys64/ucrt64/include/c++/13.2.0/pstl/glue_memory_defs.h \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/glad/glad.h \
- C:/msys64/ucrt64/include/KHR/khrplatform.h \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/glad/khrplatform.h \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Object/Object.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Shader/Shader.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/iostream \
  C:/msys64/ucrt64/include/c++/13.2.0/ostream \
@@ -383,6 +383,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Model.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/sstream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/sstream.tcc \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/MatFactory.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/Material.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/matrix_transform.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/gtc/constants.hpp \
@@ -434,7 +435,14 @@ Source/CMakeFiles/BickRenderer.dir/Src/Mesh/Model.cpp.obj: \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/ext/vector_uint1_sized.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/gtc/type_ptr.inl \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Camera/Camera.hpp \
- C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/MatFactory.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/Mat_StandardPBM_MetallicWorkFlow.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Scene/Scene.hpp \
+ C:/msys64/ucrt64/include/c++/13.2.0/list \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_list.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/list.tcc \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Common/Singleton.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Light/DirectionalLight.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Light/Light.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Light/PointLight.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Texture/Texture.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/stb_image.h

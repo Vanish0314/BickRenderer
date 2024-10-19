@@ -198,29 +198,29 @@ Src/Camera/Camera.cpp.s:
 	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Camera/Camera.cpp.s
 .PHONY : Src/Camera/Camera.cpp.s
 
-Src/HomeWork02.obj: Src/HomeWork02.cpp.obj
-.PHONY : Src/HomeWork02.obj
+Src/Common/Singleton.obj: Src/Common/Singleton.cpp.obj
+.PHONY : Src/Common/Singleton.obj
 
 # target to build an object file
-Src/HomeWork02.cpp.obj:
-	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/HomeWork02.cpp.obj
-.PHONY : Src/HomeWork02.cpp.obj
+Src/Common/Singleton.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Common/Singleton.cpp.obj
+.PHONY : Src/Common/Singleton.cpp.obj
 
-Src/HomeWork02.i: Src/HomeWork02.cpp.i
-.PHONY : Src/HomeWork02.i
+Src/Common/Singleton.i: Src/Common/Singleton.cpp.i
+.PHONY : Src/Common/Singleton.i
 
 # target to preprocess a source file
-Src/HomeWork02.cpp.i:
-	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/HomeWork02.cpp.i
-.PHONY : Src/HomeWork02.cpp.i
+Src/Common/Singleton.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Common/Singleton.cpp.i
+.PHONY : Src/Common/Singleton.cpp.i
 
-Src/HomeWork02.s: Src/HomeWork02.cpp.s
-.PHONY : Src/HomeWork02.s
+Src/Common/Singleton.s: Src/Common/Singleton.cpp.s
+.PHONY : Src/Common/Singleton.s
 
 # target to generate assembly for a file
-Src/HomeWork02.cpp.s:
-	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/HomeWork02.cpp.s
-.PHONY : Src/HomeWork02.cpp.s
+Src/Common/Singleton.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Common/Singleton.cpp.s
+.PHONY : Src/Common/Singleton.cpp.s
 
 Src/Input/InputSystem.obj: Src/Input/InputSystem.cpp.obj
 .PHONY : Src/Input/InputSystem.obj
@@ -245,6 +245,78 @@ Src/Input/InputSystem.s: Src/Input/InputSystem.cpp.s
 Src/Input/InputSystem.cpp.s:
 	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Input/InputSystem.cpp.s
 .PHONY : Src/Input/InputSystem.cpp.s
+
+Src/Light/DirectionalLight.obj: Src/Light/DirectionalLight.cpp.obj
+.PHONY : Src/Light/DirectionalLight.obj
+
+# target to build an object file
+Src/Light/DirectionalLight.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Light/DirectionalLight.cpp.obj
+.PHONY : Src/Light/DirectionalLight.cpp.obj
+
+Src/Light/DirectionalLight.i: Src/Light/DirectionalLight.cpp.i
+.PHONY : Src/Light/DirectionalLight.i
+
+# target to preprocess a source file
+Src/Light/DirectionalLight.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Light/DirectionalLight.cpp.i
+.PHONY : Src/Light/DirectionalLight.cpp.i
+
+Src/Light/DirectionalLight.s: Src/Light/DirectionalLight.cpp.s
+.PHONY : Src/Light/DirectionalLight.s
+
+# target to generate assembly for a file
+Src/Light/DirectionalLight.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Light/DirectionalLight.cpp.s
+.PHONY : Src/Light/DirectionalLight.cpp.s
+
+Src/Light/Light.obj: Src/Light/Light.cpp.obj
+.PHONY : Src/Light/Light.obj
+
+# target to build an object file
+Src/Light/Light.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Light/Light.cpp.obj
+.PHONY : Src/Light/Light.cpp.obj
+
+Src/Light/Light.i: Src/Light/Light.cpp.i
+.PHONY : Src/Light/Light.i
+
+# target to preprocess a source file
+Src/Light/Light.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Light/Light.cpp.i
+.PHONY : Src/Light/Light.cpp.i
+
+Src/Light/Light.s: Src/Light/Light.cpp.s
+.PHONY : Src/Light/Light.s
+
+# target to generate assembly for a file
+Src/Light/Light.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Light/Light.cpp.s
+.PHONY : Src/Light/Light.cpp.s
+
+Src/Light/PointLight.obj: Src/Light/PointLight.cpp.obj
+.PHONY : Src/Light/PointLight.obj
+
+# target to build an object file
+Src/Light/PointLight.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Light/PointLight.cpp.obj
+.PHONY : Src/Light/PointLight.cpp.obj
+
+Src/Light/PointLight.i: Src/Light/PointLight.cpp.i
+.PHONY : Src/Light/PointLight.i
+
+# target to preprocess a source file
+Src/Light/PointLight.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Light/PointLight.cpp.i
+.PHONY : Src/Light/PointLight.cpp.i
+
+Src/Light/PointLight.s: Src/Light/PointLight.cpp.s
+.PHONY : Src/Light/PointLight.s
+
+# target to generate assembly for a file
+Src/Light/PointLight.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Light/PointLight.cpp.s
+.PHONY : Src/Light/PointLight.cpp.s
 
 Src/Material/MatFactory.obj: Src/Material/MatFactory.cpp.obj
 .PHONY : Src/Material/MatFactory.obj
@@ -414,6 +486,30 @@ Src/Renender/Renderer.cpp.s:
 	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renender/Renderer.cpp.s
 .PHONY : Src/Renender/Renderer.cpp.s
 
+Src/Scene/Scene.obj: Src/Scene/Scene.cpp.obj
+.PHONY : Src/Scene/Scene.obj
+
+# target to build an object file
+Src/Scene/Scene.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Scene/Scene.cpp.obj
+.PHONY : Src/Scene/Scene.cpp.obj
+
+Src/Scene/Scene.i: Src/Scene/Scene.cpp.i
+.PHONY : Src/Scene/Scene.i
+
+# target to preprocess a source file
+Src/Scene/Scene.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Scene/Scene.cpp.i
+.PHONY : Src/Scene/Scene.cpp.i
+
+Src/Scene/Scene.s: Src/Scene/Scene.cpp.s
+.PHONY : Src/Scene/Scene.s
+
+# target to generate assembly for a file
+Src/Scene/Scene.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Scene/Scene.cpp.s
+.PHONY : Src/Scene/Scene.cpp.s
+
 Src/Shader/Shader.obj: Src/Shader/Shader.cpp.obj
 .PHONY : Src/Shader/Shader.obj
 
@@ -526,12 +622,21 @@ help:
 	@echo ... Src/Camera/Camera.obj
 	@echo ... Src/Camera/Camera.i
 	@echo ... Src/Camera/Camera.s
-	@echo ... Src/HomeWork02.obj
-	@echo ... Src/HomeWork02.i
-	@echo ... Src/HomeWork02.s
+	@echo ... Src/Common/Singleton.obj
+	@echo ... Src/Common/Singleton.i
+	@echo ... Src/Common/Singleton.s
 	@echo ... Src/Input/InputSystem.obj
 	@echo ... Src/Input/InputSystem.i
 	@echo ... Src/Input/InputSystem.s
+	@echo ... Src/Light/DirectionalLight.obj
+	@echo ... Src/Light/DirectionalLight.i
+	@echo ... Src/Light/DirectionalLight.s
+	@echo ... Src/Light/Light.obj
+	@echo ... Src/Light/Light.i
+	@echo ... Src/Light/Light.s
+	@echo ... Src/Light/PointLight.obj
+	@echo ... Src/Light/PointLight.i
+	@echo ... Src/Light/PointLight.s
 	@echo ... Src/Material/MatFactory.obj
 	@echo ... Src/Material/MatFactory.i
 	@echo ... Src/Material/MatFactory.s
@@ -553,6 +658,9 @@ help:
 	@echo ... Src/Renender/Renderer.obj
 	@echo ... Src/Renender/Renderer.i
 	@echo ... Src/Renender/Renderer.s
+	@echo ... Src/Scene/Scene.obj
+	@echo ... Src/Scene/Scene.i
+	@echo ... Src/Scene/Scene.s
 	@echo ... Src/Shader/Shader.obj
 	@echo ... Src/Shader/Shader.i
 	@echo ... Src/Shader/Shader.s

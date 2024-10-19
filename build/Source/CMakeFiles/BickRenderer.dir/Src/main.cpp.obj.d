@@ -151,7 +151,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/tr1/poly_laguerre.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/tr1/riemann_zeta.tcc \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/glad/glad.h \
- C:/msys64/ucrt64/include/KHR/khrplatform.h \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/glad/khrplatform.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
  C:/msys64/ucrt64/include/stdint.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/glfw/include/Glfw/glfw3.h \
@@ -439,8 +439,17 @@ Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/anim.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/metadata.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/assimp/include/assimp/postprocess.h \
- C:/Users/20131/Desktop/BickRenderer/Source/Include/Object/Object.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Mesh/Mesh.hpp \
- C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/Material.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Object/Object.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/MatFactory.hpp \
- C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/Mat_StandardPBM_MetallicWorkFlow.hpp
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/Material.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Material/Mat_StandardPBM_MetallicWorkFlow.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Scene/Scene.hpp \
+ C:/msys64/ucrt64/include/c++/13.2.0/list \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_list.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/list.tcc \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Common/Singleton.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Light/DirectionalLight.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Light/Light.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Light/PointLight.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Input/InputSystem.hpp
