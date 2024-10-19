@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-14 13:51:18
- * @LastEditTime: 2024-10-11 22:22:31
+ * @LastEditTime: 2024-10-19 19:48:17
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -30,14 +30,25 @@ void Camera::Move(const glm::vec3 &moveDirAndDist)
 {
     this->position += moveDirAndDist;
 }
-void Camera::Rotate(const float &yaw, const float &pitch)
-{
-    glm::mat4 rotationMatrix(1.0f);
-    rotationMatrix = glm::rotate(rotationMatrix, glm::radians(pitch), glm::vec3(1.0f, 0.0f, 0.0f));
-    rotationMatrix = glm::rotate(rotationMatrix, glm::radians(yaw), this->up);
-    this->forward = glm::vec3(rotationMatrix * glm::vec4(this->forward, 1.0f));
-    this->up = glm::vec3(rotationMatrix * glm::vec4(this->up, 1.0f));
-    this->right = glm::normalize(glm::cross(this->forward, this->up));
+void Camera::Rotate(const float &yawOffset, const float &pitchOffset) {
+    // 累积旋转角度
+    this->yaw += yawOffset;
+    this->pitch += pitchOffset;
+
+    // 限制俯仰角度
+    if (this->pitch > 89.0f) this->pitch = 89.0f;
+    if (this->pitch < -89.0f) this->pitch = -89.0f;
+
+    // 计算新的方向向量
+    glm::vec3 direction;
+    direction.x = cos(glm::radians(this->yaw)) * cos(glm::radians(this->pitch));
+    direction.y = sin(glm::radians(this->pitch));
+    direction.z = sin(glm::radians(this->yaw)) * cos(glm::radians(this->pitch));
+    this->forward = glm::normalize(direction);
+    
+    // 更新右向量和上向量
+    this->right = glm::normalize(glm::cross(this->forward, glm::vec3(0.0f, 1.0f, 0.0f)));
+    this->up = glm::normalize(glm::cross(this->right, this->forward));
 }
 void Camera::Zoom(const float &zoomFOV)
 {

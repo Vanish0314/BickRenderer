@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-09 21:35:01
- * @LastEditTime: 2024-10-19 19:30:46
+ * @LastEditTime: 2024-10-19 20:57:10
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -30,28 +30,6 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
 }
-
-//输入处理函数
-void ProcessInput(GLFWwindow* window,Camera &camera)
-{
-    //按下ESC键退出程序
-    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
-
-    if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-        camera.Move(camera.forward * 0.02f);
-    if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-        camera.Move(camera.forward * -0.02f);
-    if(glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-        camera.Move(camera.right * -0.02f);
-    if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-        camera.Move(camera.right * 0.02f);
-}
-void ProcessMouseInput(GLFWwindow* window,double xpos,double ypos)
-{
-    Singleton<InputSystem>::Instance().mouse.UpdatePosition(xpos,ypos);
-}
-
 // GLFWwindow* CreateWindow(int width, int height, const char* title)
 // {
 //     return window;
@@ -84,9 +62,9 @@ int main()
     }
 
     //设置Viewport
+    Singleton<InputSystem>::Instance().Init(window);
     glViewport(0, 0, 800, 800);//左下角坐标为(0,0),右上角坐标为(800,600)
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);//设置窗口大小变化回调函数
-    glfwSetCursorPosCallback(window,ProcessMouseInput);
 
     std::cout << "BickRenderer启动,你好!!!" << std::endl<<std::endl;
     
@@ -122,9 +100,11 @@ int main()
     //渲染循环
     while(!glfwWindowShouldClose(window))//窗口应该关闭时结束循环
     {
+        // 更新数据
+        // Time::Update();
+
         //输入
-        ProcessInput(window,camera);//处理输入
-        camera.Rotate(Singleton<InputSystem>::Instance().mouse.mouseBias.x,Singleton<InputSystem>::Instance().mouse.mouseBias.y);
+        Singleton<InputSystem>::Instance().Update();
 
         //渲染
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);//设置清空屏幕使用的颜色,是一个状态设置函数

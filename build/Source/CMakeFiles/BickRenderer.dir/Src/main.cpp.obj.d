@@ -452,4 +452,9 @@ Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Light/DirectionalLight.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Light/Light.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Light/PointLight.hpp \
- C:/Users/20131/Desktop/BickRenderer/Source/Include/Input/InputSystem.hpp
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Input/InputSystem.hpp \
+ C:/msys64/ucrt64/include/c++/13.2.0/map \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_tree.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_map.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_multimap.h \
+ C:/Users/20131/Desktop/BickRenderer/3rd/glfw/include/GLFW/glfw3.h
