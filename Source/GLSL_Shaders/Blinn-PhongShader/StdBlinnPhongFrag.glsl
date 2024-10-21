@@ -73,7 +73,7 @@ void main() {
 
     // 计算方向光源
     result += computeDirLight(dirLight, norm, viewDir);
-    
+
     // 计算点光源
     // for (int i = 0; i < NR_POINT_LIGHTS; i++) {
     //     result += computePointLight(pointLight[i], norm, worldPos, viewDir);

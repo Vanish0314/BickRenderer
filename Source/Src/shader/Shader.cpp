@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-12 14:40:07
- * @LastEditTime: 2024-09-20 16:51:57
+ * @LastEditTime: 2024-10-21 16:04:21
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -52,13 +52,13 @@ Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentS
         if (!success)
         {
             glGetShaderInfoLog(vertexShaderID, 512, NULL, infoLog);
-            std::cerr << "[Shader.cpp]顶点着色器编译失败!\n" << infoLog << std::endl;
+            std::cerr << "[Shader.cpp]顶点着色器编译失败!\n"<<this->name<<"\n" << infoLog << std::endl;
         }
         glGetShaderiv(fragmentShaderID, GL_COMPILE_STATUS, &success);
         if (!success)
         {
             glGetShaderInfoLog(fragmentShaderID, 512, NULL, infoLog);
-            std::cerr << "[Shader.cpp]片元着色器编译失败!\n" << infoLog << std::endl;
+            std::cerr << "[Shader.cpp]片元着色器编译失败!\n"<<this->name<<"\n" << infoLog << std::endl;
         }
         // link shaders
         shaderProgramID = glCreateProgram();
@@ -69,7 +69,7 @@ Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentS
         glGetProgramiv(shaderProgramID, GL_LINK_STATUS, &success);
         if (!success) {
             glGetProgramInfoLog(shaderProgramID, 512, NULL, infoLog);
-            std::cerr << "[Shader.cpp]着色器链接失败!\n" << infoLog << std::endl;
+            std::cerr << "[Shader.cpp]着色器链接失败!\n"<<this->name<<"\n" << infoLog << std::endl;
         }
         // delete shaders as they're linked into our program now and no longer necessary
         glDeleteShader(vertexShaderID);

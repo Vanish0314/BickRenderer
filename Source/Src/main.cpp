@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-09 21:35:01
- * @LastEditTime: 2024-10-19 20:57:10
+ * @LastEditTime: 2024-10-21 16:09:51
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -66,7 +66,13 @@ int main()
     glViewport(0, 0, 800, 800);//左下角坐标为(0,0),右上角坐标为(800,600)
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);//设置窗口大小变化回调函数
 
-    std::cout << "BickRenderer启动,你好!!!" << std::endl<<std::endl;
+    std::string startTitle = 
+        "|********************************************|\n"
+        "|************BickRenderer start**************|\n"
+        "|*********Welcome to BickRenderer************|\n"
+        "|********************************************|";
+
+    std::cout <<"\n\n\n"<< startTitle << std::endl<<std::endl;
     
     Camera camera = Camera(800,600,90.0);
     camera.SetPosition(glm::vec3(0.0f, 0.0f, 1.0f));
@@ -75,15 +81,6 @@ int main()
     auto directionalLight = std::make_shared<DirectionalLight>((glm::vec3(-1.0f, -1.0f, -1.0f)));
     Singleton<Scene>::Instance().directionalLights.push_back(directionalLight);
 
-    MatFactory_StandardPBM_MetallicWorkFlow furMat = MatFactory_StandardPBM_MetallicWorkFlow(
-        "Source/GLSL_Shaders/Fur/FuryVertex.glsl",
-        "Source/GLSL_Shaders/Fur/FuryGeometry.glsl",
-        "Source/GLSL_Shaders/Fur/FuryFrag.glsl"
-    );
-    MatFactory_StandardPBM_MetallicWorkFlow jadeMat = MatFactory_StandardPBM_MetallicWorkFlow(
-        "Source/GLSL_Shaders/Jade/JadeVertex.glsl",
-        "Source/GLSL_Shaders/Jade/JadeFrag.glsl"
-    );
     MatFactory_StandardPBM_MetallicWorkFlow phongMat = MatFactory_StandardPBM_MetallicWorkFlow(
         "Source/GLSL_Shaders/Blinn-PhongShader/StdBlinnPhongVertex.glsl",
         "Source/GLSL_Shaders/Blinn-PhongShader/StdBlinnPhongFrag.glsl"
