@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-09 21:35:01
- * @LastEditTime: 2024-11-04 15:47:12
+ * @LastEditTime: 2024-11-05 19:57:55
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -105,6 +105,7 @@ int main()
     
     Model model = Model("Assets/Models/NanoSuit/nanosuit.obj",&phongMat,Transform(glm::vec3(0.0f, 0.0f, -10.0f), glm::vec3(45.0f, 0.0f, 0.0f), glm::vec3(0.3f)));
 
+//------------------------FB0----------------------------------------------//
     unsigned int fbo;
     glGenFramebuffers(1, &fbo);
     glBindFramebuffer(GL_FRAMEBUFFER, fbo);
@@ -160,6 +161,98 @@ int main()
         "Source/GLSL_Shaders/ScreenShader/frag.glsl",
         "ScreenShader"
     );
+//------------------------FB0-END----------------------------------------------//
+//------------------------CUBEMAP----------------------------------------------//
+
+
+    GLuint cubeMap;
+    glGenTextures(1, &cubeMap);
+    glBindTexture(GL_TEXTURE_CUBE_MAP, cubeMap);
+
+    std::vector<std::string> textures_faces = {
+        "Assets/Textures/Skybox/MountainSea/right.jpg",
+        "Assets/Textures/Skybox/MountainSea/left.jpg",
+        "Assets/Textures/Skybox/MountainSea/top.jpg",
+        "Assets/Textures/Skybox/MountainSea/bottom.jpg",
+        "Assets/Textures/Skybox/MountainSea/front.jpg",
+        "Assets/Textures/Skybox/MountainSea/back.jpg"
+    };
+    int width, height, nrChannels;
+    unsigned char *data;
+    for (unsigned int i = 0; i < textures_faces.size(); i++)
+    {
+        data = stbi_load(textures_faces[i].c_str(), &width, &height, &nrChannels, 0);
+        glTexImage2D(
+            GL_TEXTURE_CUBE_MAP_POSITIVE_X + i,
+            0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+    }
+
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+
+    Shader skyboxShader = Shader(
+        "Source/GLSL_Shaders/SkyBox/cubemapvert.glsl",
+        "Source/GLSL_Shaders/SkyBox/cubemapfrag.glsl",
+        "SkyboxShader"
+    );
+
+    float skyboxVertices[] = {
+        // positions          
+        -1.0f,  1.0f, -1.0f,
+        -1.0f, -1.0f, -1.0f,
+         1.0f, -1.0f, -1.0f,
+         1.0f, -1.0f, -1.0f,
+         1.0f,  1.0f, -1.0f,
+        -1.0f,  1.0f, -1.0f,
+
+        -1.0f, -1.0f,  1.0f,
+        -1.0f, -1.0f, -1.0f,
+        -1.0f,  1.0f, -1.0f,
+        -1.0f,  1.0f, -1.0f,
+        -1.0f,  1.0f,  1.0f,
+        -1.0f, -1.0f,  1.0f,
+
+         1.0f, -1.0f, -1.0f,
+         1.0f, -1.0f,  1.0f,
+         1.0f,  1.0f,  1.0f,
+         1.0f,  1.0f,  1.0f,
+         1.0f,  1.0f, -1.0f,
+         1.0f, -1.0f, -1.0f,
+
+        -1.0f, -1.0f,  1.0f,
+        -1.0f,  1.0f,  1.0f,
+         1.0f,  1.0f,  1.0f,
+         1.0f,  1.0f,  1.0f,
+         1.0f, -1.0f,  1.0f,
+        -1.0f, -1.0f,  1.0f,
+
+        -1.0f,  1.0f, -1.0f,
+         1.0f,  1.0f, -1.0f,
+         1.0f,  1.0f,  1.0f,
+         1.0f,  1.0f,  1.0f,
+        -1.0f,  1.0f,  1.0f,
+        -1.0f,  1.0f, -1.0f,
+
+        -1.0f, -1.0f, -1.0f,
+        -1.0f, -1.0f,  1.0f,
+         1.0f, -1.0f, -1.0f,
+         1.0f, -1.0f, -1.0f,
+        -1.0f, -1.0f,  1.0f,
+         1.0f, -1.0f,  1.0f
+    };
+    unsigned int skyboxVAO, skyboxVBO;
+    glGenVertexArrays(1, &skyboxVAO);
+    glGenBuffers(1, &skyboxVBO);
+    glBindVertexArray(skyboxVAO);
+    glBindBuffer(GL_ARRAY_BUFFER, skyboxVBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVertices), &skyboxVertices, GL_STATIC_DRAW);
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+
+//------------------------CUBEMAP-END----------------------------------------------//
 
     SetOpenGL();
     int frameCount = 0;
@@ -176,13 +269,30 @@ int main()
         //渲染
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);//设置清空屏幕使用的颜色,是一个状态设置函数
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);//清空颜色缓冲,是一个状态使用函数,获取状态后执行
-
+//-----------天空盒----------//
+        skyboxShader.Use();
+        unsigned short skyboxLoc = glGetUniformLocation(skyboxShader.shaderProgramID, "skybox");
+        glUniform1i(skyboxLoc, GL_TEXTURE0);
+        glm::mat4 viewMatrix       = Camera::main->GetViewMatrix();
+        glm::mat4 projectionMatrix = Camera::main->GetProjectionMatrix();
+        unsigned short viewLoc       = glGetUniformLocation(skyboxShader.shaderProgramID, "view");
+        unsigned short projectionLoc = glGetUniformLocation(skyboxShader.shaderProgramID, "projection");
+        glUniformMatrix4fv(viewLoc      , 1, GL_FALSE, glm::value_ptr(viewMatrix));
+        glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projectionMatrix));    
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_CUBE_MAP, cubeMap);
+        glBindVertexArray(skyboxVAO);
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+        glBindVertexArray(0);
+//-----------天空盒-END----------//
+//-----------模型----------//
         model.Draw();
-
+//-----------模型-END----------//
+//-----------后处理--------------------------//
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
         glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        glActiveTexture(GL_TEXTURE0)
+        glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, texture);
         screenShader.Use();
         unsigned short textureLoc = glGetUniformLocation(screenShader.shaderProgramID, "screenTexture");
@@ -190,6 +300,7 @@ int main()
         glBindVertexArray(quadVAO);
         glDisable(GL_DEPTH_TEST);
         glDrawArrays(GL_TRIANGLES, 0, 6);
+//-----------后处理-END----------//
 
         //交换缓冲,检查并调用事件回调函数
         glfwSwapBuffers(window); //交换颜色缓冲
@@ -201,7 +312,7 @@ int main()
         // {
         //     std::cerr << "OpenGL error: " << err << std::endl;
         // }
-        std::cout << "frameCount: " << ++frameCount << std::endl;
+        // std::cout << "frameCount: " << ++frameCount << std::endl;
     }
 
     glfwTerminate(); //终止glfw
