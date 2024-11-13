@@ -10,8 +10,8 @@
 			"command": "cmake",
 			"args": [
 				"..",
-				// "-G",
-				// "MinGW Makefiles"
+				"-G",
+				"MinGW Makefiles"
 			]
 		},
 		{

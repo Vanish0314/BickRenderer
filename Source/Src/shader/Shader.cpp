@@ -1,13 +1,28 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-12 14:40:07
- * @LastEditTime: 2024-10-21 16:04:21
+ * @LastEditTime: 2024-11-13 20:19:46
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
 #include "Shader/Shader.hpp"
 
-Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentShaderPath,std::string name)
+Shader::Shader(const std::string &vertexShaderPath, const std::string &fragmentShaderPath, std::string name)
+{
+    InitShader(vertexShaderPath, fragmentShaderPath, name);
+}
+
+Shader::Shader(const std::string &vertexShaderPath, const std::string &geometryShaderPath, const std::string &fragmentShaderPath, std::string name)
+{
+    InitShader(vertexShaderPath, geometryShaderPath, fragmentShaderPath, name);
+}
+
+void Shader::Use()
+{
+    glUseProgram(shaderProgramID);
+}
+
+void Shader::InitShader(const std::string &vertexShaderPath, const std::string &fragmentShaderPath, const std::string name)
 {
     this->name = name;
 
@@ -18,21 +33,21 @@ Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentS
     fragmentShaderStream.exceptions(std::ifstream::failbit | std::ifstream::badbit);
     try
     {
-        vertexShaderStream.open(vertexShaderPath,std::ios::in);
-        fragmentShaderStream.open(fragmentShaderPath,std::ios::in);
+        vertexShaderStream.open(vertexShaderPath, std::ios::in);
+        fragmentShaderStream.open(fragmentShaderPath, std::ios::in);
 
-        if(!vertexShaderStream.is_open() ||!fragmentShaderStream.is_open())
+        if (!vertexShaderStream.is_open() || !fragmentShaderStream.is_open())
         {
             throw std::runtime_error("[Shader.cpp]打开着色器文件失败.");
         }
 
         vertexShaderCode << vertexShaderStream.rdbuf();
         vertexShaderStream.close();
-        
+
         fragmentShaderCode << fragmentShaderStream.rdbuf();
         fragmentShaderStream.close();
 
-        std::string vCode,fCode;
+        std::string vCode, fCode;
         vCode = vertexShaderCode.str();
         fCode = fragmentShaderCode.str();
 
@@ -52,13 +67,17 @@ Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentS
         if (!success)
         {
             glGetShaderInfoLog(vertexShaderID, 512, NULL, infoLog);
-            std::cerr << "[Shader.cpp]顶点着色器编译失败!\n"<<this->name<<"\n" << infoLog << std::endl;
+            std::cerr << "[Shader.cpp]顶点着色器编译失败!\n"
+                      << this->name << "\n"
+                      << infoLog << std::endl;
         }
         glGetShaderiv(fragmentShaderID, GL_COMPILE_STATUS, &success);
         if (!success)
         {
             glGetShaderInfoLog(fragmentShaderID, 512, NULL, infoLog);
-            std::cerr << "[Shader.cpp]片元着色器编译失败!\n"<<this->name<<"\n" << infoLog << std::endl;
+            std::cerr << "[Shader.cpp]片元着色器编译失败!\n"
+                      << this->name << "\n"
+                      << infoLog << std::endl;
         }
         // link shaders
         shaderProgramID = glCreateProgram();
@@ -67,39 +86,40 @@ Shader::Shader(const std::string& vertexShaderPath, const std::string& fragmentS
         glLinkProgram(shaderProgramID);
         // check for linking errors
         glGetProgramiv(shaderProgramID, GL_LINK_STATUS, &success);
-        if (!success) {
+        if (!success)
+        {
             glGetProgramInfoLog(shaderProgramID, 512, NULL, infoLog);
-            std::cerr << "[Shader.cpp]着色器链接失败!\n"<<this->name<<"\n" << infoLog << std::endl;
+            std::cerr << "[Shader.cpp]着色器链接失败!\n"
+                      << this->name << "\n"
+                      << infoLog << std::endl;
         }
         // delete shaders as they're linked into our program now and no longer necessary
         glDeleteShader(vertexShaderID);
         glDeleteShader(fragmentShaderID);
     }
-    catch (const std::exception& e)
+    catch (const std::exception &e)
     {
         std::cerr << e.what() << std::endl;
         return;
     }
-    
 }
-
-Shader::Shader(const std::string &vertexShaderPath, const std::string &geometryShaderPath, const std::string &fragmentShaderPath,std::string name)
+void Shader::InitShader(const std::string &vertexShaderPath, const std::string &geometryShaderPath, const std::string &fragmentShaderPath, const std::string name)
 {
     this->name = name;
 
-    std::ifstream vertexShaderStream,geometryShaderStream ,fragmentShaderStream;
-    std::stringstream vertexShaderCode,geometryShaderCode , fragmentShaderCode;
+    std::ifstream vertexShaderStream, geometryShaderStream, fragmentShaderStream;
+    std::stringstream vertexShaderCode, geometryShaderCode, fragmentShaderCode;
 
     vertexShaderStream.exceptions(std::ifstream::failbit | std::ifstream::badbit);
     geometryShaderStream.exceptions(std::ifstream::failbit | std::ifstream::badbit);
     fragmentShaderStream.exceptions(std::ifstream::failbit | std::ifstream::badbit);
     try
     {
-        vertexShaderStream.open(vertexShaderPath,std::ios::in);
-        geometryShaderStream.open(geometryShaderPath,std::ios::in);
-        fragmentShaderStream.open(fragmentShaderPath,std::ios::in);
+        vertexShaderStream.open(vertexShaderPath, std::ios::in);
+        geometryShaderStream.open(geometryShaderPath, std::ios::in);
+        fragmentShaderStream.open(fragmentShaderPath, std::ios::in);
 
-        if(!vertexShaderStream.is_open() ||!fragmentShaderStream.is_open()||!geometryShaderStream.is_open())
+        if (!vertexShaderStream.is_open() || !fragmentShaderStream.is_open() || !geometryShaderStream.is_open())
         {
             throw std::runtime_error("Failed to open shader files.");
         }
@@ -109,11 +129,11 @@ Shader::Shader(const std::string &vertexShaderPath, const std::string &geometryS
 
         geometryShaderCode << geometryShaderStream.rdbuf();
         geometryShaderStream.close();
-        
+
         fragmentShaderCode << fragmentShaderStream.rdbuf();
         fragmentShaderStream.close();
 
-        std::string vCode,gCode,fCode;
+        std::string vCode, gCode, fCode;
         vCode = vertexShaderCode.str();
         gCode = geometryShaderCode.str();
         fCode = fragmentShaderCode.str();
@@ -149,19 +169,14 @@ Shader::Shader(const std::string &vertexShaderPath, const std::string &geometryS
         glDeleteShader(geometryShaderID);
         glDeleteShader(fragmentShaderID);
     }
-    catch (const std::exception& e)
+    catch (const std::exception &e)
     {
-        std::cerr<<"[Shader.cpp]着色器程序初始化失败!\n";
-        std::cerr<<"错误:" << e.what() << std::endl<<std::endl;
+        std::cerr << "[Shader.cpp]着色器程序初始化失败!\n";
+        std::cerr << "错误:" << e.what() << std::endl
+                  << std::endl;
         return;
     }
 }
-
-void Shader::Use()
-{
-    glUseProgram(shaderProgramID);
-}
-
 void Shader::CheckCompileErrors(GLuint shader, std::string type)
 {
     int success;
@@ -173,7 +188,8 @@ void Shader::CheckCompileErrors(GLuint shader, std::string type)
         if (!success)
         {
             glGetShaderInfoLog(shader, 512, NULL, infoLog);
-            std::cerr << "Shader compilation error of type: " << type << "\n" << infoLog << std::endl;
+            std::cerr << "Shader compilation error of type: " << type << "\n"
+                      << infoLog << std::endl;
         }
     }
     else
@@ -182,7 +198,8 @@ void Shader::CheckCompileErrors(GLuint shader, std::string type)
         if (!success)
         {
             glGetProgramInfoLog(shader, 512, NULL, infoLog);
-            std::cerr << "Program linking error of type: " << type << "\n" << infoLog << std::endl;
+            std::cerr << "Program linking error of type: " << type << "\n"
+                      << infoLog << std::endl;
         }
     }
 }

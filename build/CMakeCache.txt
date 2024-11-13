@@ -14,136 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//Android JNI IOSystem support is active
-ASSIMP_ANDROID_JNIIOSYSTEM:BOOL=OFF
-
-//Path for library output files
-ASSIMP_ARCHIVE_OUTPUT_DIRECTORY:STRING=C:/Users/20131/Desktop/BickRenderer/build/3rd/assimp/lib
-
-//Enable AddressSanitizer.
-ASSIMP_ASAN:BOOL=OFF
-
-//Path the tool executables are installed to.
-ASSIMP_BIN_INSTALL_DIR:STRING=bin
-
-//default value of all ASSIMP_BUILD_XXX_EXPORTER values
-ASSIMP_BUILD_ALL_EXPORTERS_BY_DEFAULT:BOOL=ON
-
-//default value of all ASSIMP_BUILD_XXX_IMPORTER values
-ASSIMP_BUILD_ALL_IMPORTERS_BY_DEFAULT:BOOL=ON
-
-//describe the current architecture.
-ASSIMP_BUILD_ARCHITECTURE:STRING=
-
-//If the supplementary tools for Assimp are built in addition to
-// the library.
-ASSIMP_BUILD_ASSIMP_TOOLS:BOOL=OFF
-
-//describe the current compiler.
-ASSIMP_BUILD_COMPILER:STRING=
-
-//Build documentation using Doxygen.
-ASSIMP_BUILD_DOCS:BOOL=OFF
-
-//If the Draco libraries are to be built. Primarily for glTF
-ASSIMP_BUILD_DRACO:BOOL=OFF
-
-//Build package as Mac OS X Framework bundle.
-ASSIMP_BUILD_FRAMEWORK:BOOL=OFF
-
-//Build the C4D importer, which relies on the non-free Cineware
-// SDK.
-ASSIMP_BUILD_NONFREE_C4D_IMPORTER:BOOL=OFF
-
-//If the official samples are built as well (needs Glut).
-ASSIMP_BUILD_SAMPLES:BOOL=OFF
-
-//If the test suite for Assimp is built in addition to the library.
-ASSIMP_BUILD_TESTS:BOOL=ON
-
-//Enable USD file import
-ASSIMP_BUILD_USD_IMPORTER:BOOL=OFF
-
-//Enable verbose USD import debug logging
-ASSIMP_BUILD_USD_VERBOSE_LOGS:BOOL=OFF
-
-//Use ccache to speed up compilation.
-ASSIMP_BUILD_USE_CCACHE:BOOL=ON
-
-//Build your zlib
-ASSIMP_BUILD_ZLIB:BOOL=ON
-
-//Enable this to measure test coverage.
-ASSIMP_COVERALLS:BOOL=OFF
-
-//Set to ON to enable double precision processing
-ASSIMP_DOUBLE_PRECISION:BOOL=OFF
-
-//adds the target headercheck which compiles every header file,
-// default disabled because it adds many targets
-ASSIMP_HEADERCHECK:BOOL=OFF
-
-//Enable Hunter package manager support
-ASSIMP_HUNTER_ENABLED:BOOL=OFF
-
-//Don't call git to get the hash.
-ASSIMP_IGNORE_GIT_HASH:BOOL=OFF
-
-//Path the header files are installed to.
-ASSIMP_INCLUDE_INSTALL_DIR:STRING=include
-
-//Inject debug postfix in .a/.so/.dll lib names
-ASSIMP_INJECT_DEBUG_POSTFIX:BOOL=ON
-
-//Disable this if you want to use assimp as a submodule.
-ASSIMP_INSTALL:BOOL=ON
-
-//Path to a library.
-ASSIMP_LIB:FILEPATH=ASSIMP_LIB-NOTFOUND
-
-//Path to a library.
-ASSIMP_LIBRARY:FILEPATH=ASSIMP_LIBRARY-NOTFOUND
-
-//Path for library output files
-ASSIMP_LIBRARY_OUTPUT_DIRECTORY:STRING=C:/Users/20131/Desktop/BickRenderer/build/3rd/assimp/bin
-
-//Suffix to append to library names
-ASSIMP_LIBRARY_SUFFIX:STRING=
-
-//Path the built library files are installed to.
-ASSIMP_LIB_INSTALL_DIR:STRING=lib
-
-//Disable Assimp's export functionality.
-ASSIMP_NO_EXPORT:BOOL=OFF
-
-//Set to ON to generate CPack configuration files and packaging
-// targets
-ASSIMP_OPT_BUILD_PACKAGES:BOOL=OFF
-
-//the package-specific version used for uploading the sources
-ASSIMP_PACKAGE_VERSION:STRING=0
-
-//Suppress rapidjson warning on MSVC (NOTE: breaks android build)
-ASSIMP_RAPIDJSON_NO_MEMBER_ITERATOR:BOOL=ON
-
-//Path for runtime output files
-ASSIMP_RUNTIME_OUTPUT_DIRECTORY:STRING=C:/Users/20131/Desktop/BickRenderer/build/3rd/assimp/bin
-
-//Enable Undefined Behavior sanitizer.
-ASSIMP_UBSAN:BOOL=OFF
-
-//Treat all warnings as errors.
-ASSIMP_WARNINGS_AS_ERRORS:BOOL=ON
-
-//Value Computed by CMake
-Assimp_BINARY_DIR:STATIC=C:/Users/20131/Desktop/BickRenderer/build/3rd/assimp
-
-//Value Computed by CMake
-Assimp_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-Assimp_SOURCE_DIR:STATIC=C:/Users/20131/Desktop/BickRenderer/3rd/assimp
-
 //Build shared libraries
 BUILD_SHARED_LIBS:BOOL=OFF
 
@@ -157,9 +27,6 @@ BickRenderer_IS_TOP_LEVEL:STATIC=ON
 BickRenderer_SOURCE_DIR:STATIC=C:/Users/20131/Desktop/BickRenderer
 
 //Path to a program.
-CCACHE_PATH:FILEPATH=CCACHE_PATH-NOTFOUND
-
-//Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=C:/msys64/ucrt64/bin/addr2line.exe
 
 //Path to a program.
@@ -171,8 +38,8 @@ CMAKE_BUILD_TYPE:STRING=Debug
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
-//No help, variable specified on the command line.
-CMAKE_CXX_COMPILER:FILEPATH=C:/msys64/ucrt64/bin/g++.exe
+//CXX compiler
+CMAKE_CXX_COMPILER:STRING=C:/msys64/ucrt64/bin/g++.exe
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -200,8 +67,8 @@ CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 //Libraries linked by default with all C++ applications.
 CMAKE_CXX_STANDARD_LIBRARIES:STRING=-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
 
-//No help, variable specified on the command line.
-CMAKE_C_COMPILER:FILEPATH=C:/msys64/ucrt64/bin/gcc.exe
+//C compiler
+CMAKE_C_COMPILER:STRING=C:/msys64/ucrt64/bin/gcc.exe
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -228,9 +95,6 @@ CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Libraries linked by default with all C applications.
 CMAKE_C_STANDARD_LIBRARIES:STRING=-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-
-//Debug Postfix for lib, samples and tools
-CMAKE_DEBUG_POSTFIX:STRING=d
 
 //Path to a program.
 CMAKE_DLLTOOL:FILEPATH=C:/msys64/ucrt64/bin/dlltool.exe
@@ -543,9 +407,6 @@ GLM_ENABLE_SIMD_SSSE3:BOOL=OFF
 //Force 'pure' instructions
 GLM_FORCE_PURE:BOOL=OFF
 
-//the suffix for the assimp MinGW shared library
-LIBRARY_SUFFIX:STRING=-5
-
 //Value Computed by CMake
 glm_BINARY_DIR:STATIC=C:/Users/20131/Desktop/BickRenderer/build/3rd/glm
 
@@ -555,28 +416,11 @@ glm_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 glm_SOURCE_DIR:STATIC=C:/Users/20131/Desktop/BickRenderer/3rd/glm
 
-//Value Computed by CMake
-zlib_BINARY_DIR:STATIC=C:/Users/20131/Desktop/BickRenderer/build/3rd/assimp/contrib/zlib
-
-//Value Computed by CMake
-zlib_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-zlib_SOURCE_DIR:STATIC=C:/Users/20131/Desktop/BickRenderer/3rd/assimp/contrib/zlib
-
 
 ########################
 # INTERNAL cache entries
 ########################
 
-//Enable building amd64 assembly implementation
-AMD64:INTERNAL=FALSE
-//Enable building i686 assembly implementation
-ASM686:INTERNAL=FALSE
-//ADVANCED property for variable: ASSIMP_BUILD_ARCHITECTURE
-ASSIMP_BUILD_ARCHITECTURE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: ASSIMP_BUILD_COMPILER
-ASSIMP_BUILD_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -779,22 +623,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 GLFW_PKG_CONFIG_LIBS_PRIVATE:INTERNAL= -lgdi32
 //GLFW pkg-config Requires.private
 GLFW_PKG_CONFIG_REQUIRES_PRIVATE:INTERNAL=
-//Have function fseeko
-HAVE_FSEEKO:INTERNAL=1
-//Result of TRY_COMPILE
-HAVE_OFF64_T:INTERNAL=TRUE
-//Have include stddef.h
-HAVE_STDDEF_H:INTERNAL=1
-//Have include stdint.h
-HAVE_STDINT_H:INTERNAL=1
-//Have include sys/types.h
-HAVE_SYS_TYPES_H:INTERNAL=1
-//CHECK_TYPE_SIZE: sizeof(off64_t)
-OFF64_T:INTERNAL=8
 //Have include xinput.h
 XINPUT_H_FOUND:INTERNAL=1
-//Have include unistd.h
-Z_HAVE_UNISTD_H:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run

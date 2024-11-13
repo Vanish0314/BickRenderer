@@ -457,4 +457,8 @@ Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_tree.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_map.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_multimap.h \
- C:/Users/20131/Desktop/BickRenderer/3rd/glfw/include/GLFW/glfw3.h
+ C:/Users/20131/Desktop/BickRenderer/3rd/glfw/include/GLFW/glfw3.h \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Renderer/RenderPass_SkyBox.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Renderer/RenderPass.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Renderer/RenderResource.hpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Renderer/RenderResource_SkyBox.hpp

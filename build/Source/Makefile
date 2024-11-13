@@ -486,29 +486,101 @@ Src/Object/Object.cpp.s:
 	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Object/Object.cpp.s
 .PHONY : Src/Object/Object.cpp.s
 
-Src/Renender/Renderer.obj: Src/Renender/Renderer.cpp.obj
-.PHONY : Src/Renender/Renderer.obj
+Src/Renderer/RenderPass.obj: Src/Renderer/RenderPass.cpp.obj
+.PHONY : Src/Renderer/RenderPass.obj
 
 # target to build an object file
-Src/Renender/Renderer.cpp.obj:
-	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renender/Renderer.cpp.obj
-.PHONY : Src/Renender/Renderer.cpp.obj
+Src/Renderer/RenderPass.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renderer/RenderPass.cpp.obj
+.PHONY : Src/Renderer/RenderPass.cpp.obj
 
-Src/Renender/Renderer.i: Src/Renender/Renderer.cpp.i
-.PHONY : Src/Renender/Renderer.i
+Src/Renderer/RenderPass.i: Src/Renderer/RenderPass.cpp.i
+.PHONY : Src/Renderer/RenderPass.i
 
 # target to preprocess a source file
-Src/Renender/Renderer.cpp.i:
-	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renender/Renderer.cpp.i
-.PHONY : Src/Renender/Renderer.cpp.i
+Src/Renderer/RenderPass.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renderer/RenderPass.cpp.i
+.PHONY : Src/Renderer/RenderPass.cpp.i
 
-Src/Renender/Renderer.s: Src/Renender/Renderer.cpp.s
-.PHONY : Src/Renender/Renderer.s
+Src/Renderer/RenderPass.s: Src/Renderer/RenderPass.cpp.s
+.PHONY : Src/Renderer/RenderPass.s
 
 # target to generate assembly for a file
-Src/Renender/Renderer.cpp.s:
-	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renender/Renderer.cpp.s
-.PHONY : Src/Renender/Renderer.cpp.s
+Src/Renderer/RenderPass.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renderer/RenderPass.cpp.s
+.PHONY : Src/Renderer/RenderPass.cpp.s
+
+Src/Renderer/RenderPass_SkyBox.obj: Src/Renderer/RenderPass_SkyBox.cpp.obj
+.PHONY : Src/Renderer/RenderPass_SkyBox.obj
+
+# target to build an object file
+Src/Renderer/RenderPass_SkyBox.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renderer/RenderPass_SkyBox.cpp.obj
+.PHONY : Src/Renderer/RenderPass_SkyBox.cpp.obj
+
+Src/Renderer/RenderPass_SkyBox.i: Src/Renderer/RenderPass_SkyBox.cpp.i
+.PHONY : Src/Renderer/RenderPass_SkyBox.i
+
+# target to preprocess a source file
+Src/Renderer/RenderPass_SkyBox.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renderer/RenderPass_SkyBox.cpp.i
+.PHONY : Src/Renderer/RenderPass_SkyBox.cpp.i
+
+Src/Renderer/RenderPass_SkyBox.s: Src/Renderer/RenderPass_SkyBox.cpp.s
+.PHONY : Src/Renderer/RenderPass_SkyBox.s
+
+# target to generate assembly for a file
+Src/Renderer/RenderPass_SkyBox.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renderer/RenderPass_SkyBox.cpp.s
+.PHONY : Src/Renderer/RenderPass_SkyBox.cpp.s
+
+Src/Renderer/RenderPipeline.obj: Src/Renderer/RenderPipeline.cpp.obj
+.PHONY : Src/Renderer/RenderPipeline.obj
+
+# target to build an object file
+Src/Renderer/RenderPipeline.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renderer/RenderPipeline.cpp.obj
+.PHONY : Src/Renderer/RenderPipeline.cpp.obj
+
+Src/Renderer/RenderPipeline.i: Src/Renderer/RenderPipeline.cpp.i
+.PHONY : Src/Renderer/RenderPipeline.i
+
+# target to preprocess a source file
+Src/Renderer/RenderPipeline.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renderer/RenderPipeline.cpp.i
+.PHONY : Src/Renderer/RenderPipeline.cpp.i
+
+Src/Renderer/RenderPipeline.s: Src/Renderer/RenderPipeline.cpp.s
+.PHONY : Src/Renderer/RenderPipeline.s
+
+# target to generate assembly for a file
+Src/Renderer/RenderPipeline.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renderer/RenderPipeline.cpp.s
+.PHONY : Src/Renderer/RenderPipeline.cpp.s
+
+Src/Renderer/Renderer.obj: Src/Renderer/Renderer.cpp.obj
+.PHONY : Src/Renderer/Renderer.obj
+
+# target to build an object file
+Src/Renderer/Renderer.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renderer/Renderer.cpp.obj
+.PHONY : Src/Renderer/Renderer.cpp.obj
+
+Src/Renderer/Renderer.i: Src/Renderer/Renderer.cpp.i
+.PHONY : Src/Renderer/Renderer.i
+
+# target to preprocess a source file
+Src/Renderer/Renderer.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renderer/Renderer.cpp.i
+.PHONY : Src/Renderer/Renderer.cpp.i
+
+Src/Renderer/Renderer.s: Src/Renderer/Renderer.cpp.s
+.PHONY : Src/Renderer/Renderer.s
+
+# target to generate assembly for a file
+Src/Renderer/Renderer.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renderer/Renderer.cpp.s
+.PHONY : Src/Renderer/Renderer.cpp.s
 
 Src/Scene/Scene.obj: Src/Scene/Scene.cpp.obj
 .PHONY : Src/Scene/Scene.obj
@@ -682,9 +754,18 @@ help:
 	@echo ... Src/Object/Object.obj
 	@echo ... Src/Object/Object.i
 	@echo ... Src/Object/Object.s
-	@echo ... Src/Renender/Renderer.obj
-	@echo ... Src/Renender/Renderer.i
-	@echo ... Src/Renender/Renderer.s
+	@echo ... Src/Renderer/RenderPass.obj
+	@echo ... Src/Renderer/RenderPass.i
+	@echo ... Src/Renderer/RenderPass.s
+	@echo ... Src/Renderer/RenderPass_SkyBox.obj
+	@echo ... Src/Renderer/RenderPass_SkyBox.i
+	@echo ... Src/Renderer/RenderPass_SkyBox.s
+	@echo ... Src/Renderer/RenderPipeline.obj
+	@echo ... Src/Renderer/RenderPipeline.i
+	@echo ... Src/Renderer/RenderPipeline.s
+	@echo ... Src/Renderer/Renderer.obj
+	@echo ... Src/Renderer/Renderer.i
+	@echo ... Src/Renderer/Renderer.s
 	@echo ... Src/Scene/Scene.obj
 	@echo ... Src/Scene/Scene.i
 	@echo ... Src/Scene/Scene.s
