@@ -1,20 +1,21 @@
 /*
  * @Author: Vanish
  * @Date: 2024-11-13 20:11:54
- * @LastEditTime: 2024-11-13 21:39:56
+ * @LastEditTime: 2024-11-14 18:18:22
  * Also View: http://vanishing.cc
  * Contract Me: http://qunchengxiao.me
  * Copyright@ http://www.wtfpl.net/
  */
-#include "stb_image.h"
-#include "Renderer/RenderPass_SkyBox.hpp"
 
-//TODO: too much junk code,need to be simplified
-void RenderPass_SkyBox::Initialize(RenderPassInitInfo &&info)
+#include <iostream>
+#include "Renderer/RenderPass.hpp"
+#include "stb_image.h"
+
+// TODO: too much junk code,need to be simplified
+void RenderPass_SkyBox::Initialize(std::shared_ptr<RenderPassInitInfo> info)
 {
     //调用父类Initialize函数
-    auto infoCopy = info;
-    RenderPass::Initialize(std::move(infoCopy));
+    RenderPass::Initialize(info);
 
     auto res = m_renderResource;
     if (res)
@@ -44,6 +45,7 @@ void RenderPass_SkyBox::Initialize(RenderPassInitInfo &&info)
         glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+        stbi_image_free(data);
 
         glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
 
@@ -52,20 +54,22 @@ void RenderPass_SkyBox::Initialize(RenderPassInitInfo &&info)
         glGenBuffers(1, &m_SkyBoxVBO);
         glBindVertexArray(m_SkyBoxVAO);
         glBindBuffer(GL_ARRAY_BUFFER, m_SkyBoxVBO);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(m_skyboxVertices), &m_skyboxVertices, GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, 36*3*4, &m_skyboxVertices, GL_STATIC_DRAW);
         glEnableVertexAttribArray(0);
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void *)0);
         glBindVertexArray(0);
     }
     else
     {
-        throw std::exception("Render Resource被释放");
+        throw std::runtime_error("Render Resource被释放");
     }
 }
 
 void RenderPass_SkyBox::Draw()
 {
     //TODO: 处理OpenGl设置
+    //关闭深度写入
+    glDepthMask(GL_FALSE);
 
     // 绑定framebuffer
     glBindFramebuffer(GL_FRAMEBUFFER, m_fbo);
@@ -96,4 +100,88 @@ void RenderPass_SkyBox::Draw()
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
     glBindVertexArray(0);
     glUseProgram(0);
+
+    glDepthMask(GL_TRUE);
 }
+void RenderPass_SkyBox::Draw(GLuint FBO)
+{
+    //TODO: 处理OpenGl设置
+    glDepthMask(GL_FALSE);
+
+    // 绑定framebuffer
+    glBindFramebuffer(GL_FRAMEBUFFER, FBO);
+
+    //绑定VAO
+    glBindVertexArray(m_SkyBoxVAO);
+
+    // 绑定shader
+    m_SkyBoxShader.Use();
+    unsigned short skyboxLoc = glGetUniformLocation(m_SkyBoxShader.shaderProgramID, "skybox");
+    glUniform1i(skyboxLoc, GL_TEXTURE0);
+    glm::mat4 viewMatrix = Camera::main->GetViewMatrix();
+    glm::mat4 projectionMatrix = Camera::main->GetProjectionMatrix();
+    unsigned short viewLoc = glGetUniformLocation(m_SkyBoxShader.shaderProgramID, "view");
+    unsigned short projectionLoc = glGetUniformLocation(m_SkyBoxShader.shaderProgramID, "projection");
+    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(viewMatrix));
+    glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projectionMatrix));
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_CUBE_MAP, m_SkyBoxCubeMap);
+
+    // 绘制立方体
+    glDrawArrays(GL_TRIANGLES, 0, 36);
+    glBindVertexArray(0);
+
+    // 解绑
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    glBindVertexArray(0);
+    glUseProgram(0);
+    
+    //开启深度写入
+    glDepthMask(GL_TRUE);
+}
+
+const float RenderPass_SkyBox::m_skyboxVertices[] = 
+{
+    // positions
+    -1.0f, 1.0f, -1.0f,
+    -1.0f, -1.0f, -1.0f,
+    1.0f, -1.0f, -1.0f,
+    1.0f, -1.0f, -1.0f,
+    1.0f, 1.0f, -1.0f,
+    -1.0f, 1.0f, -1.0f,
+
+    -1.0f, -1.0f, 1.0f,
+    -1.0f, -1.0f, -1.0f,
+    -1.0f, 1.0f, -1.0f,
+    -1.0f, 1.0f, -1.0f,
+    -1.0f, 1.0f, 1.0f,
+    -1.0f, -1.0f, 1.0f,
+
+    1.0f, -1.0f, -1.0f,
+    1.0f, -1.0f, 1.0f,
+    1.0f, 1.0f, 1.0f,
+    1.0f, 1.0f, 1.0f,
+    1.0f, 1.0f, -1.0f,
+    1.0f, -1.0f, -1.0f,
+
+    -1.0f, -1.0f, 1.0f,
+    -1.0f, 1.0f, 1.0f,
+    1.0f, 1.0f, 1.0f,
+    1.0f, 1.0f, 1.0f,
+    1.0f, -1.0f, 1.0f,
+    -1.0f, -1.0f, 1.0f,
+
+    -1.0f, 1.0f, -1.0f,
+    1.0f, 1.0f, -1.0f,
+    1.0f, 1.0f, 1.0f,
+    1.0f, 1.0f, 1.0f,
+    -1.0f, 1.0f, 1.0f,
+    -1.0f, 1.0f, -1.0f,
+
+    -1.0f, -1.0f, -1.0f,
+    -1.0f, -1.0f, 1.0f,
+    1.0f, -1.0f, -1.0f,
+    1.0f, -1.0f, -1.0f,
+    -1.0f, -1.0f, 1.0f,
+    1.0f, -1.0f, 1.0f
+};

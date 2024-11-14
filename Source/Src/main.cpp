@@ -1,95 +1,13 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-09 21:35:01
- * @LastEditTime: 2024-11-13 21:41:57
+ * @LastEditTime: 2024-11-14 18:14:46
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
-#include <iostream>
-#include <cmath>
-#include "glad/glad.h" //glad 必须在Glfw前加载
-#include "Glfw/glfw3.h"
-#include "glm/glm.hpp"
-#include "glm/gtc/matrix_transform.hpp"
-#include "glm/gtc/type_ptr.hpp"
 
-#ifndef STB_IMAGE_IMPLEMENTATION
-#define STB_IMAGE_IMPLEMENTATION
-#endif
-#include "stb_image.h"
+#include "Bick.hpp"
 
-#include "Shader/Shader.hpp"
-#include "Texture/Texture.hpp"
-#include "Camera/Camera.hpp"
-#include "Mesh/Model.hpp"
-#include "Input/InputSystem.hpp"
-#include "Light/Light.hpp"
-
-#include "Renderer/RenderPass_SkyBox.hpp"
-
-// 窗口大小变化回调函数
-void framebuffer_size_callback(GLFWwindow *window, int width, int height)
-{
-    glViewport(0, 0, width, height);
-}
-// GLFWwindow* CreateWindow(int width, int height, const char* title)
-// {
-//     return window;
-// }
-
-GLFWwindow *CreateWindow(int width, int height, const char *title, GLFWframebuffersizefun callback)
-{
-    // 初始化glfw
-    glfwInit();
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);                 // 设置opengl主版本为3
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);                 // 设置opengl次版本为3
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // 告诉GLFW 我们使用的是核心模式
-    // glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-
-    // 创建窗口
-    GLFWwindow *window = glfwCreateWindow(800, 600, "BickRenderer", NULL, NULL); // 创建窗口,800*600为窗口大小,LearnOpenGL为窗口标题
-    if (window == NULL)
-    {
-        std::cout << "Failed to create GLFW window" << std::endl;
-        glfwTerminate(); // 终止glfw
-        return 0;
-    }
-    glfwMakeContextCurrent(window); // 通知GLFW将此窗口的上下文设置为当前线程的主上下文
-
-    // 初始化GLAD
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) // TODO: 这里暂时不是很清楚
-    {
-        std::cout << "Failed to initialize GLAD" << std::endl;
-        return 0;
-    }
-
-    // 设置Viewport
-    Singleton<InputSystem>::Instance().Init(window);
-    glViewport(0, 0, 800, 800);                                        // 左下角坐标为(0,0),右上角坐标为(800,600)
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback); // 设置窗口大小变化回调函数
-
-    return window;
-}
-void HellowWorld()
-{
-    std::string startTitle =
-        "|********************************************|\n"
-        "|************BickRenderer start**************|\n"
-        "|*********Welcome to BickRenderer************|\n"
-        "|********************************************|";
-
-    std::cout << "\n\n\n"
-              << startTitle << std::endl
-              << std::endl;
-}
-void SetOpenGL()
-{
-    glEnable(GL_DEPTH_TEST); // 启用深度测试
-    glDepthFunc(GL_LESS);    // 设置深度测试函数为 LESS
-    glDepthMask(GL_TRUE);    // 启用深度写入
-    glDisable(GL_CULL_FACE); // 禁用背面剔除
-    glEnable(GL_BLEND);      // 启用混合
-}
 int main()
 {
     GLFWwindow *window = CreateWindow(800, 600, "BickRenderer", framebuffer_size_callback);
@@ -102,9 +20,10 @@ int main()
     auto directionalLight = std::make_shared<DirectionalLight>((glm::vec3(-1.0f, -1.0f, -1.0f)));
     Singleton<Scene>::Instance().directionalLights.push_back(directionalLight);
 
-    MatFactory_StandardPBM_MetallicWorkFlow phongMat = MatFactory_StandardPBM_MetallicWorkFlow(
+    auto phongMat = MatFactory_StandardPBM_MetallicWorkFlow(
         "Source/GLSL_Shaders/Blinn-PhongShader/StdBlinnPhongVertex.glsl",
-        "Source/GLSL_Shaders/Blinn-PhongShader/StdBlinnPhongFrag.glsl");
+        "Source/GLSL_Shaders/Blinn-PhongShader/StdBlinnPhongFrag.glsl"
+        );
 
     Model model = Model("Assets/Models/NanoSuit/nanosuit.obj", &phongMat, Transform(glm::vec3(0.0f, 0.0f, -10.0f), glm::vec3(45.0f, 0.0f, 0.0f), glm::vec3(0.3f)));
 
@@ -163,52 +82,7 @@ int main()
         "Source/GLSL_Shaders/ScreenShader/frag.glsl",
         "ScreenShader");
     //------------------------FB0-END----------------------------------------------//
-    // //------------------------CUBEMAP----------------------------------------------//
-
-    //     GLuint cubeMap;
-    //     glGenTextures(1, &cubeMap);
-    //     glBindTexture(GL_TEXTURE_CUBE_MAP, cubeMap);
-
-    // std::vector<std::string> textures_faces = {
-    //     "Assets/Textures/Skybox/MountainSea/right.jpg",
-    //     "Assets/Textures/Skybox/MountainSea/left.jpg",
-    //     "Assets/Textures/Skybox/MountainSea/top.jpg",
-    //     "Assets/Textures/Skybox/MountainSea/bottom.jpg",
-    //     "Assets/Textures/Skybox/MountainSea/front.jpg",
-    //     "Assets/Textures/Skybox/MountainSea/back.jpg"
-    // };
-    //     int width, height, nrChannels;
-    //     unsigned char *data;
-    //     for (unsigned int i = 0; i < textures_faces.size(); i++)
-    //     {
-    //         data = stbi_load(textures_faces[i].c_str(), &width, &height, &nrChannels, 0);
-    //         glTexImage2D(
-    //             GL_TEXTURE_CUBE_MAP_POSITIVE_X + i,
-    //             0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-    //     }
-
-    //     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    //     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    //     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    //     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    //     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
-
-    //     Shader skyboxShader = Shader(
-    //         "Source/GLSL_Shaders/SkyBox/cubemapvert.glsl",
-    //         "Source/GLSL_Shaders/SkyBox/cubemapfrag.glsl",
-    //         "SkyboxShader"
-    //     );
-
-    //     unsigned int skyboxVAO, skyboxVBO;
-    //     glGenVertexArrays(1, &skyboxVAO);
-    //     glGenBuffers(1, &skyboxVBO);
-    //     glBindVertexArray(skyboxVAO);
-    //     glBindBuffer(GL_ARRAY_BUFFER, skyboxVBO);
-    //     glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVertices), &skyboxVertices, GL_STATIC_DRAW);
-    //     glEnableVertexAttribArray(0);
-    //     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-
-    // //------------------------CUBEMAP-END----------------------------------------------//
+//-------------------------------SKYBOX-PASS----------//
     auto skyboxPass = std::make_shared<RenderPass_SkyBox>();
     auto renderResoruce = std::make_shared<RenderResource>();
     renderResoruce->m_SkyBoxRenderResource.skyBoxTexturePath = {
@@ -219,12 +93,12 @@ int main()
         "Assets/Textures/Skybox/MountainSea/front.jpg",
         "Assets/Textures/Skybox/MountainSea/back.jpg"
         };
-    auto renderPassInfo = RenderPassInitInfo();
-    renderPassInfo.width = 800;
-    renderPassInfo.height = 600;
-    renderPassInfo.renderResource = renderResoruce;
-    skyboxPass->Initialize(std::move(renderPassInfo));
-
+    auto renderPassInfo = std::make_shared<RenderPassInitInfo>();
+    renderPassInfo->width = 800;
+    renderPassInfo->height = 600;
+    renderPassInfo->renderResource = renderResoruce;
+    skyboxPass->Initialize(renderPassInfo);
+//----------SKYBOX-PASS-END----------//
     SetOpenGL();
     int frameCount = 0;
     // 渲染循环
@@ -236,31 +110,14 @@ int main()
         // 输入
         Singleton<InputSystem>::Instance().Update();
 
+#pragma region 渲染
         glBindFramebuffer(GL_FRAMEBUFFER, fbo);
         // 渲染
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);               // 设置清空屏幕使用的颜色,是一个状态设置函数
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // 清空颜色缓冲,是一个状态使用函数,获取状态后执行
-        // //-----------天空盒----------//
-        //         skyboxShader.Use();
-        //         unsigned short skyboxLoc = glGetUniformLocation(skyboxShader.shaderProgramID, "skybox");
-        //         glUniform1i(skyboxLoc, GL_TEXTURE0);
-        //         glm::mat4 viewMatrix       = Camera::main->GetViewMatrix();
-        //         glm::mat4 projectionMatrix = Camera::main->GetProjectionMatrix();
-        //         unsigned short viewLoc       = glGetUniformLocation(skyboxShader.shaderProgramID, "view");
-        //         unsigned short projectionLoc = glGetUniformLocation(skyboxShader.shaderProgramID, "projection");
-        //         glUniformMatrix4fv(viewLoc      , 1, GL_FALSE, glm::value_ptr(viewMatrix));
-        //         glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projectionMatrix));
-        //         glActiveTexture(GL_TEXTURE0);
-        //         glBindTexture(GL_TEXTURE_CUBE_MAP, cubeMap);
-        //         glBindVertexArray(skyboxVAO);
-        //         glDrawArrays(GL_TRIANGLES, 0, 36);
-        //         glBindVertexArray(0);
-        // //-----------天空盒-END----------//
-        skyboxPass->Draw();
-        glBindFramebuffer(GL_FRAMEBUFFER, skyboxPass->GetFBO());
-        //-----------模型----------//
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);               // 设置清空屏幕使用的颜色
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT); // 清空颜色缓冲
+
         model.Draw();
-        //-----------模型-END----------//
+        skyboxPass->Draw(fbo);
         //-----------后处理--------------------------//
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
         glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
@@ -278,7 +135,8 @@ int main()
         // 交换缓冲,检查并调用事件回调函数
         glfwSwapBuffers(window); // 交换颜色缓冲
         glfwPollEvents();        // 检查是否触发事件(输入),更新窗口状态,调用对应回调函数
-
+#pragma endregion
+        
         // 报错
         // GLenum err;
         // while ((err = glGetError()) != GL_NO_ERROR)

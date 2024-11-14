@@ -448,7 +448,6 @@ Source/CMakeFiles/BickRenderer.dir/Src/Renderer/Renderer.cpp.obj: \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Light/Light.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Light/PointLight.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Renderer/RenderResource.hpp \
- C:/Users/20131/Desktop/BickRenderer/Source/Include/Renderer/RenderPass_SkyBox.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Renderer/RenderPass.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Renderer/RenderResource_SkyBox.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Renderer/RenderPipeline.hpp

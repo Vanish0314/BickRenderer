@@ -1,5 +1,6 @@
 Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: \
  C:\Users\20131\Desktop\BickRenderer\Source\Src\main.cpp \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/Bick.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/iostream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/requires_hosted.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -388,6 +389,7 @@ Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/sstream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/sstream.tcc \
+ C:/Users/20131/Desktop/BickRenderer/Source/Include/glad/glad.h \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Texture/Texture.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Camera/Camera.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/memory \
@@ -458,7 +460,6 @@ Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_map.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_multimap.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/glfw/include/GLFW/glfw3.h \
- C:/Users/20131/Desktop/BickRenderer/Source/Include/Renderer/RenderPass_SkyBox.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Renderer/RenderPass.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Renderer/RenderResource.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Renderer/RenderResource_SkyBox.hpp

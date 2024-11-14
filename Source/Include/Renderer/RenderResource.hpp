@@ -3,13 +3,12 @@
 #include <memory>
 #include "Scene/Scene.hpp"
 
-#include "Renderer/RenderPass_SkyBox.hpp"
+#include "Renderer/RenderPass.hpp"
+#include "Renderer/RenderResource_SkyBox.hpp"
 
-class RenderResource
+struct RenderResource
 {
-public:
     std::shared_ptr<Scene> scene;
 
-public:
     RenderResource_SkyBox m_SkyBoxRenderResource;
 };
