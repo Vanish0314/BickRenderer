@@ -1,3 +1,11 @@
+/*
+ * @Author: Vanish
+ * @Date: 2024-11-14 18:08:59
+ * @LastEditTime: 2024-11-15 13:25:12
+ * Also View: http://vanishing.cc
+ * Contract Me: http://qunchengxiao.me
+ * Copyright@ http://www.wtfpl.net/
+ */
 #pragma once
 
 #include <iostream>
@@ -43,7 +51,7 @@ GLFWwindow *CreateWindow(int width, int height, const char *title, GLFWframebuff
     // glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
     // 创建窗口
-    GLFWwindow *window = glfwCreateWindow(800, 600, "BickRenderer", NULL, NULL); // 创建窗口,800*600为窗口大小,LearnOpenGL为窗口标题
+    GLFWwindow *window = glfwCreateWindow(1920, 1080, "BickRenderer", NULL, NULL); // 创建窗口,800*600为窗口大小,LearnOpenGL为窗口标题
     if (window == NULL)
     {
         std::cout << "Failed to create GLFW window" << std::endl;
@@ -61,7 +69,7 @@ GLFWwindow *CreateWindow(int width, int height, const char *title, GLFWframebuff
 
     // 设置Viewport
     Singleton<InputSystem>::Instance().Init(window);
-    glViewport(0, 0, 800, 800);                                        // 左下角坐标为(0,0),右上角坐标为(800,600)
+    glViewport(0, 0, 1920, 1080);                                        // 左下角坐标为(0,0),右上角坐标为(800,600)
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback); // 设置窗口大小变化回调函数
 
     return window;

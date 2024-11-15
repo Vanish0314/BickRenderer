@@ -56,6 +56,7 @@ public:
     float speed = 3.0f;
     void Move(const glm::vec3 &moveDirAndDist);
     void Rotate(const float &yaw, const float &pitch);
+    void Rotate(glm::mat4 &&rotationMatrix);
     void Zoom(const float &zoomFOV);
 
 };

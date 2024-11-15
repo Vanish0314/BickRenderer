@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-09 21:35:01
- * @LastEditTime: 2024-11-14 18:14:46
+ * @LastEditTime: 2024-11-15 15:36:19
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -10,10 +10,10 @@
 
 int main()
 {
-    GLFWwindow *window = CreateWindow(800, 600, "BickRenderer", framebuffer_size_callback);
+    GLFWwindow *window = CreateWindow(1920, 1080, "BickRenderer", framebuffer_size_callback);
     HellowWorld();
 
-    Camera camera = Camera(800, 600, 90.0);
+    Camera camera = Camera(1920, 1080, 90.0);
     camera.SetPosition(glm::vec3(0.0f, 0.0f, 1.0f));
     camera.SetForward(glm::vec3(0.0f, 0.0f, -1.0f));
 
@@ -25,7 +25,7 @@ int main()
         "Source/GLSL_Shaders/Blinn-PhongShader/StdBlinnPhongFrag.glsl"
         );
 
-    Model model = Model("Assets/Models/NanoSuit/nanosuit.obj", &phongMat, Transform(glm::vec3(0.0f, 0.0f, -10.0f), glm::vec3(45.0f, 0.0f, 0.0f), glm::vec3(0.3f)));
+    Model model = Model("Assets/Models/NanoSuit/nanosuit.obj", &phongMat, Transform(glm::vec3(0.0f, 0.0f, -10.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.3f)));
 
     //------------------------FB0----------------------------------------------//
     unsigned int fbo;
@@ -35,7 +35,7 @@ int main()
     unsigned int texture;
     glGenTextures(1, &texture);                                                          // 生成纹理
     glBindTexture(GL_TEXTURE_2D, texture);                                               // 绑定纹理
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, 800, 600, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL); // 定义纹理大小,格式,数据
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, 1920, 1080, 0, GL_RGB, GL_UNSIGNED_BYTE, NULL); // 定义纹理大小,格式,数据
     // 图象从纹理图象空间映射到帧缓冲图象空间(映射需要重新构造纹理图像,这样就会造成应用到多边形上的图像失真),这时就可用glTexParmeteri()函数来确定如何把纹理象素映射成像素.
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); // 设置纹理缩小过滤方式,LINEAR表示线性插值
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); // 设置纹理放大过滤方式,LINEAR表示线性插值
@@ -46,7 +46,7 @@ int main()
     unsigned int rbo;
     glGenRenderbuffers(1, &rbo);                                                                  // 生成渲染缓冲
     glBindRenderbuffer(GL_RENDERBUFFER, rbo);                                                     // 绑定渲染缓冲
-    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, 800, 600);                        // 定义渲染缓冲大小,格式,数据
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, 1920, 1080);                        // 定义渲染缓冲大小,格式,数据
     glBindRenderbuffer(GL_RENDERBUFFER, 0);                                                       // 解绑渲染缓冲
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, rbo); // 将渲染缓冲attach到帧缓冲对象上
 
@@ -94,8 +94,8 @@ int main()
         "Assets/Textures/Skybox/MountainSea/back.jpg"
         };
     auto renderPassInfo = std::make_shared<RenderPassInitInfo>();
-    renderPassInfo->width = 800;
-    renderPassInfo->height = 600;
+    renderPassInfo->width = 1920;
+    renderPassInfo->height = 1080;
     renderPassInfo->renderResource = renderResoruce;
     skyboxPass->Initialize(renderPassInfo);
 //----------SKYBOX-PASS-END----------//
@@ -116,8 +116,9 @@ int main()
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);               // 设置清空屏幕使用的颜色
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT); // 清空颜色缓冲
 
-        model.Draw();
         skyboxPass->Draw(fbo);
+        glBindFramebuffer(GL_FRAMEBUFFER, fbo);
+        model.Draw();
         //-----------后处理--------------------------//
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
         glClearColor(1.0f, 0.0f, 0.0f, 1.0f);

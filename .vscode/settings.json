@@ -86,7 +86,8 @@
         "stop_token": "cpp",
         "thread": "cpp",
         "xhash": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "text_encoding": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

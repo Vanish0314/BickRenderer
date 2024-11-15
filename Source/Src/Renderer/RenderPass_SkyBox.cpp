@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-11-13 20:11:54
- * @LastEditTime: 2024-11-14 18:18:22
+ * @LastEditTime: 2024-11-15 15:38:33
  * Also View: http://vanishing.cc
  * Contract Me: http://qunchengxiao.me
  * Copyright@ http://www.wtfpl.net/
@@ -68,6 +68,8 @@ void RenderPass_SkyBox::Initialize(std::shared_ptr<RenderPassInitInfo> info)
 void RenderPass_SkyBox::Draw()
 {
     //TODO: 处理OpenGl设置
+    //开启深度测试
+    glEnable(GL_DEPTH_TEST);
     //关闭深度写入
     glDepthMask(GL_FALSE);
 
@@ -84,6 +86,8 @@ void RenderPass_SkyBox::Draw()
     unsigned short skyboxLoc = glGetUniformLocation(m_SkyBoxShader.shaderProgramID, "skybox");
     glUniform1i(skyboxLoc, GL_TEXTURE0);
     glm::mat4 viewMatrix = Camera::main->GetViewMatrix();
+    //去除view矩阵中的位移
+    viewMatrix[3] = glm::vec4(0.0f, 0.0f, 0.0f, 1.0f);
     glm::mat4 projectionMatrix = Camera::main->GetProjectionMatrix();
     unsigned short viewLoc = glGetUniformLocation(m_SkyBoxShader.shaderProgramID, "view");
     unsigned short projectionLoc = glGetUniformLocation(m_SkyBoxShader.shaderProgramID, "projection");
@@ -119,6 +123,8 @@ void RenderPass_SkyBox::Draw(GLuint FBO)
     unsigned short skyboxLoc = glGetUniformLocation(m_SkyBoxShader.shaderProgramID, "skybox");
     glUniform1i(skyboxLoc, GL_TEXTURE0);
     glm::mat4 viewMatrix = Camera::main->GetViewMatrix();
+    //去除view矩阵中的位移
+    viewMatrix[3] = glm::vec4(0.0f, 0.0f, 0.0f, 1.0f);
     glm::mat4 projectionMatrix = Camera::main->GetProjectionMatrix();
     unsigned short viewLoc = glGetUniformLocation(m_SkyBoxShader.shaderProgramID, "view");
     unsigned short projectionLoc = glGetUniformLocation(m_SkyBoxShader.shaderProgramID, "projection");

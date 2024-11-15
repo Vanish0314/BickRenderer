@@ -73,15 +73,15 @@ include 3rd/glm/glm/CMakeFiles/glm.dir/flags.make
 3rd/glm/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj: C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/glm.cpp
 3rd/glm/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj: 3rd/glm/glm/CMakeFiles/glm.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\20131\Desktop\BickRenderer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object 3rd/glm/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj"
-	cd /d C:\Users\20131\Desktop\BickRenderer\build\3rd\glm\glm && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 3rd/glm/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj -MF CMakeFiles\glm.dir\detail\glm.cpp.obj.d -o CMakeFiles\glm.dir\detail\glm.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\3rd\glm\glm\detail\glm.cpp
+	cd /d C:\Users\20131\Desktop\BickRenderer\build\3rd\glm\glm && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT 3rd/glm/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj -MF CMakeFiles\glm.dir\detail\glm.cpp.obj.d -o CMakeFiles\glm.dir\detail\glm.cpp.obj -c C:\Users\20131\Desktop\BickRenderer\3rd\glm\glm\detail\glm.cpp
 
 3rd/glm/glm/CMakeFiles/glm.dir/detail/glm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/glm.dir/detail/glm.cpp.i"
-	cd /d C:\Users\20131\Desktop\BickRenderer\build\3rd\glm\glm && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\20131\Desktop\BickRenderer\3rd\glm\glm\detail\glm.cpp > CMakeFiles\glm.dir\detail\glm.cpp.i
+	cd /d C:\Users\20131\Desktop\BickRenderer\build\3rd\glm\glm && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\20131\Desktop\BickRenderer\3rd\glm\glm\detail\glm.cpp > CMakeFiles\glm.dir\detail\glm.cpp.i
 
 3rd/glm/glm/CMakeFiles/glm.dir/detail/glm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/glm.dir/detail/glm.cpp.s"
-	cd /d C:\Users\20131\Desktop\BickRenderer\build\3rd\glm\glm && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\20131\Desktop\BickRenderer\3rd\glm\glm\detail\glm.cpp -o CMakeFiles\glm.dir\detail\glm.cpp.s
+	cd /d C:\Users\20131\Desktop\BickRenderer\build\3rd\glm\glm && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\20131\Desktop\BickRenderer\3rd\glm\glm\detail\glm.cpp -o CMakeFiles\glm.dir\detail\glm.cpp.s
 
 # Object files for target glm
 glm_OBJECTS = \

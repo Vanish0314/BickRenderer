@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-14 15:31:38
- * @LastEditTime: 2024-10-19 20:56:24
+ * @LastEditTime: 2024-11-15 14:26:31
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -19,11 +19,12 @@ class Mouse
 {
     friend class Singleton<Mouse>;
 private: 
-    int lastX = -1, lastY = -1;
+    int lastX = 0, lastY = 0;
     int x , y ;
 public: 
-    double horizontalSensitivity = 1.0;
-    double verticalSensitivity   = 1.0;
+    /// @brief 移动多少像素,才移动1度
+    int horizontalSensitivity = 10;
+    int verticalSensitivity   = 10;
 public: 
     bool leftButtonPressed  = false;
     bool rightButtonPressed = false;
@@ -38,9 +39,12 @@ private:
     ~Mouse()              = default;
 
 public: 
+    void UpdatePerFrame();
     void UpdatePosition(int x, int y);    //像素位置
     void UpdateButton(bool left, bool wheelPressed, bool right);
     void UpdateScroll(int scroll);
+public:
+    void MoveCamera();
 };
 
 enum KeyCode
@@ -51,7 +55,8 @@ enum KeyCode
     D,
     ESC,
     C,
-    SPACE
+    SPACE,
+    LEFT_ALT
 };
 class KeyBoard
 {
