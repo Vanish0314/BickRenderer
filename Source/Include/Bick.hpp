@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-11-14 18:08:59
- * @LastEditTime: 2024-11-15 13:25:12
+ * @LastEditTime: 2024-11-29 15:11:00
  * Also View: http://vanishing.cc
  * Contract Me: http://qunchengxiao.me
  * Copyright@ http://www.wtfpl.net/
@@ -9,6 +9,7 @@
 #pragma once
 
 #include <iostream>
+#include <filesystem>
 #include <cmath>
 #include "glad/glad.h" //glad 必须在Glfw前加载
 #include "Glfw/glfw3.h"
@@ -31,15 +32,24 @@
 #include "Renderer/RenderPass.hpp"
 
 
+//设置程序运行目录
+void SetRootPath()
+{
+    std::cout<<"当前工作目录为:"<<std::filesystem::current_path()<<std::endl;
+
+    // try {
+    //     std::filesystem::current_path("C:/Users/20131/Desktop/BickRenderer/");
+    //     std::cout << "工作目录设置为：" << std::filesystem::current_path() << std::endl;
+    // } catch (const std::exception &e) {
+    //     std::cerr << "无法设置工作目录：" << e.what() << std::endl;
+    // }
+}
+
 // 窗口大小变化回调函数
 void framebuffer_size_callback(GLFWwindow *window, int width, int height)
 {
     glViewport(0, 0, width, height);
 }
-// GLFWwindow* CreateWindow(int width, int height, const char* title)
-// {
-//     return window;
-// }
 
 GLFWwindow *CreateWindow(int width, int height, const char *title, GLFWframebuffersizefun callback)
 {

@@ -139,10 +139,40 @@ Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  C:/msys64/mingw64/include/c++/14.2.0/istream \
  C:/msys64/mingw64/include/c++/14.2.0/bits/istream.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/filesystem \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/fs_fwd.h \
+ C:/msys64/mingw64/include/c++/14.2.0/cstdint \
+ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
+ C:/msys64/mingw64/include/stdint.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/chrono.h \
+ C:/msys64/mingw64/include/c++/14.2.0/ratio \
+ C:/msys64/mingw64/include/c++/14.2.0/limits \
+ C:/msys64/mingw64/include/c++/14.2.0/ctime \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/parse_numbers.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/fs_path.h \
+ C:/msys64/mingw64/include/c++/14.2.0/locale \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h \
+ C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h \
+ C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/codecvt.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/locale_conv.h \
+ C:/msys64/mingw64/include/c++/14.2.0/iomanip \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/quoted_string.h \
+ C:/msys64/mingw64/include/c++/14.2.0/sstream \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/sstream.tcc \
+ C:/msys64/mingw64/include/c++/14.2.0/codecvt \
+ C:/msys64/mingw64/include/c++/14.2.0/ext/concurrence.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/shared_ptr.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/shared_ptr_base.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/allocated_ptr.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/unique_ptr.h \
+ C:/msys64/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/fs_dir.h \
+ C:/msys64/mingw64/include/c++/14.2.0/bits/fs_ops.h \
  C:/msys64/mingw64/include/c++/14.2.0/cmath \
  C:/msys64/mingw64/include/math.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/specfun.h \
- C:/msys64/mingw64/include/c++/14.2.0/limits \
  C:/msys64/mingw64/include/c++/14.2.0/tr1/gamma.tcc \
  C:/msys64/mingw64/include/c++/14.2.0/tr1/special_function_util.h \
  C:/msys64/mingw64/include/c++/14.2.0/tr1/bessel_function.tcc \
@@ -157,8 +187,6 @@ Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/glad/glad.h \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/glad/khrplatform.h \
- C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
- C:/msys64/mingw64/include/stdint.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/glfw/include/Glfw/glfw3.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/glm.hpp \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/detail/_fixes.hpp \
@@ -166,7 +194,6 @@ Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/cassert \
  C:/msys64/mingw64/include/assert.h \
  C:/Users/20131/Desktop/BickRenderer/3rd/glm/glm/simd/platform.h \
- C:/msys64/mingw64/include/c++/14.2.0/cstdint \
  C:/msys64/mingw64/include/c++/14.2.0/climits \
  C:/msys64/mingw64/include/c++/14.2.0/cfloat \
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/float.h \
@@ -202,7 +229,6 @@ Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/bits/unordered_map.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/hashtable.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
- C:/msys64/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/node_handle.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/erase_if.h \
@@ -382,12 +408,9 @@ Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: \
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mmintrin.h \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Shader/Shader.hpp \
  C:/msys64/mingw64/include/c++/14.2.0/fstream \
- C:/msys64/mingw64/include/c++/14.2.0/bits/codecvt.h \
  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/fstream.tcc \
- C:/msys64/mingw64/include/c++/14.2.0/sstream \
- C:/msys64/mingw64/include/c++/14.2.0/bits/sstream.tcc \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/glad/glad.h \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Texture/Texture.hpp \
  C:/Users/20131/Desktop/BickRenderer/Source/Include/Camera/Camera.hpp \
@@ -395,11 +418,6 @@ Source/CMakeFiles/BickRenderer.dir/Src/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_tempbuf.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_raw_storage_iter.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/align.h \
- C:/msys64/mingw64/include/c++/14.2.0/bits/unique_ptr.h \
- C:/msys64/mingw64/include/c++/14.2.0/bits/shared_ptr.h \
- C:/msys64/mingw64/include/c++/14.2.0/bits/shared_ptr_base.h \
- C:/msys64/mingw64/include/c++/14.2.0/bits/allocated_ptr.h \
- C:/msys64/mingw64/include/c++/14.2.0/ext/concurrence.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/shared_ptr_atomic.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/atomic_base.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/atomic_lockfree_defines.h \

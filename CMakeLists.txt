@@ -4,6 +4,9 @@ project(BickRenderer)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m64")
+message(STATUS "C++ Standard: ${CMAKE_CXX_STANDARD}")
+
 
 set(CMAKE_BUILD_TYPE Debug)
 

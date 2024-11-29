@@ -1,11 +1,14 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-12 14:40:07
- * @LastEditTime: 2024-11-13 20:19:46
+ * @LastEditTime: 2024-11-29 14:47:30
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
 #include "Shader/Shader.hpp"
+#include <exception>
+#include <ios>
+#include <iostream>
 
 Shader::Shader(const std::string &vertexShaderPath, const std::string &fragmentShaderPath, std::string name)
 {
@@ -24,6 +27,10 @@ void Shader::Use()
 
 void Shader::InitShader(const std::string &vertexShaderPath, const std::string &fragmentShaderPath, const std::string name)
 {
+    std::cout<< "[Shader.cpp]正在执行着色器程序初始化..."<<std::endl;
+    std::cout<< "[Shader.cpp]顶点着色器文件路径:"<<vertexShaderPath<<std::endl;
+    std::cout<< "[Shader.cpp]片元着色器文件路径:"<<fragmentShaderPath<<std::endl;
+
     this->name = name;
 
     std::ifstream vertexShaderStream, fragmentShaderStream;
@@ -35,11 +42,6 @@ void Shader::InitShader(const std::string &vertexShaderPath, const std::string &
     {
         vertexShaderStream.open(vertexShaderPath, std::ios::in);
         fragmentShaderStream.open(fragmentShaderPath, std::ios::in);
-
-        if (!vertexShaderStream.is_open() || !fragmentShaderStream.is_open())
-        {
-            throw std::runtime_error("[Shader.cpp]打开着色器文件失败.");
-        }
 
         vertexShaderCode << vertexShaderStream.rdbuf();
         vertexShaderStream.close();
@@ -99,6 +101,7 @@ void Shader::InitShader(const std::string &vertexShaderPath, const std::string &
     }
     catch (const std::exception &e)
     {
+        std::cout<< "[Shader.cpp]着色器程序初始化失败!无法打开文件\n"<<std::endl;
         std::cerr << e.what() << std::endl;
         return;
     }
@@ -171,7 +174,7 @@ void Shader::InitShader(const std::string &vertexShaderPath, const std::string &
     }
     catch (const std::exception &e)
     {
-        std::cerr << "[Shader.cpp]着色器程序初始化失败!\n";
+        std::cerr << "[Shader.cpp]着色器程序初始化失败!无法打开文件\n";
         std::cerr << "错误:" << e.what() << std::endl
                   << std::endl;
         return;

@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-09 21:35:01
- * @LastEditTime: 2024-11-15 15:36:19
+ * @LastEditTime: 2024-11-29 15:11:37
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -10,6 +10,7 @@
 
 int main()
 {
+
     GLFWwindow *window = CreateWindow(1920, 1080, "BickRenderer", framebuffer_size_callback);
     HellowWorld();
 
@@ -20,6 +21,7 @@ int main()
     auto directionalLight = std::make_shared<DirectionalLight>((glm::vec3(-1.0f, -1.0f, -1.0f)));
     Singleton<Scene>::Instance().directionalLights.push_back(directionalLight);
 
+    SetRootPath();
     auto phongMat = MatFactory_StandardPBM_MetallicWorkFlow(
         "Source/GLSL_Shaders/Blinn-PhongShader/StdBlinnPhongVertex.glsl",
         "Source/GLSL_Shaders/Blinn-PhongShader/StdBlinnPhongFrag.glsl"

@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = @CMakeFiles/glm.dir/includes_CXX.rsp
 
-CXX_FLAGS = -g -std=c++17
+CXX_FLAGS =  -m64 -g -std=c++17
 
