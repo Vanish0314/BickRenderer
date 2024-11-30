@@ -1,13 +1,12 @@
 /*
  * @Author: Vanish
  * @Date: 2024-11-13 20:11:54
- * @LastEditTime: 2024-11-15 15:38:33
+ * @LastEditTime: 2024-11-30 23:37:23
  * Also View: http://vanishing.cc
  * Contract Me: http://qunchengxiao.me
  * Copyright@ http://www.wtfpl.net/
  */
 
-#include <iostream>
 #include "Renderer/RenderPass.hpp"
 #include "stb_image.h"
 
@@ -21,8 +20,8 @@ void RenderPass_SkyBox::Initialize(std::shared_ptr<RenderPassInitInfo> info)
     if (res)
     {
         auto skyBoxPath = res->m_SkyBoxRenderResource.skyBoxTexturePath;
-        auto vert = res->m_SkyBoxRenderResource.skyBoxVertShaderPath;
-        auto frag = res->m_SkyBoxRenderResource.skyBoxFragShaderPath;
+        auto vert       = res->m_SkyBoxRenderResource.skyBoxVertShaderPath;
+        auto frag       = res->m_SkyBoxRenderResource.skyBoxFragShaderPath;
 
         // 创建shader
         m_SkyBoxShader.InitShader(vert, frag, "SkyBoxShader");
@@ -65,55 +64,13 @@ void RenderPass_SkyBox::Initialize(std::shared_ptr<RenderPassInitInfo> info)
     }
 }
 
-void RenderPass_SkyBox::Draw()
-{
-    //TODO: 处理OpenGl设置
-    //开启深度测试
-    glEnable(GL_DEPTH_TEST);
-    //关闭深度写入
-    glDepthMask(GL_FALSE);
-
-    // 绑定framebuffer
-    glBindFramebuffer(GL_FRAMEBUFFER, m_fbo);
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
-
-    //绑定VAO
-    glBindVertexArray(m_SkyBoxVAO);
-
-    // 绑定shader
-    m_SkyBoxShader.Use();
-    unsigned short skyboxLoc = glGetUniformLocation(m_SkyBoxShader.shaderProgramID, "skybox");
-    glUniform1i(skyboxLoc, GL_TEXTURE0);
-    glm::mat4 viewMatrix = Camera::main->GetViewMatrix();
-    //去除view矩阵中的位移
-    viewMatrix[3] = glm::vec4(0.0f, 0.0f, 0.0f, 1.0f);
-    glm::mat4 projectionMatrix = Camera::main->GetProjectionMatrix();
-    unsigned short viewLoc = glGetUniformLocation(m_SkyBoxShader.shaderProgramID, "view");
-    unsigned short projectionLoc = glGetUniformLocation(m_SkyBoxShader.shaderProgramID, "projection");
-    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(viewMatrix));
-    glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projectionMatrix));
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_CUBE_MAP, m_SkyBoxCubeMap);
-
-    // 绘制立方体
-    glDrawArrays(GL_TRIANGLES, 0, 36);
-    glBindVertexArray(0);
-
-    // 解绑
-    glBindFramebuffer(GL_FRAMEBUFFER, 0);
-    glBindVertexArray(0);
-    glUseProgram(0);
-
-    glDepthMask(GL_TRUE);
-}
-void RenderPass_SkyBox::Draw(GLuint FBO)
+void RenderPass_SkyBox::DrawPass(GLuint inputFBO, GLuint outputFBO)
 {
     //TODO: 处理OpenGl设置
     glDepthMask(GL_FALSE);
 
     // 绑定framebuffer
-    glBindFramebuffer(GL_FRAMEBUFFER, FBO);
+    glBindFramebuffer(GL_FRAMEBUFFER, outputFBO);
 
     //绑定VAO
     glBindVertexArray(m_SkyBoxVAO);

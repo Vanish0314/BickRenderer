@@ -510,6 +510,30 @@ Src/Renderer/RenderPass.cpp.s:
 	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renderer/RenderPass.cpp.s
 .PHONY : Src/Renderer/RenderPass.cpp.s
 
+Src/Renderer/RenderPass_PostProcess.obj: Src/Renderer/RenderPass_PostProcess.cpp.obj
+.PHONY : Src/Renderer/RenderPass_PostProcess.obj
+
+# target to build an object file
+Src/Renderer/RenderPass_PostProcess.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renderer/RenderPass_PostProcess.cpp.obj
+.PHONY : Src/Renderer/RenderPass_PostProcess.cpp.obj
+
+Src/Renderer/RenderPass_PostProcess.i: Src/Renderer/RenderPass_PostProcess.cpp.i
+.PHONY : Src/Renderer/RenderPass_PostProcess.i
+
+# target to preprocess a source file
+Src/Renderer/RenderPass_PostProcess.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renderer/RenderPass_PostProcess.cpp.i
+.PHONY : Src/Renderer/RenderPass_PostProcess.cpp.i
+
+Src/Renderer/RenderPass_PostProcess.s: Src/Renderer/RenderPass_PostProcess.cpp.s
+.PHONY : Src/Renderer/RenderPass_PostProcess.s
+
+# target to generate assembly for a file
+Src/Renderer/RenderPass_PostProcess.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Renderer/RenderPass_PostProcess.cpp.s
+.PHONY : Src/Renderer/RenderPass_PostProcess.cpp.s
+
 Src/Renderer/RenderPass_SkyBox.obj: Src/Renderer/RenderPass_SkyBox.cpp.obj
 .PHONY : Src/Renderer/RenderPass_SkyBox.obj
 
@@ -654,6 +678,30 @@ Src/Texture/Texture.cpp.s:
 	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Texture/Texture.cpp.s
 .PHONY : Src/Texture/Texture.cpp.s
 
+Src/Util/Logger.obj: Src/Util/Logger.cpp.obj
+.PHONY : Src/Util/Logger.obj
+
+# target to build an object file
+Src/Util/Logger.cpp.obj:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Util/Logger.cpp.obj
+.PHONY : Src/Util/Logger.cpp.obj
+
+Src/Util/Logger.i: Src/Util/Logger.cpp.i
+.PHONY : Src/Util/Logger.i
+
+# target to preprocess a source file
+Src/Util/Logger.cpp.i:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Util/Logger.cpp.i
+.PHONY : Src/Util/Logger.cpp.i
+
+Src/Util/Logger.s: Src/Util/Logger.cpp.s
+.PHONY : Src/Util/Logger.s
+
+# target to generate assembly for a file
+Src/Util/Logger.cpp.s:
+	cd /d C:\Users\20131\Desktop\BickRenderer\build && $(MAKE) $(MAKESILENT) -f Source\CMakeFiles\BickRenderer.dir\build.make Source/CMakeFiles/BickRenderer.dir/Src/Util/Logger.cpp.s
+.PHONY : Src/Util/Logger.cpp.s
+
 Src/glad/glad.obj: Src/glad/glad.c.obj
 .PHONY : Src/glad/glad.obj
 
@@ -757,6 +805,9 @@ help:
 	@echo ... Src/Renderer/RenderPass.obj
 	@echo ... Src/Renderer/RenderPass.i
 	@echo ... Src/Renderer/RenderPass.s
+	@echo ... Src/Renderer/RenderPass_PostProcess.obj
+	@echo ... Src/Renderer/RenderPass_PostProcess.i
+	@echo ... Src/Renderer/RenderPass_PostProcess.s
 	@echo ... Src/Renderer/RenderPass_SkyBox.obj
 	@echo ... Src/Renderer/RenderPass_SkyBox.i
 	@echo ... Src/Renderer/RenderPass_SkyBox.s
@@ -775,6 +826,9 @@ help:
 	@echo ... Src/Texture/Texture.obj
 	@echo ... Src/Texture/Texture.i
 	@echo ... Src/Texture/Texture.s
+	@echo ... Src/Util/Logger.obj
+	@echo ... Src/Util/Logger.i
+	@echo ... Src/Util/Logger.s
 	@echo ... Src/glad/glad.obj
 	@echo ... Src/glad/glad.i
 	@echo ... Src/glad/glad.s

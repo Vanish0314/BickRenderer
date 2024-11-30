@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-11-13 19:34:42
- * @LastEditTime: 2024-11-14 18:00:05
+ * @LastEditTime: 2024-11-30 23:08:08
  * Also View: http://vanishing.cc
  * Contract Me: http://qunchengxiao.me
  * Copyright@ http://www.wtfpl.net/
@@ -24,6 +24,18 @@ void RenderPass::Initialize(std::shared_ptr<RenderPassInitInfo> info)
 
     // 创建FBO
     CreateFrameBuffer();
+}
+
+void RenderPass::Draw(GLuint InputFBO, std::optional<GLuint> OutputFBO)
+{
+    if(OutputFBO.has_value())
+    {
+        DrawPass(InputFBO, OutputFBO.value());
+    }
+    else
+    {
+        DrawPass(InputFBO, m_fbo);
+    }
 }
 
 void RenderPass::ChangeFBO(GLuint fbo)

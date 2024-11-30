@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-11-13 16:46:50
- * @LastEditTime: 2024-11-14 17:17:29
+ * @LastEditTime: 2024-11-30 23:11:06
  * Also View: http://vanishing.cc
  * Contract Me: http://qunchengxiao.me
  * Copyright@ http://www.wtfpl.net/
@@ -10,9 +10,8 @@
 
 struct RenderResource;
 
-#include <string>
+#include <optional>
 #include <memory>
-#include <iostream>
 #include <glad/glad.h>
 #include "Renderer/RenderResource.hpp"
 
@@ -39,13 +38,16 @@ public:
 public: 
     virtual void Initialize(std::shared_ptr<RenderPassInitInfo> info);
     virtual void ChangeFBO(GLuint fbo);
-    /// @brief 绘制在Pass的FBO上
-    virtual void Draw() = 0;
-    /// @brief 绘制在指定的FBO上,FBO必须完整
-    virtual void Draw(GLuint FBO) = 0;
+
+    /// @brief 设置输入FBO和输出FBO,如果不指定则绘制在默认FBO上.
+    void Draw(GLuint InputFBO = 0, std::optional<GLuint> OutputFBO = std::nullopt);
+
     virtual GLuint GetOutputTexture() const;
     virtual GLuint GetFBO() const;
     virtual void CleanUp();
+
+protected:
+    virtual void DrawPass(GLuint InputFBO,GLuint OutputFBO) = 0;
 
 private:
     void CreateFrameBuffer();
@@ -67,8 +69,8 @@ class RenderPass_SkyBox : public RenderPass
 {
 public:
     virtual void Initialize(std::shared_ptr<RenderPassInitInfo> info) override final;
-    virtual void Draw() override final;
-    virtual void Draw(GLuint FBO) override final;
+protected:
+    virtual void DrawPass(GLuint InputFBO,GLuint OutputFBO) override final;
 
 private:
     GLuint m_SkyBoxVAO;
@@ -78,4 +80,21 @@ private:
 
 private:
     static const float m_skyboxVertices[];
+};
+
+
+class RenderPass_PostProcess : public RenderPass
+{
+public:
+    virtual void Initialize(std::shared_ptr<RenderPassInitInfo> info) override final;
+protected:
+    virtual void DrawPass(GLuint InputFBO,GLuint OutputFBO) override final;
+
+private:
+    GLuint m_PostProcessVAO;
+    GLuint m_PostProcessVBO;
+    Shader m_PostProcessShader;
+    GLuint m_inputFBO;
+private:
+    static const float m_postProcessVertices[];
 };
