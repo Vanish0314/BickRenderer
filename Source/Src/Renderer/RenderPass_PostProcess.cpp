@@ -1,3 +1,11 @@
+/*
+ * @Author: Vanish
+ * @Date: 2024-11-30 20:14:35
+ * @LastEditTime: 2024-12-02 21:12:20
+ * Also View: http://vanishing.cc
+ * Contract Me: http://qunchengxiao.me
+ * Copyright@ http://www.wtfpl.net/
+ */
 #include "Bick.hpp"
 #include "Renderer/RenderPass.hpp"
 
@@ -37,26 +45,21 @@ void RenderPass_PostProcess::DrawPass(GLuint inputFBO, GLuint outputFBO)
     glGetFramebufferAttachmentParameteriv(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME, (GLint*)&inputTexture);
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
     if (inputTexture == 0) {
-        std::cerr << "[RenderPass_PostProcess::DrawPass] 无法从输入FBO中获取颜色缓冲,请检查缓冲位置是否正确" << std::endl;
+        std::cerr << "[RenderPass_PostProcess::DrawPass] 无法从输入FBO中获取颜色缓冲,请检查缓冲位置或类型是否正确" << std::endl;
         return;
     }
 
     glBindFramebuffer(GL_FRAMEBUFFER, outputFBO);
-    glClearColor(1.0f, 0.1f, 0.5f, 1.0f);  // 清屏
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
     glBindVertexArray(m_PostProcessVAO);
     m_PostProcessShader.Use(); 
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, inputTexture);  // 绑定输入纹理
     GLuint textureLoc = glGetUniformLocation(m_PostProcessShader.shaderProgramID, "screenTexture");
-    glUniform1i(textureLoc, GL_TEXTURE0);
+    glUniform1i(textureLoc, 0);
 
     glDrawArrays(GL_TRIANGLES, 0, 6);
 
-    // 清理状态
-    glBindFramebuffer(GL_FRAMEBUFFER, 0);
-    glBindVertexArray(0);
-    glUseProgram(0);
+    //TODO 如果outputFBO的分辨率不同,需要进行缩放,可以放到基类实现
 }
 
 const float RenderPass_PostProcess::m_postProcessVertices[] = 

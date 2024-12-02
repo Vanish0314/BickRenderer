@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-11-13 19:34:42
- * @LastEditTime: 2024-11-30 23:08:08
+ * @LastEditTime: 2024-12-02 17:01:16
  * Also View: http://vanishing.cc
  * Contract Me: http://qunchengxiao.me
  * Copyright@ http://www.wtfpl.net/
@@ -34,8 +34,25 @@ void RenderPass::Draw(GLuint InputFBO, std::optional<GLuint> OutputFBO)
     }
     else
     {
+        ClearBuffer();
         DrawPass(InputFBO, m_fbo);
     }
+    UnBind();
+}
+void RenderPass::ClearBuffer()
+{
+    glBindFramebuffer(GL_FRAMEBUFFER, m_fbo);
+    glClearColor(m_clearColor.x, m_clearColor.y, m_clearColor.z, m_clearColor.w);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
+}
+void RenderPass::UnBind()
+{
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);   // 恢复到默认帧缓冲
+    glBindVertexArray(0);                   // 解绑 VAO
+    glUseProgram(0);                        // 解绑当前着色器
+    glBindTexture(GL_TEXTURE_2D, 0);        // 解绑当前纹理
+    glBindBuffer(GL_ARRAY_BUFFER, 0);       // 解绑 VBO
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0); // 解绑索引缓冲
 }
 
 void RenderPass::ChangeFBO(GLuint fbo)
@@ -95,9 +112,7 @@ void RenderPass::ChangeFBO(GLuint fbo)
 
 void RenderPass::CreateFrameBuffer()
 {
-    //TODO:这里只绑定了一个color buffer,需要绑定模板和深度buffer
-
-    // 创建纹理
+    // 创建颜色纹理
     glGenTextures(1, &m_outputTexture);
     glBindTexture(GL_TEXTURE_2D, m_outputTexture);
     glTexImage2D(GL_TEXTURE_2D, 0, m_outputInternalFormat, m_width, m_height, 0, m_outputInternalFormat, GL_FLOAT, nullptr);
@@ -108,13 +123,30 @@ void RenderPass::CreateFrameBuffer()
     // 创建FBO
     glGenFramebuffers(1, &m_fbo);
     glBindFramebuffer(GL_FRAMEBUFFER, m_fbo);
+
+    // 绑定颜色纹理到FBO
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, m_outputTexture, 0);
+
+    // 创建深度和模板缓冲对象
+    GLuint depthStencilRBO;
+    glGenRenderbuffers(1, &depthStencilRBO);
+    glBindRenderbuffer(GL_RENDERBUFFER, depthStencilRBO);
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, m_width, m_height); // 24位深度 + 8位模板
+    glBindRenderbuffer(GL_RENDERBUFFER, 0);
+
+    // 将深度和模板缓冲绑定到FBO
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, depthStencilRBO);
+
+    // 检查FBO是否完整
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
     {
-        std::cerr << "FBO不完整" << std::endl;
+        std::cerr << "[RenderPass::CreateFrameBuffer] FBO不完整" << std::endl;
     }
+
+    // 解绑FBO
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
 }
+
 
 inline GLuint RenderPass::GetOutputTexture() const
 {

@@ -11,9 +11,9 @@
 Model::Model(std::string const path,MatFactory *matFactory,Transform transform)
 :Object(transform)
 {
-    std::cout <<"开始加载模型..."<<"路径:"<<path << std::endl;
+    std::cout <<"[Model.cpp]开始加载模型..."<<"路径:"<<path << std::endl;
     LoadModel(path, matFactory);
-    std::cout <<"模型加载完成！"<<"路径:"<<path << std::endl;
+    std::cout <<"[Model.cpp]模型加载完成！"<<"路径:"<<path << std::endl;
 }
 
 Model::~Model(){}

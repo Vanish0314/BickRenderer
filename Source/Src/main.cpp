@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-09 21:35:01
- * @LastEditTime: 2024-11-30 23:33:46
+ * @LastEditTime: 2024-12-02 21:19:53
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -85,6 +85,8 @@ int main()
     GLFWwindow *window = CreateWindow(1920, 1080, "BickRenderer", framebuffer_size_callback);
     HellowWorld();
 
+
+#pragma region SceneSetUp
     Camera camera = Camera(1920, 1080, 90.0);
     camera.SetPosition(glm::vec3(0.0f, 0.0f, 1.0f));
     camera.SetForward(glm::vec3(0.0f, 0.0f, -1.0f));
@@ -99,7 +101,11 @@ int main()
 
     Model model = Model("Assets/Models/NanoSuit/nanosuit.obj", &phongMat, Transform(glm::vec3(0.0f, 0.0f, -10.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.3f)));
 
-//-------------------------------SKYBOX-PASS----------//
+#pragma endregion
+
+
+#pragma region PassSetUp
+
     auto skyboxPass = std::make_shared<RenderPass_SkyBox>();
     auto renderResoruce = std::make_shared<RenderResource>();
     renderResoruce->m_SkyBoxRenderResource.skyBoxTexturePath = {
@@ -115,15 +121,16 @@ int main()
     renderPassInfo->height = 1080;
     renderPassInfo->renderResource = renderResoruce;
     skyboxPass->Initialize(renderPassInfo);
-//----------SKYBOX-PASS-END----------//
     auto postProcessPass = std::make_shared<RenderPass_PostProcess>();
     renderResoruce->m_PostProcessRenderResource.postProcessVertShaderPath = "Source/GLSL_Shaders/ScreenShader/vert.glsl";
     renderResoruce->m_PostProcessRenderResource.postProcessFragShaderPath = "Source/GLSL_Shaders/ScreenShader/frag.glsl";
     postProcessPass->Initialize(renderPassInfo);
-//--------------------------------
+
+#pragma endregion
+
+
     SetOpenGL();
     int frameCount = 0;
-    // 渲染循环
     while (!glfwWindowShouldClose(window)) // 窗口应该关闭时结束循环
     {
         // 更新数据
@@ -133,17 +140,21 @@ int main()
         Singleton<InputSystem>::Instance().Update();
 
 #pragma region 渲染
-        skyboxPass->Draw();
-        glBindFramebuffer(GL_FRAMEBUFFER, skyboxPass->GetFBO());
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        skyboxPass->Draw(0,0);
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);
         model.Draw();
-        postProcessPass->Draw(skyboxPass->GetFBO(),0);
 
         // 交换缓冲,检查并调用事件回调函数
         glfwSwapBuffers(window); // 交换颜色缓冲
         glfwPollEvents();        // 检查是否触发事件(输入),更新窗口状态,调用对应回调函数
 #pragma endregion
         
-        //TODO:数据显示
+        std::cout<<"\rFrameCount: "<<frameCount++;
+        std::cout.flush();
     }
 
     glfwTerminate(); // 终止glfw
