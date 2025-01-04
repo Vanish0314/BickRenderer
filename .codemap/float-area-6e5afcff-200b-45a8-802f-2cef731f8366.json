@@ -1,0 +1,425 @@
+{
+  "type": "float-area",
+  "_widgets": [
+    [
+      {
+        "widget": {
+          "constructionOptions": {
+            "factoryId": "code-editor-opener",
+            "options": {
+              "kind": "navigatable",
+              "uri": "file:///c%3A/Users/20131/Desktop/BickRenderer/CMakeLists.txt",
+              "floatAreaId": "6e5afcff-200b-45a8-802f-2cef731f8366"
+            }
+          },
+          "innerWidgetState": {
+            "cursorState": [
+              {
+                "inSelectionMode": false,
+                "selectionStart": {
+                  "lineNumber": 1,
+                  "column": 1
+                },
+                "position": {
+                  "lineNumber": 1,
+                  "column": 1
+                }
+              }
+            ],
+            "viewState": {
+              "scrollLeft": 0,
+              "firstPosition": {
+                "lineNumber": 1,
+                "column": 1
+              },
+              "firstPositionDeltaTop": 0
+            },
+            "contributionsState": {
+              "editor.contrib.folding": {
+                "lineCount": 18,
+                "provider": "indent",
+                "foldedImports": false
+              },
+              "editor.contrib.wordHighlighter": false
+            }
+          }
+        },
+        "width": 600,
+        "height": 450,
+        "spacing": 0
+      },
+      {
+        "widget": {
+          "constructionOptions": {
+            "factoryId": "code-editor-opener",
+            "options": {
+              "kind": "navigatable",
+              "uri": "file:///c%3A/Users/20131/Desktop/BickRenderer/Source/Include/Bick.hpp",
+              "floatAreaId": "6e5afcff-200b-45a8-802f-2cef731f8366"
+            }
+          },
+          "innerWidgetState": {
+            "cursorState": [
+              {
+                "inSelectionMode": false,
+                "selectionStart": {
+                  "lineNumber": 1,
+                  "column": 1
+                },
+                "position": {
+                  "lineNumber": 1,
+                  "column": 1
+                }
+              }
+            ],
+            "viewState": {
+              "scrollLeft": 0,
+              "firstPosition": {
+                "lineNumber": 1,
+                "column": 1
+              },
+              "firstPositionDeltaTop": 0
+            },
+            "contributionsState": {
+              "editor.contrib.folding": {
+                "lineCount": 1,
+                "provider": "syntax",
+                "foldedImports": false
+              },
+              "editor.contrib.wordHighlighter": false
+            }
+          }
+        },
+        "width": 600,
+        "height": 450,
+        "spacing": 0
+      },
+      {
+        "widget": {
+          "constructionOptions": {
+            "factoryId": "code-editor-opener",
+            "options": {
+              "kind": "navigatable",
+              "uri": "file:///c%3A/Users/20131/Desktop/BickRenderer/Source/Include/stb_image.h",
+              "floatAreaId": "6e5afcff-200b-45a8-802f-2cef731f8366"
+            }
+          },
+          "innerWidgetState": {
+            "cursorState": [
+              {
+                "inSelectionMode": false,
+                "selectionStart": {
+                  "lineNumber": 1,
+                  "column": 1
+                },
+                "position": {
+                  "lineNumber": 1,
+                  "column": 1
+                }
+              }
+            ],
+            "viewState": {
+              "scrollLeft": 0,
+              "firstPosition": {
+                "lineNumber": 1,
+                "column": 1
+              },
+              "firstPositionDeltaTop": 0
+            },
+            "contributionsState": {
+              "editor.contrib.folding": {
+                "lineCount": 7991,
+                "provider": "syntax",
+                "foldedImports": false
+              },
+              "editor.contrib.wordHighlighter": false
+            }
+          }
+        },
+        "width": 600,
+        "height": 450,
+        "spacing": 0
+      },
+      {
+        "widget": {
+          "constructionOptions": {
+            "factoryId": "code-editor-opener",
+            "options": {
+              "kind": "navigatable",
+              "uri": "file:///c%3A/Users/20131/Desktop/BickRenderer/Source/CMakeLists.txt",
+              "floatAreaId": "6e5afcff-200b-45a8-802f-2cef731f8366"
+            }
+          },
+          "innerWidgetState": {
+            "cursorState": [
+              {
+                "inSelectionMode": false,
+                "selectionStart": {
+                  "lineNumber": 4,
+                  "column": 32
+                },
+                "position": {
+                  "lineNumber": 4,
+                  "column": 32
+                }
+              }
+            ],
+            "viewState": {
+              "scrollLeft": 0,
+              "firstPosition": {
+                "lineNumber": 1,
+                "column": 1
+              },
+              "firstPositionDeltaTop": 0
+            },
+            "contributionsState": {
+              "editor.contrib.folding": {
+                "lineCount": 13,
+                "provider": "indent",
+                "foldedImports": false
+              },
+              "editor.contrib.wordHighlighter": true
+            }
+          }
+        },
+        "width": 600,
+        "height": 450,
+        "spacing": 0
+      },
+      {
+        "widget": {
+          "constructionOptions": {
+            "factoryId": "code-editor-opener",
+            "options": {
+              "kind": "navigatable",
+              "uri": "file:///c%3A/Users/20131/Desktop/BickRenderer/Source/Src/main.cpp",
+              "floatAreaId": "6e5afcff-200b-45a8-802f-2cef731f8366"
+            }
+          },
+          "innerWidgetState": {
+            "cursorState": [
+              {
+                "inSelectionMode": false,
+                "selectionStart": {
+                  "lineNumber": 97,
+                  "column": 40
+                },
+                "position": {
+                  "lineNumber": 97,
+                  "column": 40
+                }
+              }
+            ],
+            "viewState": {
+              "scrollLeft": 0,
+              "firstPosition": {
+                "lineNumber": 93,
+                "column": 1
+              },
+              "firstPositionDeltaTop": -3
+            },
+            "contributionsState": {
+              "editor.contrib.folding": {
+                "lineCount": 162,
+                "provider": "syntax",
+                "foldedImports": false
+              },
+              "editor.contrib.wordHighlighter": true
+            }
+          }
+        },
+        "width": 600,
+        "height": 450,
+        "spacing": 0
+      }
+    ],
+    [
+      {
+        "widget": {
+          "constructionOptions": {
+            "factoryId": "code-editor-opener",
+            "options": {
+              "kind": "navigatable",
+              "uri": "file:///c%3A/Users/20131/Desktop/BickRenderer/3rd/glfw/include/GLFW/glfw3.h",
+              "floatAreaId": "6e5afcff-200b-45a8-802f-2cef731f8366"
+            }
+          },
+          "innerWidgetState": {
+            "cursorState": [
+              {
+                "inSelectionMode": false,
+                "selectionStart": {
+                  "lineNumber": 1760,
+                  "column": 17
+                },
+                "position": {
+                  "lineNumber": 1760,
+                  "column": 17
+                }
+              }
+            ],
+            "viewState": {
+              "scrollLeft": 88,
+              "firstPosition": {
+                "lineNumber": 1760,
+                "column": 1
+              },
+              "firstPositionDeltaTop": 0
+            },
+            "contributionsState": {
+              "editor.contrib.folding": {
+                "lineCount": 6562,
+                "provider": "syntax",
+                "foldedImports": false
+              },
+              "editor.contrib.wordHighlighter": false
+            }
+          }
+        },
+        "width": 600,
+        "height": 450,
+        "spacing": 0
+      },
+      {
+        "widget": {
+          "constructionOptions": {
+            "factoryId": "code-editor-opener",
+            "options": {
+              "kind": "navigatable",
+              "uri": "file:///c%3A/Users/20131/Desktop/BickRenderer/Source/Include/Material/MatFactory.hpp",
+              "floatAreaId": "6e5afcff-200b-45a8-802f-2cef731f8366"
+            }
+          },
+          "innerWidgetState": {
+            "cursorState": [
+              {
+                "inSelectionMode": false,
+                "selectionStart": {
+                  "lineNumber": 41,
+                  "column": 5
+                },
+                "position": {
+                  "lineNumber": 41,
+                  "column": 5
+                }
+              }
+            ],
+            "viewState": {
+              "scrollLeft": 1,
+              "firstPosition": {
+                "lineNumber": 35,
+                "column": 1
+              },
+              "firstPositionDeltaTop": -2
+            },
+            "contributionsState": {
+              "editor.contrib.folding": {
+                "lineCount": 58,
+                "provider": "syntax",
+                "foldedImports": false
+              },
+              "editor.contrib.wordHighlighter": false
+            }
+          }
+        },
+        "width": 600,
+        "height": 450,
+        "spacing": 0
+      }
+    ]
+  ],
+  "_widths": [
+    600,
+    600
+  ],
+  "_modelData": {
+    "connections": [
+      {
+        "startWord": {
+          "uri": "/c:/Users/20131/Desktop/BickRenderer/Source/Src/main.cpp",
+          "lineNumber": 13,
+          "startColumn": 9,
+          "endColumn": 33,
+          "word": "STB_IMAGE_IMPLEMENTATION",
+          "x": 79,
+          "y": 2084.333459472656,
+          "hide": true,
+          "height": 1,
+          "width": 1
+        },
+        "endWord": {
+          "uri": "/c:/Users/20131/Desktop/BickRenderer/Source/Src/main.cpp",
+          "lineNumber": 14,
+          "startColumn": 9,
+          "endColumn": 33,
+          "endLineNumber": 14,
+          "word": "",
+          "x": 79,
+          "y": 2084.333459472656,
+          "hide": true,
+          "height": 1,
+          "width": 1
+        },
+        "id": "6ae74169-58bd-415a-923d-a506d6a19825"
+      },
+      {
+        "startWord": {
+          "uri": "/c:/Users/20131/Desktop/BickRenderer/Source/Src/main.cpp",
+          "lineNumber": 29,
+          "startColumn": 68,
+          "endColumn": 90,
+          "word": "GLFWframebuffersizefun",
+          "x": 79,
+          "y": 2084.333459472656,
+          "hide": true,
+          "height": 1,
+          "width": 1
+        },
+        "endWord": {
+          "uri": "/c:/Users/20131/Desktop/BickRenderer/3rd/glfw/include/GLFW/glfw3.h",
+          "lineNumber": 1760,
+          "startColumn": 17,
+          "endColumn": 39,
+          "endLineNumber": 1760,
+          "word": "",
+          "x": 778.00009765625,
+          "y": 60.333398437499994,
+          "hide": false,
+          "height": 19,
+          "width": 170
+        },
+        "id": "53502421-0204-4e7a-9633-b864a0034d00"
+      },
+      {
+        "startWord": {
+          "uri": "/c:/Users/20131/Desktop/BickRenderer/Source/Src/main.cpp",
+          "lineNumber": 97,
+          "startColumn": 21,
+          "endColumn": 60,
+          "word": "MatFactory_StandardPBM_MetallicWorkFlow",
+          "x": 233,
+          "y": 2176.333459472656,
+          "hide": false,
+          "height": 19,
+          "width": 300
+        },
+        "endWord": {
+          "uri": "/c:/Users/20131/Desktop/BickRenderer/Source/Include/Material/MatFactory.hpp",
+          "lineNumber": 41,
+          "startColumn": 5,
+          "endColumn": 44,
+          "endLineNumber": 41,
+          "word": "",
+          "x": 765.00009765625,
+          "y": 641.333349609375,
+          "hide": false,
+          "height": 19,
+          "width": 300.0000000000001
+        },
+        "id": "9ab1c2de-a6fc-494f-928f-0080cf4f448c"
+      }
+    ],
+    "annotations": [],
+    "highlights": []
+  }
+}

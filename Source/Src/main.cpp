@@ -1,44 +1,45 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-09 21:35:01
- * @LastEditTime: 2024-12-02 21:19:53
+ * @LastEditTime: 2025-01-01 18:19:10
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
- 
-#include <iostream>
-#include "glad/glad.h" //glad 必须在Glfw前加载
+
 #include "Glfw/glfw3.h"
+#include "glad/glad.h" //glad 必须在Glfw前加载
+#include <iostream>
+
 
 #ifndef STB_IMAGE_IMPLEMENTATION
 #define STB_IMAGE_IMPLEMENTATION
 #endif
 
 #include "Camera/Camera.hpp"
-#include "Mesh/Model.hpp"
 #include "Input/InputSystem.hpp"
+#include "Mesh/Model.hpp"
+
 
 #include "Renderer/RenderPass.hpp"
 
 // 窗口大小变化回调函数
-void framebuffer_size_callback(GLFWwindow *window, int width, int height)
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
 }
 
-GLFWwindow *CreateWindow(int width, int height, const char *title, GLFWframebuffersizefun callback)
+GLFWwindow* CreateWindow(int width, int height, const char* title, GLFWframebuffersizefun callback)
 {
     // 初始化glfw
     glfwInit();
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);                 // 设置opengl主版本为3
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);                 // 设置opengl次版本为3
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); // 设置opengl主版本为3
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3); // 设置opengl次版本为3
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // 告诉GLFW 我们使用的是核心模式
     // glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
     // 创建窗口
-    GLFWwindow *window = glfwCreateWindow(1920, 1080, "BickRenderer", NULL, NULL); // 创建窗口,800*600为窗口大小,LearnOpenGL为窗口标题
-    if (window == NULL)
-    {
+    GLFWwindow* window = glfwCreateWindow(1920, 1080, "BickRenderer", NULL, NULL); // 创建窗口,800*600为窗口大小,LearnOpenGL为窗口标题
+    if (window == NULL) {
         std::cout << "Failed to create GLFW window" << std::endl;
         glfwTerminate(); // 终止glfw
         return 0;
@@ -54,18 +55,17 @@ GLFWwindow *CreateWindow(int width, int height, const char *title, GLFWframebuff
 
     // 设置Viewport
     Singleton<InputSystem>::Instance().Init(window);
-    glViewport(0, 0, 1920, 1080);                                        // 左下角坐标为(0,0),右上角坐标为(800,600)
+    glViewport(0, 0, 1920, 1080); // 左下角坐标为(0,0),右上角坐标为(800,600)
     glfwSetFramebufferSizeCallback(window, callback); // 设置窗口大小变化回调函数
 
     return window;
 }
 void HellowWorld()
 {
-    std::string startTitle =
-        "|********************************************|\n"
-        "|************BickRenderer start**************|\n"
-        "|*********Welcome to BickRenderer************|\n"
-        "|********************************************|";
+    std::string startTitle = "|********************************************|\n"
+                             "|************BickRenderer start**************|\n"
+                             "|*********Welcome to BickRenderer************|\n"
+                             "|********************************************|";
 
     std::cout << "\n\n\n"
               << startTitle << std::endl
@@ -74,17 +74,16 @@ void HellowWorld()
 void SetOpenGL()
 {
     glEnable(GL_DEPTH_TEST); // 启用深度测试
-    glDepthFunc(GL_LESS);    // 设置深度测试函数为 LESS
-    glDepthMask(GL_TRUE);    // 启用深度写入
+    glDepthFunc(GL_LESS); // 设置深度测试函数为 LESS
+    glDepthMask(GL_TRUE); // 启用深度写入
     glDisable(GL_CULL_FACE); // 禁用背面剔除
-    glEnable(GL_BLEND);      // 启用混合
+    glEnable(GL_BLEND); // 启用混合
 }
 
 int main()
 {
-    GLFWwindow *window = CreateWindow(1920, 1080, "BickRenderer", framebuffer_size_callback);
+    GLFWwindow* window = CreateWindow(1920, 1080, "BickRenderer", framebuffer_size_callback);
     HellowWorld();
-
 
 #pragma region SceneSetUp
     Camera camera = Camera(1920, 1080, 90.0);
@@ -96,13 +95,11 @@ int main()
 
     auto phongMat = MatFactory_StandardPBM_MetallicWorkFlow(
         "Source/GLSL_Shaders/Blinn-PhongShader/StdBlinnPhongVertex.glsl",
-        "Source/GLSL_Shaders/Blinn-PhongShader/StdBlinnPhongFrag.glsl"
-        );
+        "Source/GLSL_Shaders/Blinn-PhongShader/StdBlinnPhongFrag.glsl");
 
     Model model = Model("Assets/Models/NanoSuit/nanosuit.obj", &phongMat, Transform(glm::vec3(0.0f, 0.0f, -10.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.3f)));
 
 #pragma endregion
-
 
 #pragma region PassSetUp
 
@@ -115,7 +112,7 @@ int main()
         "Assets/Textures/Skybox/MountainSea/bottom.jpg",
         "Assets/Textures/Skybox/MountainSea/front.jpg",
         "Assets/Textures/Skybox/MountainSea/back.jpg"
-        };
+    };
     auto renderPassInfo = std::make_shared<RenderPassInitInfo>();
     renderPassInfo->width = 1920;
     renderPassInfo->height = 1080;
@@ -127,7 +124,6 @@ int main()
     postProcessPass->Initialize(renderPassInfo);
 
 #pragma endregion
-
 
     SetOpenGL();
     int frameCount = 0;
@@ -144,18 +140,17 @@ int main()
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        skyboxPass->Draw(0,0);
+        skyboxPass->Draw(0, 0);
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
         model.Draw();
 
         // 交换缓冲,检查并调用事件回调函数
         glfwSwapBuffers(window); // 交换颜色缓冲
-        glfwPollEvents();        // 检查是否触发事件(输入),更新窗口状态,调用对应回调函数
+        glfwPollEvents(); // 检查是否触发事件(输入),更新窗口状态,调用对应回调函数
 #pragma endregion
-        
-        std::cout<<"\rFrameCount: "<<frameCount++;
+
+        std::cout << "\rFrameCount: " << frameCount++;
         std::cout.flush();
     }
-
     glfwTerminate(); // 终止glfw
 }

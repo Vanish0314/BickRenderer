@@ -1,13 +1,21 @@
 <!--
  * @Author: Vanish
  * @Date: 2024-09-13 21:46:04
- * @LastEditTime: 2024-11-29 16:03:00
+ * @LastEditTime: 2025-01-04 23:15:14
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
 -->
 # BickRenderer
 
 此项目目标是实现一个基于OpenGL的光栅化渲染器,以支持作者个人的图形学学习.
+
+# Update Plan For Next Quarter
+
+-[ ] Sponza Scene
+-[ ] BSSRDF Material
+-[ ] Skin Animation
+-[ ] Forward & Deferred Rendering Pipeline
+-[ ] Custom Render Pipeline
 
 # Goals
 - [x] Lighting
