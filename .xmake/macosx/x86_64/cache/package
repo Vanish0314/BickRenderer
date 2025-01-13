@@ -1,0 +1,118 @@
+{
+    glfw3 = {
+        sysincludedirs = "/usr/local/Cellar/glfw/3.4/include",
+        linkdirs = "/usr/local/Cellar/glfw/3.4/lib",
+        links = "glfw",
+        libfiles = "/usr/local/Cellar/glfw/3.4/lib/libglfw.dylib",
+        __enabled = true,
+        __requirestr = "glfw3",
+        version = "3.4.0",
+        shared = true
+    },
+    glm = {
+        sysincludedirs = "/usr/local/Cellar/glm/1.0.1/include",
+        __requirestr = "glm",
+        version = "1.0.1",
+        __enabled = true
+    },
+    tinygltf = {
+        sysincludedirs = {
+            "/Users/vanish/.xmake/packages/t/tinygltf/v2.9.3/c0a5094c611b4ceab086c57a7a5d6fba/include",
+            "/Users/vanish/.xmake/packages/n/nlohmann_json/v3.11.3/07dbd8c7f12347f583937915168be7dc/include",
+            "/Users/vanish/.xmake/packages/s/stb/2024.06.01/c5dad42a0d624f5a9cc4dce48178a35e/include",
+            "/Users/vanish/.xmake/packages/s/stb/2024.06.01/c5dad42a0d624f5a9cc4dce48178a35e/include/stb"
+        },
+        version = "v2.9.3",
+        __enabled = true,
+        license = "MIT",
+        __requirestr = "tinygltf",
+        envs = {
+            PATH = {
+                "/Users/vanish/.xmake/packages/c/cmake/3.30.2/8ef6e179552143e896028fe8efa403e5/bin"
+            }
+        },
+        installdir = "/Users/vanish/.xmake/packages/t/tinygltf/v2.9.3/c0a5094c611b4ceab086c57a7a5d6fba"
+    },
+    assimp = {
+        sysincludedirs = {
+            "/Users/vanish/.xmake/packages/a/assimp/v5.4.3/70c2032c2cae4584891588798ee17240/include",
+            "/Users/vanish/.xmake/packages/m/minizip/v1.2.13/d1916a67b92342b78e85cd63eb5d6d72/include",
+            "/Users/vanish/.xmake/packages/m/minizip/v1.2.13/d1916a67b92342b78e85cd63eb5d6d72/include/minizip"
+        },
+        __enabled = true,
+        license = "BSD-3-Clause",
+        __requirestr = "assimp",
+        envs = {
+            PATH = {
+                "/Users/vanish/.xmake/packages/c/cmake/3.30.2/8ef6e179552143e896028fe8efa403e5/bin"
+            }
+        },
+        static = true,
+        libfiles = {
+            "/Users/vanish/.xmake/packages/a/assimp/v5.4.3/70c2032c2cae4584891588798ee17240/lib/libassimp.a",
+            "/Users/vanish/.xmake/packages/m/minizip/v1.2.13/d1916a67b92342b78e85cd63eb5d6d72/lib/libminizip.a"
+        },
+        version = "v5.4.3",
+        linkdirs = {
+            "/Users/vanish/.xmake/packages/a/assimp/v5.4.3/70c2032c2cae4584891588798ee17240/lib",
+            "/Users/vanish/.xmake/packages/m/minizip/v1.2.13/d1916a67b92342b78e85cd63eb5d6d72/lib"
+        },
+        links = {
+            "assimp",
+            "minizip",
+            "z"
+        },
+        installdir = "/Users/vanish/.xmake/packages/a/assimp/v5.4.3/70c2032c2cae4584891588798ee17240"
+    },
+    llvm = {
+        __requirestr = "llvm",
+        envs = {
+            SSL_CERT_FILE = {
+                "/Users/vanish/.xmake/packages/c/ca-certificates/20240207/b2f34802b3154d36a12423aea2041825/cacert.pem"
+            },
+            SSL_CERT_DIR = {
+                "/Users/vanish/.xmake/packages/c/ca-certificates/20240207/b2f34802b3154d36a12423aea2041825"
+            },
+            PYTHONPATH = {
+                "/Users/vanish/.xmake/packages/p/python/3.13.0/3263494a476d4b1a842dc6269015df70/lib/python3.13/site-packages"
+            },
+            PATH = {
+                "/Users/vanish/.xmake/packages/l/llvm/18.1.1/65bb45e67aea414688297b6a060eb80a/bin",
+                "/Users/vanish/.xmake/packages/c/cmake/3.30.2/8ef6e179552143e896028fe8efa403e5/bin",
+                "/Users/vanish/.xmake/packages/p/python/3.13.0/3263494a476d4b1a842dc6269015df70/bin",
+                "/Users/vanish/.xmake/packages/p/python/3.13.0/3263494a476d4b1a842dc6269015df70/bin",
+                "/Users/vanish/.xmake/packages/p/python/3.13.0/3263494a476d4b1a842dc6269015df70/Scripts"
+            }
+        },
+        __enabled = true
+    },
+    glad = {
+        sysincludedirs = "/Users/vanish/.xmake/packages/g/glad/v0.1.36/e6361778169149179bb154a87a3e8645/include",
+        __enabled = true,
+        license = "MIT",
+        __requirestr = "glad",
+        envs = {
+            SSL_CERT_FILE = {
+                "/Users/vanish/.xmake/packages/c/ca-certificates/20240207/b2f34802b3154d36a12423aea2041825/cacert.pem"
+            },
+            SSL_CERT_DIR = {
+                "/Users/vanish/.xmake/packages/c/ca-certificates/20240207/b2f34802b3154d36a12423aea2041825"
+            },
+            PYTHONPATH = {
+                "/Users/vanish/.xmake/packages/p/python/3.13.0/3263494a476d4b1a842dc6269015df70/lib/python3.13/site-packages"
+            },
+            PATH = {
+                "/Users/vanish/.xmake/packages/c/cmake/3.30.2/8ef6e179552143e896028fe8efa403e5/bin",
+                "/Users/vanish/.xmake/packages/p/python/3.13.0/3263494a476d4b1a842dc6269015df70/bin",
+                "/Users/vanish/.xmake/packages/p/python/3.13.0/3263494a476d4b1a842dc6269015df70/bin",
+                "/Users/vanish/.xmake/packages/p/python/3.13.0/3263494a476d4b1a842dc6269015df70/Scripts"
+            }
+        },
+        static = true,
+        libfiles = "/Users/vanish/.xmake/packages/g/glad/v0.1.36/e6361778169149179bb154a87a3e8645/lib/libglad.a",
+        version = "v0.1.36",
+        linkdirs = "/Users/vanish/.xmake/packages/g/glad/v0.1.36/e6361778169149179bb154a87a3e8645/lib",
+        links = "glad",
+        installdir = "/Users/vanish/.xmake/packages/g/glad/v0.1.36/e6361778169149179bb154a87a3e8645"
+    }
+}

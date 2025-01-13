@@ -1,0 +1,12 @@
+{
+    packages = {
+        "/Users/vanish/.xmake/packages/c/ca-certificates/20240207/b2f34802b3154d36a12423aea2041825",
+        "/Users/vanish/.xmake/packages/p/python/3.13.0/3263494a476d4b1a842dc6269015df70",
+        "/Users/vanish/.xmake/packages/g/glad/v0.1.36/e6361778169149179bb154a87a3e8645",
+        "/Users/vanish/.xmake/packages/m/minizip/v1.2.13/d1916a67b92342b78e85cd63eb5d6d72",
+        "/Users/vanish/.xmake/packages/a/assimp/v5.4.3/70c2032c2cae4584891588798ee17240",
+        "/Users/vanish/.xmake/packages/n/nlohmann_json/v3.11.3/07dbd8c7f12347f583937915168be7dc",
+        "/Users/vanish/.xmake/packages/s/stb/2024.06.01/c5dad42a0d624f5a9cc4dce48178a35e",
+        "/Users/vanish/.xmake/packages/t/tinygltf/v2.9.3/c0a5094c611b4ceab086c57a7a5d6fba"
+    }
+}

@@ -1,13 +1,13 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-09 21:35:01
- * @LastEditTime: 2025-01-01 18:19:10
+ * @LastEditTime: 2025-01-13 20:56:26
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
 
-#include "Glfw/glfw3.h"
 #include "glad/glad.h" //glad 必须在Glfw前加载
+#include "Glfw/glfw3.h"
 #include <iostream>
 
 

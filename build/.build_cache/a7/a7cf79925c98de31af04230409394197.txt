@@ -1,0 +1,48 @@
+{
+    errdata = "In file included from Source/Src/Mesh/Model.cpp:8:\
+In file included from Source/Include/Mesh/Model.hpp:20:\
+\27[1mSource/Include/Mesh/Mesh.hpp:18:10: \27[0m\27[0;1;35mwarning: \27[0m\27[1mnon-portable path to file '\"shader/Shader.hpp\"'; specified path differs in case from file name on disk [-Wnonportable-include-path]\27[0m\
+   18 | #include \27[0;32m\"Shader/Shader.hpp\"\27[0m\
+      | \27[0;1;32m         ^~~~~~~~~~~~~~~~~~~\
+\27[0m      | \27[0;32m         \"shader/Shader.hpp\"\
+\27[0mIn file included from Source/Src/Mesh/Model.cpp:8:\
+In file included from Source/Include/Mesh/Model.hpp:20:\
+In file included from Source/Include/Mesh/Mesh.hpp:19:\
+In file included from Source/Include/Material/MatFactory.hpp:11:\
+\27[1mSource/Include/Material/Material.hpp:14:10: \27[0m\27[0;1;35mwarning: \27[0m\27[1mnon-portable path to file '\"shader/Shader.hpp\"'; specified path differs in case from file name on disk [-Wnonportable-include-path]\27[0m\
+   14 | #include \27[0;32m\"Shader/Shader.hpp\"\27[0m\
+      | \27[0;1;32m         ^~~~~~~~~~~~~~~~~~~\
+\27[0m      | \27[0;32m         \"shader/Shader.hpp\"\
+\27[0m2 warnings generated.\
+In file included from Source/Src/Mesh/Model.cpp:8:\
+In file included from Source/Include/Mesh/Model.hpp:14:\
+In file included from /usr/local/Cellar/llvm/19.1.6/bin/../include/c++/v1/vector:325:\
+In file included from /usr/local/Cellar/llvm/19.1.6/bin/../include/c++/v1/__format/formatter_bool.h:16:\
+In file included from /usr/local/Cellar/llvm/19.1.6/bin/../include/c++/v1/__format/concepts.h:16:\
+In file included from /usr/local/Cellar/llvm/19.1.6/bin/../include/c++/v1/__format/format_parse_context.h:16:\
+In file included from /usr/local/Cellar/llvm/19.1.6/bin/../include/c++/v1/string_view:941:\
+In file included from /usr/local/Cellar/llvm/19.1.6/bin/../include/c++/v1/algorithm:1842:\
+In file included from /usr/local/Cellar/llvm/19.1.6/bin/../include/c++/v1/__algorithm/for_each.h:16:\
+In file included from /usr/local/Cellar/llvm/19.1.6/bin/../include/c++/v1/__ranges/movable_box.h:21:\
+In file included from /usr/local/Cellar/llvm/19.1.6/bin/../include/c++/v1/optional:1294:\
+In file included from /usr/local/Cellar/llvm/19.1.6/bin/../include/c++/v1/memory:944:\
+In file included from /usr/local/Cellar/llvm/19.1.6/bin/../include/c++/v1/__memory/inout_ptr.h:16:\
+In file included from /usr/local/Cellar/llvm/19.1.6/bin/../include/c++/v1/__memory/shared_ptr.h:32:\
+\27[1m/usr/local/Cellar/llvm/19.1.6/bin/../include/c++/v1/__memory/unique_ptr.h:80:5: \27[0m\27[0;1;35mwarning: \27[0m\27[1mdelete called on 'Material' that is abstract but has non-virtual destructor [-Wdelete-abstract-non-virtual-dtor]\27[0m\
+   80 |     \27[0;34mdelete\27[0m __ptr;\27[0m\
+      | \27[0;1;32m    ^\
+\27[0m\27[1m/usr/local/Cellar/llvm/19.1.6/bin/../include/c++/v1/__memory/unique_ptr.h:292:7: \27[0m\27[0;1;36mnote: \27[0min instantiation of member function 'std::default_delete<Material>::operator()' requested here\27[0m\
+  292 |       __ptr_.second()(__tmp);\27[0m\
+      | \27[0;1;32m      ^\
+\27[0m\27[1m/usr/local/Cellar/llvm/19.1.6/bin/../include/c++/v1/__memory/unique_ptr.h:261:159: \27[0m\27[0;1;36mnote: \27[0min instantiation of member function 'std::unique_ptr<Material>::reset' requested here\27[0m\
+  261 |   \27[0;34m__attribute__\27[0m((__visibility__(\27[0;32m\"hidden\"\27[0m))) \27[0;34m__attribute__\27[0m((__exclude_from_explicit_instantiation__)) \27[0;34m__attribute__\27[0m((__abi_tag__(\27[0;32m\"ne190106\"\27[0m))) ~unique_ptr() { reset(); }\27[0m\
+      | \27[0;1;32m                                                                                                                                                              ^\
+\27[0m\27[1m/usr/local/Cellar/llvm/19.1.6/bin/../include/c++/v1/__memory/shared_ptr.h:452:21: \27[0m\27[0;1;36mnote: \27[0min instantiation of member function 'std::unique_ptr<Material>::~unique_ptr' requested here\27[0m\
+  452 |     unique_ptr<_Yp> __hold(__p);\27[0m\
+      | \27[0;1;32m                    ^\
+\27[0m\27[1mSource/Src/Mesh/Model.cpp:101:20: \27[0m\27[0;1;36mnote: \27[0min instantiation of function template specialization 'std::shared_ptr<Material>::shared_ptr<Material, 0>' requested here\27[0m\
+  101 |         \27[0;34mauto\27[0m mat = std::shared_ptr<Material>(matFactory->CreateMaterial(material, directory));\27[0m\
+      | \27[0;1;32m                   ^\
+\27[0m1 warning generated.\
+"
+}

@@ -1,0 +1,1 @@
+fetch vcpkg::glad-latest failed!
