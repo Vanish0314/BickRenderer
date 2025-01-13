@@ -1,122 +1,122 @@
 {
-    envs_arch_x86_64_plat_macosx = {
+    nim_arch_x86_64_plat_macosx = {
         __global = true,
-        arch = "x86_64",
-        __checked = true,
-        plat = "macosx"
-    },
-    xcode_arch_x86_64_plat_macosx = {
-        xcode_sysroot = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk",
-        xcode_sdkver = "15.2",
-        __checked = true,
-        __global = true,
-        arch = "x86_64",
-        target_minver = "15.2",
-        xcode = "/Applications/Xcode.app",
-        bindir = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
-        plat = "macosx"
-    },
-    tool_target_BickRenderer_macosx_x86_64_ld = {
-        program = "/usr/local/Cellar/llvm/19.1.6/bin/clang++",
-        toolname = "clangxx",
-        toolchain_info = {
-            arch = "x86_64",
-            name = "llvm",
-            cachekey = "llvm_arch_x86_64_plat_macosx",
-            plat = "macosx"
-        }
-    },
-    yasm_arch_x86_64_plat_macosx = {
-        __global = true,
-        arch = "x86_64",
-        __checked = true,
-        plat = "macosx"
-    },
-    gfortran_arch_x86_64_plat_macosx = {
-        __global = true,
-        arch = "x86_64",
-        __checked = true,
-        plat = "macosx"
-    },
-    tool_target_BickRenderer_macosx_x86_64_cxx = {
-        toolname = "clang",
-        toolchain_info = {
-            name = "llvm",
-            arch = "x86_64",
-            cachekey = "llvm_arch_x86_64_plat_macosx",
-            plat = "macosx"
-        },
-        program = "/usr/local/Cellar/llvm/19.1.6/bin/clang"
-    },
-    tool_platform_macosx_x86_64_ld = {
-        toolname = "clangxx",
-        toolchain_info = {
-            name = "xcode",
-            arch = "x86_64",
-            cachekey = "xcode_arch_x86_64_plat_macosx",
-            plat = "macosx"
-        },
-        program = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++"
-    },
-    fpc_arch_x86_64_plat_macosx = {
-        __global = true,
-        arch = "x86_64",
-        __checked = true,
-        plat = "macosx"
-    },
-    tool_platform_macosx_x86_64_cc = {
-        toolname = "clang",
-        toolchain_info = {
-            name = "xcode",
-            arch = "x86_64",
-            cachekey = "xcode_arch_x86_64_plat_macosx",
-            plat = "macosx"
-        },
-        program = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
-    },
-    go_arch_x86_64_plat_macosx = {
-        __global = true,
-        arch = "x86_64",
-        __checked = true,
-        plat = "macosx"
-    },
-    nasm_arch_x86_64_plat_macosx = {
-        __global = true,
-        arch = "x86_64",
-        __checked = true,
-        plat = "macosx"
+        __checked = false,
+        plat = "macosx",
+        arch = "x86_64"
     },
     llvm_arch_x86_64_plat_macosx = {
         cross = "",
-        arch = "x86_64",
-        __global = true,
-        sdkdir = "/usr/local/Cellar/llvm/19.1.6",
-        bindir = "/usr/local/Cellar/llvm/19.1.6/bin",
         __checked = {
+            cross = "",
             bindir = "/usr/local/Cellar/llvm/19.1.6/bin",
-            sdkdir = "/usr/local/Cellar/llvm/19.1.6",
-            cross = ""
+            sdkdir = "/usr/local/Cellar/llvm/19.1.6"
         },
-        xcode = "/Applications/Xcode.app",
         xcode_sdkver = "15.2",
-        plat = "macosx"
-    },
-    nim_arch_x86_64_plat_macosx = {
+        plat = "macosx",
+        xcode = "/Applications/Xcode.app",
+        bindir = "/usr/local/Cellar/llvm/19.1.6/bin",
+        sdkdir = "/usr/local/Cellar/llvm/19.1.6",
         __global = true,
-        arch = "x86_64",
-        __checked = false,
-        plat = "macosx"
+        arch = "x86_64"
+    },
+    gfortran_arch_x86_64_plat_macosx = {
+        __global = true,
+        __checked = true,
+        plat = "macosx",
+        arch = "x86_64"
     },
     rust_arch_x86_64_plat_macosx = {
         __global = true,
-        arch = "x86_64",
         __checked = true,
-        plat = "macosx"
+        plat = "macosx",
+        arch = "x86_64"
+    },
+    nasm_arch_x86_64_plat_macosx = {
+        __global = true,
+        __checked = true,
+        plat = "macosx",
+        arch = "x86_64"
+    },
+    fpc_arch_x86_64_plat_macosx = {
+        __global = true,
+        __checked = true,
+        plat = "macosx",
+        arch = "x86_64"
     },
     cuda_arch_x86_64_plat_macosx = {
         __global = true,
-        arch = "x86_64",
         __checked = true,
-        plat = "macosx"
+        plat = "macosx",
+        arch = "x86_64"
+    },
+    yasm_arch_x86_64_plat_macosx = {
+        __global = true,
+        __checked = true,
+        plat = "macosx",
+        arch = "x86_64"
+    },
+    tool_platform_macosx_x86_64_ld = {
+        toolchain_info = {
+            plat = "macosx",
+            cachekey = "xcode_arch_x86_64_plat_macosx",
+            name = "xcode",
+            arch = "x86_64"
+        },
+        program = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+        toolname = "clangxx"
+    },
+    xcode_arch_x86_64_plat_macosx = {
+        xcode_sysroot = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk",
+        __checked = true,
+        xcode_sdkver = "15.2",
+        plat = "macosx",
+        xcode = "/Applications/Xcode.app",
+        bindir = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+        target_minver = "15.2",
+        __global = true,
+        arch = "x86_64"
+    },
+    tool_target_BickRenderer_macosx_x86_64_cxx = {
+        toolchain_info = {
+            plat = "macosx",
+            cachekey = "llvm_arch_x86_64_plat_macosx",
+            name = "llvm",
+            arch = "x86_64"
+        },
+        program = "/usr/local/Cellar/llvm/19.1.6/bin/clang",
+        toolname = "clang"
+    },
+    envs_arch_x86_64_plat_macosx = {
+        __global = true,
+        __checked = true,
+        plat = "macosx",
+        arch = "x86_64"
+    },
+    tool_platform_macosx_x86_64_cc = {
+        toolchain_info = {
+            plat = "macosx",
+            cachekey = "xcode_arch_x86_64_plat_macosx",
+            name = "xcode",
+            arch = "x86_64"
+        },
+        program = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang",
+        toolname = "clang"
+    },
+    go_arch_x86_64_plat_macosx = {
+        __global = true,
+        __checked = true,
+        plat = "macosx",
+        arch = "x86_64"
+    },
+    tool_target_BickRenderer_macosx_x86_64_ld = {
+        toolchain_info = {
+            plat = "macosx",
+            cachekey = "llvm_arch_x86_64_plat_macosx",
+            name = "llvm",
+            arch = "x86_64"
+        },
+        program = "/usr/local/Cellar/llvm/19.1.6/bin/clang++",
+        toolname = "clangxx"
     }
 }

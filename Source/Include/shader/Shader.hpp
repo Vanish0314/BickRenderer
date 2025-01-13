@@ -1,16 +1,13 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-12 14:40:12
- * @LastEditTime: 2024-11-13 21:31:05
+ * @LastEditTime: 2025-01-13 21:00:03
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
 #pragma once
 
 #include <string>
-#include <iostream>
-#include <fstream>
-#include <sstream>
 
 #include <glad/glad.h>
 

@@ -1,6 +1,9 @@
 {
-    depfiles_gcc = "build/.objs/BickRenderer/macosx/x86_64/release/Source/Src/Material/__cpp_Mat_StandardPBM_MetallicWorkFlow.cpp.cpp:   Source/Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp   Source/Include/Material/Mat_StandardPBM_MetallicWorkFlow.hpp   Source/Include/Scene/Scene.hpp Source/Include/Common/Singleton.hpp   Source/Include/Mesh/Model.hpp Source/Include/Mesh/Mesh.hpp   Source/Include/Object/Object.hpp Source/Include/Shader/Shader.hpp   Source/Include/Material/MatFactory.hpp   Source/Include/Material/Material.hpp Source/Include/Camera/Camera.hpp   Source/Include/Light/DirectionalLight.hpp   Source/Include/Light/Light.hpp Source/Include/Light/PointLight.hpp   Source/Include/Texture/Texture.hpp Source/Include/stb_image.h\
+    depfiles_gcc = "build/.objs/BickRenderer/macosx/x86_64/release/Source/Src/Material/__cpp_Mat_StandardPBM_MetallicWorkFlow.cpp.cpp:   Source/Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp   Source/Include/Material/Mat_StandardPBM_MetallicWorkFlow.hpp   Source/Include/Scene/Scene.hpp Source/Include/Common/Singleton.hpp   Source/Include/Mesh/Model.hpp Source/Include/Mesh/Mesh.hpp   Source/Include/Object/Object.hpp Source/Include/Shader/Shader.hpp   Source/Include/Material/MatFactory.hpp   Source/Include/Material/Material.hpp   Source/Include/Light/DirectionalLight.hpp   Source/Include/Light/Light.hpp Source/Include/Light/PointLight.hpp   Source/Include/Camera/Camera.hpp Source/Include/Texture/Texture.hpp   Source/Include/stb_image.h\
 ",
+    files = {
+        "Source/Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp"
+    },
     values = {
         "/usr/local/Cellar/llvm/19.1.6/bin/clang",
         {
@@ -35,8 +38,5 @@
             "/Users/vanish/.xmake/packages/s/stb/2024.06.01/c5dad42a0d624f5a9cc4dce48178a35e/include/stb",
             "-DNDEBUG"
         }
-    },
-    files = {
-        "Source/Src/Material/Mat_StandardPBM_MetallicWorkFlow.cpp"
     }
 }

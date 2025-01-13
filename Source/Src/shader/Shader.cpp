@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-12 14:40:07
- * @LastEditTime: 2024-11-29 14:47:30
+ * @LastEditTime: 2025-01-13 21:05:33
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -9,6 +9,8 @@
 #include <exception>
 #include <ios>
 #include <iostream>
+#include <fstream>
+#include <sstream>
 
 Shader::Shader(const std::string &vertexShaderPath, const std::string &fragmentShaderPath, std::string name)
 {

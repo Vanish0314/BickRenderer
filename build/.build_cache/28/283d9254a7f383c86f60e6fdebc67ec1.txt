@@ -1,0 +1,22 @@
+{
+    errdata = "In file included from Source/Src/Renderer/Renderer.cpp:8:\
+In file included from Source/Include/Renderer/Renderer.hpp:13:\
+In file included from Source/Include/Scene/Scene.hpp:14:\
+In file included from Source/Include/Mesh/Model.hpp:20:\
+\27[1mSource/Include/Mesh/Mesh.hpp:18:10: \27[0m\27[0;1;35mwarning: \27[0m\27[1mnon-portable path to file '\"shader/Shader.hpp\"'; specified path differs in case from file name on disk [-Wnonportable-include-path]\27[0m\
+   18 | #include \27[0;32m\"Shader/Shader.hpp\"\27[0m\
+      | \27[0;1;32m         ^~~~~~~~~~~~~~~~~~~\
+\27[0m      | \27[0;32m         \"shader/Shader.hpp\"\
+\27[0mIn file included from Source/Src/Renderer/Renderer.cpp:8:\
+In file included from Source/Include/Renderer/Renderer.hpp:13:\
+In file included from Source/Include/Scene/Scene.hpp:14:\
+In file included from Source/Include/Mesh/Model.hpp:20:\
+In file included from Source/Include/Mesh/Mesh.hpp:19:\
+In file included from Source/Include/Material/MatFactory.hpp:11:\
+\27[1mSource/Include/Material/Material.hpp:12:10: \27[0m\27[0;1;35mwarning: \27[0m\27[1mnon-portable path to file '\"shader/Shader.hpp\"'; specified path differs in case from file name on disk [-Wnonportable-include-path]\27[0m\
+   12 | #include \27[0;32m\"Shader/Shader.hpp\"\27[0m\
+      | \27[0;1;32m         ^~~~~~~~~~~~~~~~~~~\
+\27[0m      | \27[0;32m         \"shader/Shader.hpp\"\
+\27[0m2 warnings generated.\
+"
+}

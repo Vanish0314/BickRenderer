@@ -1,6 +1,9 @@
 {
-    depfiles_gcc = "build/.objs/BickRenderer/macosx/x86_64/release/Source/Src/Material/Material.cpp.o:   Source/Src/Material/Material.cpp Source/Include/Material/Material.hpp   Source/Include/Shader/Shader.hpp Source/Include/Object/Object.hpp   Source/Include/Camera/Camera.hpp\
+    depfiles_gcc = "build/.objs/BickRenderer/macosx/x86_64/release/Source/Src/Material/__cpp_Material.cpp.cpp:   Source/Src/Material/Material.cpp Source/Include/Material/Material.hpp   Source/Include/Shader/Shader.hpp Source/Include/Object/Object.hpp\
 ",
+    files = {
+        "Source/Src/Material/Material.cpp"
+    },
     values = {
         "/usr/local/Cellar/llvm/19.1.6/bin/clang",
         {
@@ -35,8 +38,5 @@
             "/Users/vanish/.xmake/packages/s/stb/2024.06.01/c5dad42a0d624f5a9cc4dce48178a35e/include/stb",
             "-DNDEBUG"
         }
-    },
-    files = {
-        "Source/Src/Material/Material.cpp"
     }
 }

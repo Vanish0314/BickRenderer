@@ -1,6 +1,9 @@
 {
     depfiles_gcc = "build/.objs/BickRenderer/macosx/x86_64/release/Source/Src/Util/__cpp_Logger.cpp.cpp:   Source/Src/Util/Logger.cpp Source/Include/Util/Logger.hpp   Source/Include/Common/Singleton.hpp\
 ",
+    files = {
+        "Source/Src/Util/Logger.cpp"
+    },
     values = {
         "/usr/local/Cellar/llvm/19.1.6/bin/clang",
         {
@@ -35,8 +38,5 @@
             "/Users/vanish/.xmake/packages/s/stb/2024.06.01/c5dad42a0d624f5a9cc4dce48178a35e/include/stb",
             "-DNDEBUG"
         }
-    },
-    files = {
-        "Source/Src/Util/Logger.cpp"
     }
 }

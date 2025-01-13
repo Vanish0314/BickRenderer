@@ -2,6 +2,28 @@
     cmdlines = {
         "xmake ",
         "xmake ",
+        "xmake run",
+        "xmake ",
+        "xmake clean",
+        "xmake ",
+        "xmake clean",
+        "xmake ",
+        "xmake clean",
+        "xmake ",
+        "xmake clean",
+        "xmake ",
+        "xmake f -p macosx -a x86_64 -m debug",
+        "xmake ",
+        "xmake ",
+        "xmake ",
+        "xmake ",
+        "xmake m .",
+        "xmake clean",
+        "xmake ",
+        "xmake ",
+        "xmake clean",
+        "xmake ",
+        "xmake ",
         "xmake run"
     }
 }

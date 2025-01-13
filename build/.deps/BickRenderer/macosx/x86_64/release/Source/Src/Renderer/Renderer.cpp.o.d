@@ -1,6 +1,9 @@
 {
-    depfiles_gcc = "build/.objs/BickRenderer/macosx/x86_64/release/Source/Src/Renderer/__cpp_Renderer.cpp.cpp:   Source/Src/Renderer/Renderer.cpp Source/Include/Renderer/Renderer.hpp   Source/Include/Common/Window.hpp Source/Include/Scene/Scene.hpp   Source/Include/Common/Singleton.hpp Source/Include/Mesh/Model.hpp   Source/Include/Mesh/Mesh.hpp Source/Include/Object/Object.hpp   Source/Include/Shader/Shader.hpp   Source/Include/Material/MatFactory.hpp   Source/Include/Material/Material.hpp Source/Include/Camera/Camera.hpp   Source/Include/Material/Mat_StandardPBM_MetallicWorkFlow.hpp   Source/Include/Texture/Texture.hpp Source/Include/stb_image.h   Source/Include/Light/DirectionalLight.hpp   Source/Include/Light/Light.hpp Source/Include/Light/PointLight.hpp   Source/Include/Renderer/RenderResource.hpp   Source/Include/Renderer/RenderResource_SkyBox.hpp   Source/Include/Renderer/RenderResource_PostProcess.hpp   Source/Include/Renderer/RenderPipeline.hpp   Source/Include/Renderer/RenderPass.hpp\
+    depfiles_gcc = "build/.objs/BickRenderer/macosx/x86_64/release/Source/Src/Renderer/__cpp_Renderer.cpp.cpp:   Source/Src/Renderer/Renderer.cpp Source/Include/Renderer/Renderer.hpp   Source/Include/Common/Window.hpp Source/Include/Scene/Scene.hpp   Source/Include/Common/Singleton.hpp Source/Include/Mesh/Model.hpp   Source/Include/Mesh/Mesh.hpp Source/Include/Object/Object.hpp   Source/Include/Shader/Shader.hpp   Source/Include/Material/MatFactory.hpp   Source/Include/Material/Material.hpp   Source/Include/Material/Mat_StandardPBM_MetallicWorkFlow.hpp   Source/Include/Texture/Texture.hpp Source/Include/stb_image.h   Source/Include/Light/DirectionalLight.hpp   Source/Include/Light/Light.hpp Source/Include/Light/PointLight.hpp   Source/Include/Camera/Camera.hpp   Source/Include/Renderer/RenderResource.hpp   Source/Include/Renderer/RenderResource_SkyBox.hpp   Source/Include/Renderer/RenderResource_PostProcess.hpp   Source/Include/Renderer/RenderPipeline.hpp   Source/Include/Renderer/RenderPass.hpp\
 ",
+    files = {
+        "Source/Src/Renderer/Renderer.cpp"
+    },
     values = {
         "/usr/local/Cellar/llvm/19.1.6/bin/clang",
         {
@@ -35,8 +38,5 @@
             "/Users/vanish/.xmake/packages/s/stb/2024.06.01/c5dad42a0d624f5a9cc4dce48178a35e/include/stb",
             "-DNDEBUG"
         }
-    },
-    files = {
-        "Source/Src/Renderer/Renderer.cpp"
     }
 }

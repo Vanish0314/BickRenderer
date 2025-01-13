@@ -1,6 +1,9 @@
 {
     depfiles_gcc = "build/.objs/BickRenderer/macosx/x86_64/release/Source/Src/Renderer/__cpp_RenderPipeline.cpp.cpp:   Source/Src/Renderer/RenderPipeline.cpp\
 ",
+    files = {
+        "Source/Src/Renderer/RenderPipeline.cpp"
+    },
     values = {
         "/usr/local/Cellar/llvm/19.1.6/bin/clang",
         {
@@ -35,8 +38,5 @@
             "/Users/vanish/.xmake/packages/s/stb/2024.06.01/c5dad42a0d624f5a9cc4dce48178a35e/include/stb",
             "-DNDEBUG"
         }
-    },
-    files = {
-        "Source/Src/Renderer/RenderPipeline.cpp"
     }
 }

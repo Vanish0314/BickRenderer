@@ -1,6 +1,9 @@
 {
     depfiles_gcc = "build/.objs/BickRenderer/macosx/x86_64/release/Source/Src/Object/__cpp_Object.cpp.cpp:   Source/Src/Object/Object.cpp\
 ",
+    files = {
+        "Source/Src/Object/Object.cpp"
+    },
     values = {
         "/usr/local/Cellar/llvm/19.1.6/bin/clang",
         {
@@ -35,8 +38,5 @@
             "/Users/vanish/.xmake/packages/s/stb/2024.06.01/c5dad42a0d624f5a9cc4dce48178a35e/include/stb",
             "-DNDEBUG"
         }
-    },
-    files = {
-        "Source/Src/Object/Object.cpp"
     }
 }
