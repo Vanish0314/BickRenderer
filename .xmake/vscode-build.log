@@ -1,1 +1,12 @@
-error: macro(anonymous) not found!
+[ 33%]: cache compiling.debug Source/Src/AssetLoader/glTFImporter.cpp
+[ 96%]: linking.debug BickRenderer
+error: Undefined symbols for architecture x86_64:
+  "_stbi_write_bmp_to_func", referenced from:
+      tinygltf::WriteImageData(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const*, tinygltf::Image const*, bool, tinygltf::FsCallbacks const*, tinygltf::URICallbacks const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>*, void*) in glTFImporter.cpp.o
+  "_stbi_write_jpg_to_func", referenced from:
+      tinygltf::WriteImageData(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const*, tinygltf::Image const*, bool, tinygltf::FsCallbacks const*, tinygltf::URICallbacks const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>*, void*) in glTFImporter.cpp.o
+  "_stbi_write_png_to_func", referenced from:
+      tinygltf::WriteImageData(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const*, tinygltf::Image const*, bool, tinygltf::FsCallbacks const*, tinygltf::URICallbacks const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>*, void*) in glTFImporter.cpp.o
+ld: symbol(s) not found for architecture x86_64
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+

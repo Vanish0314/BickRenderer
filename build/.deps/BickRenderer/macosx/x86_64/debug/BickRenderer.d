@@ -7,6 +7,7 @@
         "build/.objs/BickRenderer/macosx/x86_64/debug/Source/Src/Renderer/RenderPass_PostProcess.cpp.o",
         "build/.objs/BickRenderer/macosx/x86_64/debug/Source/Src/Renderer/RenderPass_SkyBox.cpp.o",
         "build/.objs/BickRenderer/macosx/x86_64/debug/Source/Src/Renderer/Renderer.cpp.o",
+        "build/.objs/BickRenderer/macosx/x86_64/debug/Source/Src/AssetLoader/glTFImporter.cpp.o",
         "build/.objs/BickRenderer/macosx/x86_64/debug/Source/Src/Util/Logger.cpp.o",
         "build/.objs/BickRenderer/macosx/x86_64/debug/Source/Src/Input/InputSystem.cpp.o",
         "build/.objs/BickRenderer/macosx/x86_64/debug/Source/Src/Camera/Camera.cpp.o",
