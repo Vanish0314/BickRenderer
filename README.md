@@ -1,7 +1,7 @@
 <!--
  * @Author: Vanish
  * @Date: 2024-09-13 21:46:04
- * @LastEditTime: 2025-01-04 23:15:14
+ * @LastEditTime: 2025-03-06 18:58:38
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
 -->
@@ -11,11 +11,11 @@
 
 # Update Plan For Next Quarter
 
--[ ] Sponza Scene
--[ ] BSSRDF Material
--[ ] Skin Animation
--[ ] Forward & Deferred Rendering Pipeline
--[ ] Custom Render Pipeline
+- [ ] Sponza Scene
+- [ ] BSSRDF Material
+- [ ] Skin Animation
+- [ ] Forward & Deferred Rendering Pipeline
+- [ ] Custom Render Pipeline
 
 # Goals
 - [x] Lighting
