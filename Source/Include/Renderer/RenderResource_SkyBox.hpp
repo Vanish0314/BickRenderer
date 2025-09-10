@@ -10,11 +10,12 @@
 
 #include <vector>
 #include <string>
+#include "Common/AssetPath.hpp"
 
 struct RenderResource_SkyBox
 {
     /// @brief 按照顺序存储六个立方体贴图的路径
     std::vector<std::string> skyBoxTexturePath;
-    std::string skyBoxVertShaderPath = "Source/GLSL_Shaders/SkyBox/cubemapvert.glsl";
-    std::string skyBoxFragShaderPath = "Source/GLSL_Shaders/SkyBox/cubemapfrag.glsl";
+    std::string skyBoxVertShaderPath = "SkyBox/cubemapvert.glsl";
+    std::string skyBoxFragShaderPath = "SkyBox/cubemapfrag.glsl";
 };

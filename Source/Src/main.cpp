@@ -1,7 +1,7 @@
 /*
  * @Author: Vanish
  * @Date: 2024-09-09 21:35:01
- * @LastEditTime: 2025-01-13 20:56:26
+ * @LastEditTime: 2025-09-10 20:23:28
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
  */
@@ -18,7 +18,7 @@
 #include "Camera/Camera.hpp"
 #include "Input/InputSystem.hpp"
 #include "Mesh/Model.hpp"
-
+#include "Common/AssetPath.hpp"
 
 #include "Renderer/RenderPass.hpp"
 
@@ -84,20 +84,27 @@ int main()
 {
     GLFWwindow* window = CreateWindow(1920, 1080, "BickRenderer", framebuffer_size_callback);
     HellowWorld();
+    
+    // 初始化资源路径系统
+    AssetPath::Initialize();
 
 #pragma region SceneSetUp
-    Camera camera = Camera(1920, 1080, 90.0);
+    // 创建主摄像机 - 使用原来的方式但手动设置为main
+    Camera camera = Camera(1920, 1080, 90, false); // 不自动设置为main，避免shared_ptr问题
     camera.SetPosition(glm::vec3(0.0f, 0.0f, 1.0f));
     camera.SetForward(glm::vec3(0.0f, 0.0f, -1.0f));
+    
+    // 手动设置Camera::main
+    Camera::main = std::make_shared<Camera>(camera);
 
     auto directionalLight = std::make_shared<DirectionalLight>((glm::vec3(-1.0f, -1.0f, -1.0f)));
     Singleton<Scene>::Instance().directionalLights.push_back(directionalLight);
 
     auto phongMat = MatFactory_StandardPBM_MetallicWorkFlow(
-        "Source/GLSL_Shaders/Blinn-PhongShader/StdBlinnPhongVertex.glsl",
-        "Source/GLSL_Shaders/Blinn-PhongShader/StdBlinnPhongFrag.glsl");
+        AssetPath::GetShaderPath("Blinn-PhongShader/StdBlinnPhongVertex.glsl"),
+        AssetPath::GetShaderPath("Blinn-PhongShader/StdBlinnPhongFrag.glsl"));
 
-    Model model = Model("Assets/Models/NanoSuit/nanosuit.obj", &phongMat, Transform(glm::vec3(0.0f, 0.0f, -10.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.3f)));
+    Model model = Model(AssetPath::GetAssetPath("Models/NanoSuit/nanosuit.obj"), &phongMat, Transform(glm::vec3(0.0f, 0.0f, -10.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.3f)));
 
 #pragma endregion
 
@@ -106,12 +113,12 @@ int main()
     auto skyboxPass = std::make_shared<RenderPass_SkyBox>();
     auto renderResoruce = std::make_shared<RenderResource>();
     renderResoruce->m_SkyBoxRenderResource.skyBoxTexturePath = {
-        "Assets/Textures/Skybox/MountainSea/right.jpg",
-        "Assets/Textures/Skybox/MountainSea/left.jpg",
-        "Assets/Textures/Skybox/MountainSea/top.jpg",
-        "Assets/Textures/Skybox/MountainSea/bottom.jpg",
-        "Assets/Textures/Skybox/MountainSea/front.jpg",
-        "Assets/Textures/Skybox/MountainSea/back.jpg"
+        AssetPath::GetAssetPath("Textures/Skybox/MountainSea/right.jpg"),
+        AssetPath::GetAssetPath("Textures/Skybox/MountainSea/left.jpg"),
+        AssetPath::GetAssetPath("Textures/Skybox/MountainSea/top.jpg"), 
+        AssetPath::GetAssetPath("Textures/Skybox/MountainSea/bottom.jpg"),
+        AssetPath::GetAssetPath("Textures/Skybox/MountainSea/front.jpg"),
+        AssetPath::GetAssetPath("Textures/Skybox/MountainSea/back.jpg")
     };
     auto renderPassInfo = std::make_shared<RenderPassInitInfo>();
     renderPassInfo->width = 1920;
@@ -119,8 +126,8 @@ int main()
     renderPassInfo->renderResource = renderResoruce;
     skyboxPass->Initialize(renderPassInfo);
     auto postProcessPass = std::make_shared<RenderPass_PostProcess>();
-    renderResoruce->m_PostProcessRenderResource.postProcessVertShaderPath = "Source/GLSL_Shaders/ScreenShader/vert.glsl";
-    renderResoruce->m_PostProcessRenderResource.postProcessFragShaderPath = "Source/GLSL_Shaders/ScreenShader/frag.glsl";
+    renderResoruce->m_PostProcessRenderResource.postProcessVertShaderPath = AssetPath::GetShaderPath("ScreenShader/vert.glsl");
+    renderResoruce->m_PostProcessRenderResource.postProcessFragShaderPath = AssetPath::GetShaderPath("ScreenShader/frag.glsl");
     postProcessPass->Initialize(renderPassInfo);
 
 #pragma endregion
@@ -136,12 +143,18 @@ int main()
         Singleton<InputSystem>::Instance().Update();
 
 #pragma region 渲染
+        // 清除屏幕
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
+        glViewport(0, 0, 1920, 1080);
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        skyboxPass->Draw(0, 0);
-        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+        // 第一阶段：渲染天空盒到屏幕
+        glDepthMask(GL_FALSE); // 禁用深度写入
+        skyboxPass->Draw(0, 0); // 直接渲染到默认帧缓冲
+        glDepthMask(GL_TRUE);  // 重新启用深度写入
+        
+        // 第二阶段：渲染模型到屏幕（天空盒作为背景）
         model.Draw();
 
         // 交换缓冲,检查并调用事件回调函数

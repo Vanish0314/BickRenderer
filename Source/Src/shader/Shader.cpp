@@ -105,6 +105,9 @@ void Shader::InitShader(const std::string &vertexShaderPath, const std::string &
     {
         std::cout<< "[Shader.cpp]着色器程序初始化失败!无法打开文件\n"<<std::endl;
         std::cerr << e.what() << std::endl;
+        // Clear stream state to prevent ios_base::clear errors
+        vertexShaderStream.clear();
+        fragmentShaderStream.clear();
         return;
     }
 }
@@ -179,6 +182,10 @@ void Shader::InitShader(const std::string &vertexShaderPath, const std::string &
         std::cerr << "[Shader.cpp]着色器程序初始化失败!无法打开文件\n";
         std::cerr << "错误:" << e.what() << std::endl
                   << std::endl;
+        // Clear stream state to prevent ios_base::clear errors
+        vertexShaderStream.clear();
+        geometryShaderStream.clear();
+        fragmentShaderStream.clear();
         return;
     }
 }

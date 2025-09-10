@@ -1,7 +1,7 @@
 <!--
  * @Author: Vanish
  * @Date: 2024-09-13 21:46:04
- * @LastEditTime: 2025-03-06 18:58:38
+ * @LastEditTime: 2025-09-10 20:32:00
  * Also View: http://vanishing.cc
  * Copyright@ https://creativecommons.org/licenses/by/4.0/deed.zh-hans
 -->
@@ -65,5 +65,5 @@
   - [ ] UI System
 
 # Render Result
-![](Img/Clip_2024-11-15_15-43-58.png)
+![](Img/image.png)
 ![](Img/Clip_2024-11-15_15-45-59.png)

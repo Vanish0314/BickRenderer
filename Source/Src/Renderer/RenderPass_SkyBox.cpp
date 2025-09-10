@@ -8,6 +8,7 @@
  */
 
 #include "Renderer/RenderPass.hpp"
+#include "Common/AssetPath.hpp"
 #include "stb_image.h"
 
 // TODO: too much junk code,need to be simplified
@@ -24,7 +25,7 @@ void RenderPass_SkyBox::Initialize(std::shared_ptr<RenderPassInitInfo> info)
         auto frag       = res->m_SkyBoxRenderResource.skyBoxFragShaderPath;
 
         // 创建shader
-        m_SkyBoxShader.InitShader(vert, frag, "SkyBoxShader");
+        m_SkyBoxShader.InitShader(AssetPath::GetShaderPath(vert), AssetPath::GetShaderPath(frag), "SkyBoxShader");
 
         // 创建立方体贴图
         glGenTextures(1, &m_SkyBoxCubeMap);
@@ -34,17 +35,26 @@ void RenderPass_SkyBox::Initialize(std::shared_ptr<RenderPassInitInfo> info)
         unsigned char *data;
         for (unsigned int i = 0; i < 6; i++)
         {
+            std::cout << "[SkyBox] 加载纹理: " << skyBoxPath[i] << std::endl;
             data = stbi_load(skyBoxPath[i].c_str(), &width, &height, &nrChannels, 0);
-            glTexImage2D(
-                GL_TEXTURE_CUBE_MAP_POSITIVE_X + i,
-                0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+            if (data)
+            {
+                glTexImage2D(
+                    GL_TEXTURE_CUBE_MAP_POSITIVE_X + i,
+                    0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+                stbi_image_free(data);
+                std::cout << "[SkyBox] 纹理 " << i << " 加载成功: " << width << "x" << height << std::endl;
+            }
+            else
+            {
+                std::cerr << "[SkyBox] 纹理 " << i << " 加载失败: " << skyBoxPath[i] << std::endl;
+            }
         }
         glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
         glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
         glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
-        stbi_image_free(data);
 
         glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
 
@@ -78,7 +88,7 @@ void RenderPass_SkyBox::DrawPass(GLuint inputFBO, GLuint outputFBO)
     // 绑定shader
     m_SkyBoxShader.Use();
     unsigned short skyboxLoc = glGetUniformLocation(m_SkyBoxShader.shaderProgramID, "skybox");
-    glUniform1i(skyboxLoc, GL_TEXTURE0);
+    glUniform1i(skyboxLoc, 0); // 纹理单元0
     glm::mat4 viewMatrix = Camera::main->GetViewMatrix();
     //去除view矩阵中的位移
     viewMatrix[3] = glm::vec4(0.0f, 0.0f, 0.0f, 1.0f);
@@ -92,15 +102,10 @@ void RenderPass_SkyBox::DrawPass(GLuint inputFBO, GLuint outputFBO)
 
     // 绘制立方体
     glDrawArrays(GL_TRIANGLES, 0, 36);
-    glBindVertexArray(0);
-
-    // 解绑
-    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    
+    // 解绑VAO和shader（但不解绑FBO，让基类处理）
     glBindVertexArray(0);
     glUseProgram(0);
-    
-    //开启深度写入
-    glDepthMask(GL_TRUE);
 }
 
 const float RenderPass_SkyBox::m_skyboxVertices[] = 

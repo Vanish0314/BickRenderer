@@ -8,6 +8,7 @@
  */
 #include "Bick.hpp"
 #include "Renderer/RenderPass.hpp"
+#include "Common/AssetPath.hpp"
 
 void RenderPass_PostProcess::Initialize(std::shared_ptr<RenderPassInitInfo> info)
 {
@@ -18,7 +19,7 @@ void RenderPass_PostProcess::Initialize(std::shared_ptr<RenderPassInitInfo> info
     {
         auto vert = res->m_PostProcessRenderResource.postProcessVertShaderPath;
         auto frag = res->m_PostProcessRenderResource.postProcessFragShaderPath;
-        m_PostProcessShader.InitShader(vert,frag,"PostProcessShader");
+        m_PostProcessShader.InitShader(AssetPath::GetShaderPath(vert), AssetPath::GetShaderPath(frag), "PostProcessShader");
 
         //VAO
         glGenVertexArrays(1, &m_PostProcessVAO);
@@ -27,6 +28,7 @@ void RenderPass_PostProcess::Initialize(std::shared_ptr<RenderPassInitInfo> info
         glGenBuffers(1, &m_PostProcessVBO);
         glBindBuffer(GL_ARRAY_BUFFER, m_PostProcessVBO);
         glBufferData(GL_ARRAY_BUFFER,6*4*sizeof(float), m_postProcessVertices, GL_STATIC_DRAW);
+        glEnableVertexAttribArray(0);
         glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void *)0);
         glEnableVertexAttribArray(1);
         glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void *)(2 * sizeof(float)));

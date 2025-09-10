@@ -64,7 +64,7 @@ protected:
 
     GLint m_outputInternalFormat = GL_RGBA;
 
-    glm::vec4 m_clearColor = glm::vec4(0.3f, 0.57f, 0.4f, 1.0f);
+    glm::vec4 m_clearColor = glm::vec4(0.0f, 0.0f, 0.0f, 1.0f);
 };
 
 
