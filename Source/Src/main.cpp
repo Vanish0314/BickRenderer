@@ -7,7 +7,7 @@
  */
 
 #include "glad/glad.h" //glad 必须在Glfw前加载
-#include "Glfw/glfw3.h"
+#include <GLFW/glfw3.h>
 #include <iostream>
 
 
